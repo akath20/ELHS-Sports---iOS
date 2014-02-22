@@ -11,7 +11,8 @@
 @interface ViewController : UIViewController
 
 
-@property (strong, nonatomic) IBOutlet UILabel *label;
+
+- (IBAction)iconClicked:(UIButton *)sender;
 
 
 @end

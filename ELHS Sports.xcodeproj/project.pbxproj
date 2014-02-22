@@ -116,8 +116,8 @@
 			children = (
 				FA6ED9BE18B9588600CA58B5 /* App Delegate */,
 				FA6ED9BF18B9589100CA58B5 /* View Controllers */,
-				FA6ED9A018B9587400CA58B5 /* Images.xcassets */,
 				FA6ED9BD18B9587F00CA58B5 /* Interfaces */,
+				FA6ED9A018B9587400CA58B5 /* Images.xcassets */,
 				FA6ED98C18B9587400CA58B5 /* Supporting Files */,
 			);
 			path = "ELHS Sports";
@@ -498,6 +498,7 @@
 				FA6ED9B918B9587500CA58B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FA6ED9BA18B9587500CA58B5 /* Build configuration list for PBXNativeTarget "ELHS SportsTests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +507,7 @@
 				FA6ED9BC18B9587500CA58B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
