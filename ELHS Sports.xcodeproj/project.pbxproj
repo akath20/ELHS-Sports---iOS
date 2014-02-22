@@ -114,13 +114,10 @@
 		FA6ED98B18B9587400CA58B5 /* ELHS Sports */ = {
 			isa = PBXGroup;
 			children = (
-				FA6ED99418B9587400CA58B5 /* AppDelegate.h */,
-				FA6ED99518B9587400CA58B5 /* AppDelegate.m */,
-				FA6ED99718B9587400CA58B5 /* Main_iPhone.storyboard */,
-				FA6ED99A18B9587400CA58B5 /* Main_iPad.storyboard */,
-				FA6ED99D18B9587400CA58B5 /* ViewController.h */,
-				FA6ED99E18B9587400CA58B5 /* ViewController.m */,
+				FA6ED9BE18B9588600CA58B5 /* App Delegate */,
+				FA6ED9BF18B9589100CA58B5 /* View Controllers */,
 				FA6ED9A018B9587400CA58B5 /* Images.xcassets */,
+				FA6ED9BD18B9587F00CA58B5 /* Interfaces */,
 				FA6ED98C18B9587400CA58B5 /* Supporting Files */,
 			);
 			path = "ELHS Sports";
@@ -153,6 +150,33 @@
 				FA6ED9B018B9587500CA58B5 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FA6ED9BD18B9587F00CA58B5 /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				FA6ED99718B9587400CA58B5 /* Main_iPhone.storyboard */,
+				FA6ED99A18B9587400CA58B5 /* Main_iPad.storyboard */,
+			);
+			name = Interfaces;
+			sourceTree = "<group>";
+		};
+		FA6ED9BE18B9588600CA58B5 /* App Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				FA6ED99418B9587400CA58B5 /* AppDelegate.h */,
+				FA6ED99518B9587400CA58B5 /* AppDelegate.m */,
+			);
+			name = "App Delegate";
+			sourceTree = "<group>";
+		};
+		FA6ED9BF18B9589100CA58B5 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FA6ED99D18B9587400CA58B5 /* ViewController.h */,
+				FA6ED99E18B9587400CA58B5 /* ViewController.m */,
+			);
+			name = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
