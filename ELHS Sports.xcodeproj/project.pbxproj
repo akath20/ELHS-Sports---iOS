@@ -1,0 +1,489 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FA6ED98618B9587400CA58B5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA6ED98518B9587400CA58B5 /* Foundation.framework */; };
+		FA6ED98818B9587400CA58B5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA6ED98718B9587400CA58B5 /* CoreGraphics.framework */; };
+		FA6ED98A18B9587400CA58B5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA6ED98918B9587400CA58B5 /* UIKit.framework */; };
+		FA6ED99018B9587400CA58B5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FA6ED98E18B9587400CA58B5 /* InfoPlist.strings */; };
+		FA6ED99218B9587400CA58B5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6ED99118B9587400CA58B5 /* main.m */; };
+		FA6ED99618B9587400CA58B5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6ED99518B9587400CA58B5 /* AppDelegate.m */; };
+		FA6ED99918B9587400CA58B5 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA6ED99718B9587400CA58B5 /* Main_iPhone.storyboard */; };
+		FA6ED99C18B9587400CA58B5 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA6ED99A18B9587400CA58B5 /* Main_iPad.storyboard */; };
+		FA6ED99F18B9587400CA58B5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6ED99E18B9587400CA58B5 /* ViewController.m */; };
+		FA6ED9A118B9587400CA58B5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA6ED9A018B9587400CA58B5 /* Images.xcassets */; };
+		FA6ED9A818B9587400CA58B5 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA6ED9A718B9587400CA58B5 /* XCTest.framework */; };
+		FA6ED9A918B9587500CA58B5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA6ED98518B9587400CA58B5 /* Foundation.framework */; };
+		FA6ED9AA18B9587500CA58B5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA6ED98918B9587400CA58B5 /* UIKit.framework */; };
+		FA6ED9B218B9587500CA58B5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FA6ED9B018B9587500CA58B5 /* InfoPlist.strings */; };
+		FA6ED9B418B9587500CA58B5 /* ELHS_SportsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6ED9B318B9587500CA58B5 /* ELHS_SportsTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FA6ED9AB18B9587500CA58B5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA6ED97A18B9587400CA58B5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FA6ED98118B9587400CA58B5;
+			remoteInfo = "ELHS Sports";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FA6ED98218B9587400CA58B5 /* ELHS Sports.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ELHS Sports.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA6ED98518B9587400CA58B5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		FA6ED98718B9587400CA58B5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		FA6ED98918B9587400CA58B5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		FA6ED98D18B9587400CA58B5 /* ELHS Sports-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ELHS Sports-Info.plist"; sourceTree = "<group>"; };
+		FA6ED98F18B9587400CA58B5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FA6ED99118B9587400CA58B5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FA6ED99318B9587400CA58B5 /* ELHS Sports-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ELHS Sports-Prefix.pch"; sourceTree = "<group>"; };
+		FA6ED99418B9587400CA58B5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		FA6ED99518B9587400CA58B5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		FA6ED99818B9587400CA58B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		FA6ED99B18B9587400CA58B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		FA6ED99D18B9587400CA58B5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		FA6ED99E18B9587400CA58B5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		FA6ED9A018B9587400CA58B5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		FA6ED9A618B9587400CA58B5 /* ELHS SportsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ELHS SportsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA6ED9A718B9587400CA58B5 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		FA6ED9AF18B9587500CA58B5 /* ELHS SportsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ELHS SportsTests-Info.plist"; sourceTree = "<group>"; };
+		FA6ED9B118B9587500CA58B5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FA6ED9B318B9587500CA58B5 /* ELHS_SportsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ELHS_SportsTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FA6ED97F18B9587400CA58B5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA6ED98818B9587400CA58B5 /* CoreGraphics.framework in Frameworks */,
+				FA6ED98A18B9587400CA58B5 /* UIKit.framework in Frameworks */,
+				FA6ED98618B9587400CA58B5 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA6ED9A318B9587400CA58B5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA6ED9A818B9587400CA58B5 /* XCTest.framework in Frameworks */,
+				FA6ED9AA18B9587500CA58B5 /* UIKit.framework in Frameworks */,
+				FA6ED9A918B9587500CA58B5 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FA6ED97918B9587400CA58B5 = {
+			isa = PBXGroup;
+			children = (
+				FA6ED98B18B9587400CA58B5 /* ELHS Sports */,
+				FA6ED9AD18B9587500CA58B5 /* ELHS SportsTests */,
+				FA6ED98418B9587400CA58B5 /* Frameworks */,
+				FA6ED98318B9587400CA58B5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FA6ED98318B9587400CA58B5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FA6ED98218B9587400CA58B5 /* ELHS Sports.app */,
+				FA6ED9A618B9587400CA58B5 /* ELHS SportsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FA6ED98418B9587400CA58B5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FA6ED98518B9587400CA58B5 /* Foundation.framework */,
+				FA6ED98718B9587400CA58B5 /* CoreGraphics.framework */,
+				FA6ED98918B9587400CA58B5 /* UIKit.framework */,
+				FA6ED9A718B9587400CA58B5 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FA6ED98B18B9587400CA58B5 /* ELHS Sports */ = {
+			isa = PBXGroup;
+			children = (
+				FA6ED99418B9587400CA58B5 /* AppDelegate.h */,
+				FA6ED99518B9587400CA58B5 /* AppDelegate.m */,
+				FA6ED99718B9587400CA58B5 /* Main_iPhone.storyboard */,
+				FA6ED99A18B9587400CA58B5 /* Main_iPad.storyboard */,
+				FA6ED99D18B9587400CA58B5 /* ViewController.h */,
+				FA6ED99E18B9587400CA58B5 /* ViewController.m */,
+				FA6ED9A018B9587400CA58B5 /* Images.xcassets */,
+				FA6ED98C18B9587400CA58B5 /* Supporting Files */,
+			);
+			path = "ELHS Sports";
+			sourceTree = "<group>";
+		};
+		FA6ED98C18B9587400CA58B5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FA6ED98D18B9587400CA58B5 /* ELHS Sports-Info.plist */,
+				FA6ED98E18B9587400CA58B5 /* InfoPlist.strings */,
+				FA6ED99118B9587400CA58B5 /* main.m */,
+				FA6ED99318B9587400CA58B5 /* ELHS Sports-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FA6ED9AD18B9587500CA58B5 /* ELHS SportsTests */ = {
+			isa = PBXGroup;
+			children = (
+				FA6ED9B318B9587500CA58B5 /* ELHS_SportsTests.m */,
+				FA6ED9AE18B9587500CA58B5 /* Supporting Files */,
+			);
+			path = "ELHS SportsTests";
+			sourceTree = "<group>";
+		};
+		FA6ED9AE18B9587500CA58B5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FA6ED9AF18B9587500CA58B5 /* ELHS SportsTests-Info.plist */,
+				FA6ED9B018B9587500CA58B5 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FA6ED98118B9587400CA58B5 /* ELHS Sports */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA6ED9B718B9587500CA58B5 /* Build configuration list for PBXNativeTarget "ELHS Sports" */;
+			buildPhases = (
+				FA6ED97E18B9587400CA58B5 /* Sources */,
+				FA6ED97F18B9587400CA58B5 /* Frameworks */,
+				FA6ED98018B9587400CA58B5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ELHS Sports";
+			productName = "ELHS Sports";
+			productReference = FA6ED98218B9587400CA58B5 /* ELHS Sports.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FA6ED9A518B9587400CA58B5 /* ELHS SportsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA6ED9BA18B9587500CA58B5 /* Build configuration list for PBXNativeTarget "ELHS SportsTests" */;
+			buildPhases = (
+				FA6ED9A218B9587400CA58B5 /* Sources */,
+				FA6ED9A318B9587400CA58B5 /* Frameworks */,
+				FA6ED9A418B9587400CA58B5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FA6ED9AC18B9587500CA58B5 /* PBXTargetDependency */,
+			);
+			name = "ELHS SportsTests";
+			productName = "ELHS SportsTests";
+			productReference = FA6ED9A618B9587400CA58B5 /* ELHS SportsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FA6ED97A18B9587400CA58B5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Alex Atwater";
+				TargetAttributes = {
+					FA6ED9A518B9587400CA58B5 = {
+						TestTargetID = FA6ED98118B9587400CA58B5;
+					};
+				};
+			};
+			buildConfigurationList = FA6ED97D18B9587400CA58B5 /* Build configuration list for PBXProject "ELHS Sports" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FA6ED97918B9587400CA58B5;
+			productRefGroup = FA6ED98318B9587400CA58B5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FA6ED98118B9587400CA58B5 /* ELHS Sports */,
+				FA6ED9A518B9587400CA58B5 /* ELHS SportsTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FA6ED98018B9587400CA58B5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA6ED99C18B9587400CA58B5 /* Main_iPad.storyboard in Resources */,
+				FA6ED9A118B9587400CA58B5 /* Images.xcassets in Resources */,
+				FA6ED99918B9587400CA58B5 /* Main_iPhone.storyboard in Resources */,
+				FA6ED99018B9587400CA58B5 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA6ED9A418B9587400CA58B5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA6ED9B218B9587500CA58B5 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FA6ED97E18B9587400CA58B5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA6ED99F18B9587400CA58B5 /* ViewController.m in Sources */,
+				FA6ED99618B9587400CA58B5 /* AppDelegate.m in Sources */,
+				FA6ED99218B9587400CA58B5 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA6ED9A218B9587400CA58B5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA6ED9B418B9587500CA58B5 /* ELHS_SportsTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FA6ED9AC18B9587500CA58B5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FA6ED98118B9587400CA58B5 /* ELHS Sports */;
+			targetProxy = FA6ED9AB18B9587500CA58B5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FA6ED98E18B9587400CA58B5 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA6ED98F18B9587400CA58B5 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		FA6ED99718B9587400CA58B5 /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA6ED99818B9587400CA58B5 /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		FA6ED99A18B9587400CA58B5 /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA6ED99B18B9587400CA58B5 /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		FA6ED9B018B9587500CA58B5 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA6ED9B118B9587500CA58B5 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FA6ED9B518B9587500CA58B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FA6ED9B618B9587500CA58B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FA6ED9B818B9587500CA58B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ELHS Sports/ELHS Sports-Prefix.pch";
+				INFOPLIST_FILE = "ELHS Sports/ELHS Sports-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		FA6ED9B918B9587500CA58B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ELHS Sports/ELHS Sports-Prefix.pch";
+				INFOPLIST_FILE = "ELHS Sports/ELHS Sports-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		FA6ED9BB18B9587500CA58B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ELHS Sports.app/ELHS Sports";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ELHS Sports/ELHS Sports-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "ELHS SportsTests/ELHS SportsTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		FA6ED9BC18B9587500CA58B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ELHS Sports.app/ELHS Sports";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ELHS Sports/ELHS Sports-Prefix.pch";
+				INFOPLIST_FILE = "ELHS SportsTests/ELHS SportsTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FA6ED97D18B9587400CA58B5 /* Build configuration list for PBXProject "ELHS Sports" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA6ED9B518B9587500CA58B5 /* Debug */,
+				FA6ED9B618B9587500CA58B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA6ED9B718B9587500CA58B5 /* Build configuration list for PBXNativeTarget "ELHS Sports" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA6ED9B818B9587500CA58B5 /* Debug */,
+				FA6ED9B918B9587500CA58B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		FA6ED9BA18B9587500CA58B5 /* Build configuration list for PBXNativeTarget "ELHS SportsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA6ED9BB18B9587500CA58B5 /* Debug */,
+				FA6ED9BC18B9587500CA58B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FA6ED97A18B9587400CA58B5 /* Project object */;
+}
