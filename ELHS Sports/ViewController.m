@@ -44,12 +44,12 @@
         [[SharedValues allValues] setUrlToLoadAsString:@"Soccer"];
     } else if ([selectedSport isEqualToString:@"Swimming"]) {
         [[SharedValues allValues] setUrlToLoadAsString:@"Swimming"];
-    } else if ([selectedSport isEqualToString:@"Ski"]) {
-        [[SharedValues allValues] setUrlToLoadAsString:@"Ski"];
+    } else if ([selectedSport isEqualToString:@"Skiing"]) {
+        [[SharedValues allValues] setUrlToLoadAsString:@"Skiing"];
     } else if ([selectedSport isEqualToString:@"Track"]) {
         [[SharedValues allValues] setUrlToLoadAsString:@"Track"];
     } else {
-        NSLog(@"Error; Bad title for button.");
+        NSLog(@"\nError; Bad title for button.");
     }
     
     

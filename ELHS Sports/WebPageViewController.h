@@ -8,9 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface WebPageViewController : UIViewController {
-   
-}
+@interface WebPageViewController : UIViewController
 
 @property (strong, nonatomic) IBOutlet UIWebView *webView;
 

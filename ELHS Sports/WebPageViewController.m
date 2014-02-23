@@ -7,6 +7,7 @@
 //
 
 #import "WebPageViewController.h"
+#import "SharedValues.h"
 
 @interface WebPageViewController ()
 
@@ -15,8 +16,7 @@
 @implementation WebPageViewController
 
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad{
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     [self setAutomaticallyAdjustsScrollViewInsets:false];
@@ -24,18 +24,34 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-    NSLog(@"\n%@", self.urlToLoad);
+    
+    //Setup The Web View
+    [self setupTheWebView];
     
     
 }
 
-- (void)didReceiveMemoryWarning
-{
+- (void)didReceiveMemoryWarning{
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
     
 }
 
+- (void)setupTheWebView {
+    
+    //get the webpage to load
+    NSString *urlToLoadAsString = [[SharedValues allValues] urlToLoadAsString];
+    
+    //convert to URL
+    NSURL *urlToLoadAsURL = [[NSURL alloc] initWithString:[NSString stringWithFormat:@"http://www.eastlongmeadowsports.com/%@/", urlToLoadAsString]];
+    
+    //make a load request
+    NSURLRequest *urlToLoadRequest = [[NSURLRequest alloc] initWithURL:urlToLoadAsURL];
+    
+    //load the webpage
+    [self.webView loadRequest:urlToLoadRequest];
+    
+}
 
 
 
