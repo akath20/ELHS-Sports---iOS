@@ -8,11 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-@interface WebPageViewController : UIViewController
+@interface WebPageViewController : UIViewController <UIWebViewDelegate>
 
 @property (strong, nonatomic) IBOutlet UIWebView *webView;
 @property (strong, nonatomic) IBOutlet UINavigationItem *topNavBar;
+@property (strong, nonatomic) IBOutlet UIActivityIndicatorView *loadingAnimation;
+@property (strong, nonatomic) IBOutlet UIButton *backButton;
 
+
+- (IBAction)buttonClicked:(UIButton *)sender;
 
 @end
 

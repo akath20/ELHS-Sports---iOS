@@ -185,26 +185,44 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <dataDetectorType key="dataDetectorTypes" calendarEvent="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="OuM-O5-ulg" id="tjD-P7-R7D"/>
+                                </connections>
                             </webView>
                             <button opaque="NO" alpha="0.75" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bFD-cr-YyW">
-                                <rect key="frame" x="8" y="488" width="27" height="24"/>
+                                <rect key="frame" x="12" y="479" width="32" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="057 CircledArrowLeft">
+                                <state key="normal" title="Back" image="057 CircledArrowLeft">
+                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="buttonClicked:" destination="OuM-O5-ulg" eventType="touchUpInside" id="fkS-4T-WOd"/>
+                                </connections>
                             </button>
                             <button opaque="NO" alpha="0.75" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="URy-Av-Lje">
-                                <rect key="frame" x="43" y="488" width="26" height="23"/>
+                                <rect key="frame" x="282" y="479" width="32" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="063 Undo">
+                                <state key="normal" title="Refresh" image="063 Undo">
+                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="buttonClicked:" destination="OuM-O5-ulg" eventType="touchUpInside" id="5x8-1R-xG0"/>
+                                </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="AGB-11-cmn">
+                                <rect key="frame" x="150" y="484" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="color" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="ySD-uE-uot"/>
                     <connections>
+                        <outlet property="backButton" destination="bFD-cr-YyW" id="Qs1-fJ-4AO"/>
+                        <outlet property="loadingAnimation" destination="AGB-11-cmn" id="PYh-mG-85h"/>
                         <outlet property="topNavBar" destination="ySD-uE-uot" id="ALN-3o-Ysz"/>
                         <outlet property="webView" destination="2f7-Jb-lFt" id="tTJ-UI-3dk"/>
                     </connections>

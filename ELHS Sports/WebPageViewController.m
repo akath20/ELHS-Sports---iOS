@@ -35,6 +35,10 @@
         self.topNavBar.title = [[SharedValues allValues] urlToLoadAsString];
     }
     
+    //configure the buttons at the bottem
+    [self.backButton setHidden:TRUE];
+    
+    
     
     
 }
@@ -60,6 +64,45 @@
     [self.webView loadRequest:urlToLoadRequest];
     
 }
+
+
+- (IBAction)buttonClicked:(UIButton *)sender {
+    
+    if ([sender.titleLabel.text isEqualToString:@"Back"]) {
+        //if the back button
+        [self.webView goBack];
+        
+    } else {
+        //if the refresh button
+        [self.webView reload];
+        
+    }
+}
+
+- (void)webViewDidStartLoad:(UIWebView *)webView {
+    [self.loadingAnimation setHidden:false];
+    [self.loadingAnimation startAnimating];
+}
+
+- (void)webViewDidFinishLoad:(UIWebView *)webView {
+    [self.loadingAnimation setHidden:TRUE];
+    [self.loadingAnimation stopAnimating];
+    
+    //see if the back button should be shown
+    if ([self.webView canGoBack]) {
+        [self.backButton setHidden:false];
+    } else {
+        [self.backButton setHidden:TRUE];
+    }
+}
+
+- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
+    UIAlertView *errorAlert = [[UIAlertView alloc] initWithTitle:@"An Error Occured" message:[NSString stringWithFormat:@"An Error Occured. Please try again, if problem continues, please contact support. \n%@", error] delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles: nil];
+    [errorAlert show];
+    [self.navigationController popToRootViewControllerAnimated:TRUE];
+    
+}
+
 
 
 
