@@ -11,6 +11,7 @@
 @interface WebPageViewController : UIViewController
 
 @property (strong, nonatomic) IBOutlet UIWebView *webView;
+@property (strong, nonatomic) IBOutlet UINavigationItem *topNavBar;
 
 
 @end

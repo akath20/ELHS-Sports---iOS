@@ -28,6 +28,14 @@
     //Setup The Web View
     [self setupTheWebView];
     
+    //set the title of the nav bar
+    if ([[[SharedValues allValues] urlToLoadAsString] isEqualToString:@""]) {
+        self.topNavBar.title = @"Home";
+    } else {
+        self.topNavBar.title = [[SharedValues allValues] urlToLoadAsString];
+    }
+    
+    
     
 }
 
@@ -43,7 +51,7 @@
     NSString *urlToLoadAsString = [[SharedValues allValues] urlToLoadAsString];
     
     //convert to URL
-    NSURL *urlToLoadAsURL = [[NSURL alloc] initWithString:[NSString stringWithFormat:@"http://www.eastlongmeadowsports.com/%@/", urlToLoadAsString]];
+    NSURL *urlToLoadAsURL = [[NSURL alloc] initWithString:[NSString stringWithFormat:@"http://www.eastlongmeadowsports.com/%@", urlToLoadAsString]];
     
     //make a load request
     NSURLRequest *urlToLoadRequest = [[NSURLRequest alloc] initWithURL:urlToLoadAsURL];

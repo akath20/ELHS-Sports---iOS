@@ -48,10 +48,11 @@
         [[SharedValues allValues] setUrlToLoadAsString:@"Skiing"];
     } else if ([selectedSport isEqualToString:@"Track"]) {
         [[SharedValues allValues] setUrlToLoadAsString:@"Track"];
+    } else if ([selectedSport isEqualToString:@"Home"]) {
+        [[SharedValues allValues] setUrlToLoadAsString:@""];
     } else {
         NSLog(@"\nError; Bad title for button.");
     }
-    
     
     //switch the view
     [self performSegueWithIdentifier:@"showWebPage" sender:Nil];
