@@ -19,7 +19,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eO8-XE-c7x">
                                 <rect key="frame" x="31" y="89" width="128" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="Basketball">
+                                <state key="normal" title="Basketball" image="Basketball">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -29,7 +29,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0k6-ei-z19">
                                 <rect key="frame" x="172" y="89" width="128" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="Hockey">
+                                <state key="normal" title="Hockey" image="Hockey">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -39,37 +39,52 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y60-Sb-fhF">
                                 <rect key="frame" x="-4" y="225" width="117" height="117"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="Wrestling">
+                                <state key="normal" title="Wrestling" image="Wrestling">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="iconClicked:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="gaC-rO-41Y"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cf1-IF-TFi">
                                 <rect key="frame" x="109" y="232" width="113" height="113"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="Soccer">
+                                <state key="normal" title="Soccer" image="Soccer">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="iconClicked:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="KRl-a2-3hY"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qe6-KZ-lgV">
                                 <rect key="frame" x="220" y="232" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="Swim">
+                                <state key="normal" title="Swimming" image="Swim">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="iconClicked:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="7O5-kf-p86"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3hr-WZ-YVY">
                                 <rect key="frame" x="35" y="368" width="117" height="117"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="Ski">
+                                <state key="normal" title="Ski" image="Ski">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="iconClicked:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="uWE-JF-ft3"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gv2-ap-NyX">
                                 <rect key="frame" x="173" y="365" width="123" height="123"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="Track">
+                                <state key="normal" title="Track" image="Track">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="iconClicked:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="AV3-I2-CMI"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.85377471301020402" green="0.0092643148213790404" blue="0.0" alpha="0.68000000000000005" colorSpace="calibratedRGB"/>
@@ -77,10 +92,43 @@
                     <navigationItem key="navigationItem" title="Home" id="Xjj-aw-CRW">
                         <barButtonItem key="leftBarButtonItem" title="Settings" id="nQt-ES-YvW"/>
                     </navigationItem>
+                    <connections>
+                        <segue destination="OuM-O5-ulg" kind="push" identifier="showWebPage" id="Lmn-Sx-U0W"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="916" y="207"/>
+        </scene>
+        <!--Web Page View Controller-->
+        <scene sceneID="I7O-xn-nMa">
+            <objects>
+                <viewController id="OuM-O5-ulg" customClass="WebPageViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gbN-5K-GhX"/>
+                        <viewControllerLayoutGuide type="bottom" id="FWa-lh-6mv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XUA-gI-TzP">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2f7-Jb-lFt">
+                                <rect key="frame" x="0.0" y="65" width="320" height="453"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <dataDetectorType key="dataDetectorTypes" calendarEvent="YES"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ySD-uE-uot"/>
+                    <connections>
+                        <outlet property="webView" destination="2f7-Jb-lFt" id="tTJ-UI-3dk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3dp-J2-V3e" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1402" y="207"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="K2j-zb-rob">

@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  WebPageViewController.h
 //  ELHS Sports
 //
 //  Created by Alex Atwater on 2/22/14.
@@ -8,12 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface WebPageViewController : UIViewController {
+   
+}
 
-
-
-- (IBAction)iconClicked:(UIButton *)sender;
+@property (strong, nonatomic) IBOutlet UIWebView *webView;
 
 
 @end
+
+
 

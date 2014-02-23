@@ -22,6 +22,8 @@
 		FA6ED9AA18B9587500CA58B5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA6ED98918B9587400CA58B5 /* UIKit.framework */; };
 		FA6ED9B218B9587500CA58B5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FA6ED9B018B9587500CA58B5 /* InfoPlist.strings */; };
 		FA6ED9B418B9587500CA58B5 /* ELHS_SportsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6ED9B318B9587500CA58B5 /* ELHS_SportsTests.m */; };
+		FA80B93818B96DC70029119C /* WebPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA80B93718B96DC70029119C /* WebPageViewController.m */; };
+		FA80B93C18B97D680029119C /* SharedValues.m in Sources */ = {isa = PBXBuildFile; fileRef = FA80B93B18B97D680029119C /* SharedValues.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,10 @@
 		FA6ED9AF18B9587500CA58B5 /* ELHS SportsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ELHS SportsTests-Info.plist"; sourceTree = "<group>"; };
 		FA6ED9B118B9587500CA58B5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		FA6ED9B318B9587500CA58B5 /* ELHS_SportsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ELHS_SportsTests.m; sourceTree = "<group>"; };
+		FA80B93618B96DC70029119C /* WebPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebPageViewController.h; sourceTree = "<group>"; };
+		FA80B93718B96DC70029119C /* WebPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebPageViewController.m; sourceTree = "<group>"; };
+		FA80B93A18B97D680029119C /* SharedValues.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SharedValues.h; sourceTree = "<group>"; };
+		FA80B93B18B97D680029119C /* SharedValues.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SharedValues.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				FA6ED9BE18B9588600CA58B5 /* App Delegate */,
+				FA80B93918B97D4F0029119C /* Shared Values */,
 				FA6ED9BF18B9589100CA58B5 /* View Controllers */,
 				FA6ED9BD18B9587F00CA58B5 /* Interfaces */,
 				FA6ED9A018B9587400CA58B5 /* Images.xcassets */,
@@ -175,8 +182,19 @@
 			children = (
 				FA6ED99D18B9587400CA58B5 /* ViewController.h */,
 				FA6ED99E18B9587400CA58B5 /* ViewController.m */,
+				FA80B93618B96DC70029119C /* WebPageViewController.h */,
+				FA80B93718B96DC70029119C /* WebPageViewController.m */,
 			);
 			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		FA80B93918B97D4F0029119C /* Shared Values */ = {
+			isa = PBXGroup;
+			children = (
+				FA80B93A18B97D680029119C /* SharedValues.h */,
+				FA80B93B18B97D680029119C /* SharedValues.m */,
+			);
+			name = "Shared Values";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,6 +295,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA80B93C18B97D680029119C /* SharedValues.m in Sources */,
+				FA80B93818B96DC70029119C /* WebPageViewController.m in Sources */,
 				FA6ED99F18B9587400CA58B5 /* ViewController.m in Sources */,
 				FA6ED99618B9587400CA58B5 /* AppDelegate.m in Sources */,
 				FA6ED99218B9587400CA58B5 /* main.m in Sources */,
