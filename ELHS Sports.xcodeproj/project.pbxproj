@@ -24,6 +24,7 @@
 		FA6ED9B418B9587500CA58B5 /* ELHS_SportsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6ED9B318B9587500CA58B5 /* ELHS_SportsTests.m */; };
 		FA80B93818B96DC70029119C /* WebPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA80B93718B96DC70029119C /* WebPageViewController.m */; };
 		FA80B93C18B97D680029119C /* SharedValues.m in Sources */ = {isa = PBXBuildFile; fileRef = FA80B93B18B97D680029119C /* SharedValues.m */; };
+		FA80B93E18BAC68D0029119C /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA80B93D18BAC68D0029119C /* iAd.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		FA80B93718B96DC70029119C /* WebPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebPageViewController.m; sourceTree = "<group>"; };
 		FA80B93A18B97D680029119C /* SharedValues.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SharedValues.h; sourceTree = "<group>"; };
 		FA80B93B18B97D680029119C /* SharedValues.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SharedValues.m; sourceTree = "<group>"; };
+		FA80B93D18BAC68D0029119C /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA80B93E18BAC68D0029119C /* iAd.framework in Frameworks */,
 				FA6ED98818B9587400CA58B5 /* CoreGraphics.framework in Frameworks */,
 				FA6ED98A18B9587400CA58B5 /* UIKit.framework in Frameworks */,
 				FA6ED98618B9587400CA58B5 /* Foundation.framework in Frameworks */,
@@ -109,6 +112,7 @@
 		FA6ED98418B9587400CA58B5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FA80B93D18BAC68D0029119C /* iAd.framework */,
 				FA6ED98518B9587400CA58B5 /* Foundation.framework */,
 				FA6ED98718B9587400CA58B5 /* CoreGraphics.framework */,
 				FA6ED98918B9587400CA58B5 /* UIKit.framework */,

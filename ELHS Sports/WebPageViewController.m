@@ -20,6 +20,8 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     [self setAutomaticallyAdjustsScrollViewInsets:false];
+    [self.adBanner setHidden:TRUE];
+    
     
 }
 
@@ -36,11 +38,26 @@
     }
     
     //configure the buttons at the bottem
+    
     [self.backButton setHidden:TRUE];
     
+    if (!(self.adBanner.isHidden)) {
+        //if the banner is showing then redo the view setup
+        if (!(interfaceMoved)) {
+            //move everything up
+            [self.backButton setFrame:CGRectMake(self.backButton.frame.origin.x, self.backButton.frame.origin.y - 50, self.backButton.frame.size.width, self.backButton.frame.size.height)];
+            [self.refreshButton setFrame:CGRectMake(self.refreshButton.frame.origin.x, self.refreshButton.frame.origin.y - 50, self.refreshButton.frame.size.width, self.refreshButton.frame.size.height)];
+            [self.loadingAnimation setFrame:CGRectMake(self.loadingAnimation.frame.origin.x, self.loadingAnimation.frame.origin.y - 50, self.loadingAnimation.frame.size.width, self.loadingAnimation.frame.size.height)];
+            [self.webView setFrame:CGRectMake(self.webView.frame.origin.x, self.webView.frame.origin.y, self.webView.frame.size.width, self.webView.frame.size.height - 50)];
+            interfaceMoved = TRUE;
+        }
+    }
     
     
-    
+}
+
+-(void)viewWillDisappear:(BOOL)animated {
+    self.webView = nil;
 }
 
 - (void)didReceiveMemoryWarning{
@@ -73,20 +90,27 @@
         [self.webView goBack];
         
     } else {
+        
         //if the refresh button
         [self.webView reload];
+        [self.adBanner setHidden:TRUE];
         
     }
+    
 }
+
+
 
 - (void)webViewDidStartLoad:(UIWebView *)webView {
     [self.loadingAnimation setHidden:false];
+    [self.refreshButton setHidden:TRUE];
     [self.loadingAnimation startAnimating];
 }
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
     [self.loadingAnimation setHidden:TRUE];
     [self.loadingAnimation stopAnimating];
+    [self.refreshButton setHidden:false];
     
     //see if the back button should be shown
     if ([self.webView canGoBack]) {
@@ -102,6 +126,25 @@
     [self.navigationController popToRootViewControllerAnimated:TRUE];
     
 }
+
+- (void)bannerViewDidLoadAd:(ADBannerView *)banner {
+    [self.adBanner setHidden:false];
+    if (!(interfaceMoved)) {
+        //move everything up
+        [self.backButton setFrame:CGRectMake(self.backButton.frame.origin.x, self.backButton.frame.origin.y - 50, self.backButton.frame.size.width, self.backButton.frame.size.height)];
+        [self.refreshButton setFrame:CGRectMake(self.refreshButton.frame.origin.x, self.refreshButton.frame.origin.y - 50, self.refreshButton.frame.size.width, self.refreshButton.frame.size.height)];
+        [self.loadingAnimation setFrame:CGRectMake(self.loadingAnimation.frame.origin.x, self.loadingAnimation.frame.origin.y - 50, self.loadingAnimation.frame.size.width, self.loadingAnimation.frame.size.height)];
+        [self.webView setFrame:CGRectMake(self.webView.frame.origin.x, self.webView.frame.origin.y, self.webView.frame.size.width, self.webView.frame.size.height - 50)];
+        interfaceMoved = TRUE;
+    }
+    
+}
+
+- (void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error {
+    [self.adBanner setHidden:TRUE];
+}
+
+
 
 
 

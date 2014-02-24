@@ -7,18 +7,26 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <iAd/iAd.h>
 
-@interface WebPageViewController : UIViewController <UIWebViewDelegate>
+@interface WebPageViewController : UIViewController <UIWebViewDelegate, ADBannerViewDelegate>
 
-@property (strong, nonatomic) IBOutlet UIWebView *webView;
+@property (weak, nonatomic) IBOutlet UIWebView *webView;
 @property (strong, nonatomic) IBOutlet UINavigationItem *topNavBar;
 @property (strong, nonatomic) IBOutlet UIActivityIndicatorView *loadingAnimation;
 @property (strong, nonatomic) IBOutlet UIButton *backButton;
+@property (strong, nonatomic) IBOutlet UIButton *refreshButton;
+@property (strong, nonatomic) IBOutlet ADBannerView *adBanner;
+
 
 
 - (IBAction)buttonClicked:(UIButton *)sender;
 
 @end
+
+BOOL interfaceMoved;
+
+
 
 
 

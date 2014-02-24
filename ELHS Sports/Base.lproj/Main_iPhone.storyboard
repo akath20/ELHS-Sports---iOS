@@ -79,7 +79,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3hr-WZ-YVY">
                                 <rect key="frame" x="10" y="359" width="104" height="106"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Ski" image="Ski">
+                                <state key="normal" title="Skiing" image="Ski">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -157,7 +157,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="Xjj-aw-CRW">
                         <barButtonItem key="leftBarButtonItem" image="053 Preferences" id="nQt-ES-YvW">
-                            <color key="tintColor" red="0.85377471299999996" green="0.0092643148209999998" blue="0.0" alpha="0.68000000000000005" colorSpace="calibratedRGB"/>
+                            <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -181,7 +181,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" fixedFrame="YES" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2f7-Jb-lFt">
-                                <rect key="frame" x="0.0" y="65" width="320" height="453"/>
+                                <rect key="frame" x="0.0" y="65" width="320" height="503"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <dataDetectorType key="dataDetectorTypes" calendarEvent="YES"/>
@@ -189,9 +189,13 @@
                                     <outlet property="delegate" destination="OuM-O5-ulg" id="tjD-P7-R7D"/>
                                 </connections>
                             </webView>
-                            <button opaque="NO" alpha="0.75" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bFD-cr-YyW">
-                                <rect key="frame" x="12" y="479" width="32" height="29"/>
+                            <button opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bFD-cr-YyW">
+                                <rect key="frame" x="10" y="527" width="32" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="bQR-0d-9dS"/>
+                                    <constraint firstAttribute="width" constant="32" id="kBo-b7-eV4"/>
+                                </constraints>
                                 <state key="normal" title="Back" image="057 CircledArrowLeft">
                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -200,9 +204,13 @@
                                     <action selector="buttonClicked:" destination="OuM-O5-ulg" eventType="touchUpInside" id="fkS-4T-WOd"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" alpha="0.75" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="URy-Av-Lje">
-                                <rect key="frame" x="282" y="479" width="32" height="29"/>
+                            <button opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="URy-Av-Lje">
+                                <rect key="frame" x="281" y="527" width="32" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="32" id="VYa-L9-hKt"/>
+                                    <constraint firstAttribute="height" constant="29" id="fet-If-0Un"/>
+                                </constraints>
                                 <state key="normal" title="Refresh" image="063 Undo">
                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -211,18 +219,40 @@
                                     <action selector="buttonClicked:" destination="OuM-O5-ulg" eventType="touchUpInside" id="5x8-1R-xG0"/>
                                 </connections>
                             </button>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="AGB-11-cmn">
-                                <rect key="frame" x="150" y="484" width="20" height="20"/>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="AGB-11-cmn">
+                                <rect key="frame" x="150" y="532" width="20" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="VOY-0d-8Xk"/>
+                                    <constraint firstAttribute="height" constant="20" id="y8R-PZ-NOG"/>
+                                </constraints>
                                 <color key="color" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </activityIndicatorView>
+                            <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jdE-Y2-kqJ">
+                                <rect key="frame" x="0.0" y="518" width="320" height="50"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="OuM-O5-ulg" id="qqg-Hh-lrY"/>
+                                </connections>
+                            </adBannerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="FWa-lh-6mv" firstAttribute="top" secondItem="AGB-11-cmn" secondAttribute="bottom" constant="16" id="ABw-8Q-Fnu"/>
+                            <constraint firstItem="FWa-lh-6mv" firstAttribute="top" secondItem="bFD-cr-YyW" secondAttribute="bottom" constant="12" id="Gdk-WD-XfQ"/>
+                            <constraint firstItem="URy-Av-Lje" firstAttribute="leading" secondItem="AGB-11-cmn" secondAttribute="trailing" constant="111" id="XY3-Bq-aBo"/>
+                            <constraint firstItem="URy-Av-Lje" firstAttribute="leading" secondItem="AGB-11-cmn" secondAttribute="trailing" constant="111" id="YWS-1r-yJQ"/>
+                            <constraint firstItem="bFD-cr-YyW" firstAttribute="leading" secondItem="XUA-gI-TzP" secondAttribute="leading" constant="10" id="gGS-ce-VXQ"/>
+                            <constraint firstAttribute="trailing" secondItem="URy-Av-Lje" secondAttribute="trailing" constant="7" id="hEW-F7-uQz"/>
+                            <constraint firstItem="FWa-lh-6mv" firstAttribute="top" secondItem="URy-Av-Lje" secondAttribute="bottom" constant="12" id="y4z-i5-RrG"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="ySD-uE-uot"/>
                     <connections>
+                        <outlet property="adBanner" destination="jdE-Y2-kqJ" id="yDS-ub-d6x"/>
                         <outlet property="backButton" destination="bFD-cr-YyW" id="Qs1-fJ-4AO"/>
                         <outlet property="loadingAnimation" destination="AGB-11-cmn" id="PYh-mG-85h"/>
+                        <outlet property="refreshButton" destination="URy-Av-Lje" id="04c-GM-9Pj"/>
                         <outlet property="topNavBar" destination="ySD-uE-uot" id="ALN-3o-Ysz"/>
                         <outlet property="webView" destination="2f7-Jb-lFt" id="tTJ-UI-3dk"/>
                     </connections>
