@@ -11,6 +11,7 @@
 @interface SharedValues : NSObject
 
 @property (strong, nonatomic) NSString *urlToLoadAsString;
+@property BOOL webViewDidLoadOnce;
 
 + (SharedValues *)allValues;
 

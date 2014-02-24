@@ -20,7 +20,12 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     [self setAutomaticallyAdjustsScrollViewInsets:false];
-    [self.adBanner setHidden:TRUE];
+    if (![[SharedValues allValues] webViewDidLoadOnce]) {
+        [self.adBanner setHidden:TRUE];
+    }
+    
+    [[SharedValues allValues] setWebViewDidLoadOnce:TRUE];
+    
     
     
 }
