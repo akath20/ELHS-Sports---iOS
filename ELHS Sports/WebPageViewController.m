@@ -24,6 +24,28 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     
+    
+    //set the screen accordingly with the phone model
+    if ((int)[[UIScreen mainScreen] bounds].size.height == 568) {
+        // This is iPhone 5 screen
+        [self.backButton setFrame:CGRectMake(10, 527, 32, 29)];
+        [self.refreshButton setFrame:CGRectMake(281, 527, 32, 29)];
+        [self.webView setFrame:CGRectMake(0, 64, 320, 504)];
+        [self.loadingAnimation setFrame:CGRectMake(142, 298, self.loadingAnimation.frame.size.width, self.loadingAnimation.frame.size.height)];
+        [self.adBanner setFrame:CGRectMake(0, 518, 320, 50)];
+    } else {
+        //this is the 4/4s screen
+        [self.backButton setFrame:CGRectMake(10, 444, 32, 29)];
+        [self.refreshButton setFrame:CGRectMake(281, 444, 32, 29)];
+        [self.webView setFrame:CGRectMake(0, 64, 320, 416)];
+        [self.loadingAnimation setFrame:CGRectMake(142, 243, self.loadingAnimation.frame.size.width, self.loadingAnimation.frame.size.height)];
+        [self.adBanner setFrame:CGRectMake(0, 430, 320, 50)];
+        
+    }
+    
+    
+    
+    
     [self setAutomaticallyAdjustsScrollViewInsets:false];
     
     //Setup The Web View
@@ -54,11 +76,7 @@
     self.webView = nil;
 }
 
-- (void)didReceiveMemoryWarning{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-    
-}
+
 
 - (void)setupTheWebView {
     
@@ -86,7 +104,6 @@
         
         //if the refresh button
         [self.webView reload];
-        [self.adBanner setHidden:TRUE];
         
     }
     
