@@ -180,13 +180,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" fixedFrame="YES" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2f7-Jb-lFt">
+                            <webView multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ieR-DP-H6n">
                                 <rect key="frame" x="0.0" y="64" width="320" height="504"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <dataDetectorType key="dataDetectorTypes" calendarEvent="YES"/>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES"/>
                                 <connections>
-                                    <outlet property="delegate" destination="OuM-O5-ulg" id="tjD-P7-R7D"/>
+                                    <outlet property="delegate" destination="OuM-O5-ulg" id="o0L-1A-H3P"/>
                                 </connections>
                             </webView>
                             <button opaque="NO" alpha="0.75" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bFD-cr-YyW">
@@ -217,7 +217,7 @@
                                 <color key="color" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </activityIndicatorView>
                             <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jdE-Y2-kqJ">
-                                <rect key="frame" x="0.0" y="517" width="320" height="50"/>
+                                <rect key="frame" x="0.0" y="518" width="320" height="50"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <outlet property="delegate" destination="OuM-O5-ulg" id="qqg-Hh-lrY"/>
@@ -233,7 +233,7 @@
                         <outlet property="loadingAnimation" destination="AGB-11-cmn" id="PYh-mG-85h"/>
                         <outlet property="refreshButton" destination="URy-Av-Lje" id="04c-GM-9Pj"/>
                         <outlet property="topNavBar" destination="ySD-uE-uot" id="ALN-3o-Ysz"/>
-                        <outlet property="webView" destination="2f7-Jb-lFt" id="tTJ-UI-3dk"/>
+                        <outlet property="webView" destination="ieR-DP-H6n" id="Mh1-fW-x5z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3dp-J2-V3e" userLabel="First Responder" sceneMemberID="firstResponder"/>

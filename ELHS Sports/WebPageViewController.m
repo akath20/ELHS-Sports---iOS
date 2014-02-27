@@ -19,18 +19,12 @@
 - (void)viewDidLoad{
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    [self setAutomaticallyAdjustsScrollViewInsets:false];
-    if (![[SharedValues allValues] webViewDidLoadOnce]) {
-        [self.adBanner setHidden:TRUE];
-    }
-    
-    [[SharedValues allValues] setWebViewDidLoadOnce:TRUE];
-    
-    
     
 }
 
 - (void)viewWillAppear:(BOOL)animated {
+    
+    [self setAutomaticallyAdjustsScrollViewInsets:false];
     
     //Setup The Web View
     [self setupTheWebView];
@@ -46,16 +40,11 @@
     
     [self.backButton setHidden:TRUE];
     
-    if (!(self.adBanner.isHidden)) {
-        //if the banner is showing then redo the view setup
-        if (!(interfaceMoved)) {
-            //move everything up
-            [self.backButton setFrame:CGRectMake(self.backButton.frame.origin.x, self.backButton.frame.origin.y - 50, self.backButton.frame.size.width, self.backButton.frame.size.height)];
-            [self.refreshButton setFrame:CGRectMake(self.refreshButton.frame.origin.x, self.refreshButton.frame.origin.y - 50, self.refreshButton.frame.size.width, self.refreshButton.frame.size.height)];
-            [self.loadingAnimation setFrame:CGRectMake(self.loadingAnimation.frame.origin.x, self.loadingAnimation.frame.origin.y - 50, self.loadingAnimation.frame.size.width, self.loadingAnimation.frame.size.height)];
-            [self.webView setFrame:CGRectMake(self.webView.frame.origin.x, self.webView.frame.origin.y, self.webView.frame.size.width, self.webView.frame.size.height - 50)];
-            interfaceMoved = TRUE;
-        }
+    if ([[SharedValues allValues] adDidLoadOnce]) {
+        [self.backButton setFrame:CGRectMake(self.backButton.frame.origin.x, self.backButton.frame.origin.y - 50, self.backButton.frame.size.width, self.backButton.frame.size.height)];
+        [self.refreshButton setFrame:CGRectMake(self.refreshButton.frame.origin.x, self.refreshButton.frame.origin.y - 50, self.refreshButton.frame.size.width, self.refreshButton.frame.size.height)];
+        [self.webView setFrame:CGRectMake(self.webView.frame.origin.x, self.webView.frame.origin.y, self.webView.frame.size.width, self.webView.frame.size.height - 50)];
+        
     }
     
     
@@ -87,7 +76,6 @@
     
 }
 
-
 - (IBAction)buttonClicked:(UIButton *)sender {
     
     if ([sender.titleLabel.text isEqualToString:@"Back"]) {
@@ -103,8 +91,6 @@
     }
     
 }
-
-
 
 - (void)webViewDidStartLoad:(UIWebView *)webView {
     [self.loadingAnimation setHidden:false];
@@ -134,13 +120,13 @@
 
 - (void)bannerViewDidLoadAd:(ADBannerView *)banner {
     [self.adBanner setHidden:false];
-    if (!(interfaceMoved)) {
+    if (![[SharedValues allValues] adDidLoadOnce]) {
         //move everything up
         [self.backButton setFrame:CGRectMake(self.backButton.frame.origin.x, self.backButton.frame.origin.y - 50, self.backButton.frame.size.width, self.backButton.frame.size.height)];
         [self.refreshButton setFrame:CGRectMake(self.refreshButton.frame.origin.x, self.refreshButton.frame.origin.y - 50, self.refreshButton.frame.size.width, self.refreshButton.frame.size.height)];
-        [self.loadingAnimation setFrame:CGRectMake(self.loadingAnimation.frame.origin.x, self.loadingAnimation.frame.origin.y - 50, self.loadingAnimation.frame.size.width, self.loadingAnimation.frame.size.height)];
+        
         [self.webView setFrame:CGRectMake(self.webView.frame.origin.x, self.webView.frame.origin.y, self.webView.frame.size.width, self.webView.frame.size.height - 50)];
-        interfaceMoved = TRUE;
+        [[SharedValues allValues] setAdDidLoadOnce:TRUE];
     }
     
 }

@@ -18,13 +18,9 @@
 @property (strong, nonatomic) IBOutlet UIButton *refreshButton;
 @property (strong, nonatomic) IBOutlet ADBannerView *adBanner;
 
-
-
 - (IBAction)buttonClicked:(UIButton *)sender;
 
 @end
-
-BOOL interfaceMoved;
 
 
 
