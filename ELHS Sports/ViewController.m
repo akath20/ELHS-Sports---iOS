@@ -25,6 +25,7 @@
         
         int magicNumber = 25;
         int modNumber = 15;
+        float xMove  =.5;
         
         for (UIButton *currentButton in [self allButtons]) {
             if (currentButton.tag == 1) {
@@ -37,6 +38,8 @@
                 //middle line
                 [currentButton setFrame:CGRectMake(currentButton.frame.origin.x, (currentButton.frame.origin.y - magicNumber), (currentButton.frame.size.width - magicNumber), (currentButton.frame.size.height - magicNumber))];
             }
+            
+            [currentButton setFrame:CGRectMake((currentButton.frame.origin.x + (magicNumber * xMove)), currentButton.frame.origin.y, currentButton.frame.size.width, currentButton.frame.size.height)];
             
         }
         
