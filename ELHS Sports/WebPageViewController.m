@@ -49,14 +49,7 @@
     } else {
         //iPad
     }
-    
-    
-    
-    
-    
-    
-    
-    
+  
     
     [self setAutomaticallyAdjustsScrollViewInsets:false];
     
@@ -72,7 +65,12 @@
     
     //configure the buttons at the bottem
     
-    [self.backButton setHidden:TRUE];
+    if (self.webView.canGoBack) {
+        [self.backButton setHidden:false];
+    } else {
+        [self.backButton setHidden:true];
+    }
+    
     
     if ([[SharedValues allValues] adDidLoadOnce]) {
         [self.backButton setFrame:CGRectMake(self.backButton.frame.origin.x, self.backButton.frame.origin.y - 50, self.backButton.frame.size.width, self.backButton.frame.size.height)];
@@ -87,8 +85,6 @@
 -(void)viewWillDisappear:(BOOL)animated {
     self.webView = nil;
 }
-
-
 
 - (void)setupTheWebView {
     

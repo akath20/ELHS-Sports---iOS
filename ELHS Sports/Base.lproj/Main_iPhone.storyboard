@@ -64,7 +64,7 @@
                     <navigationItem key="navigationItem" title="Settings" id="TkG-Uq-Lk1">
                         <barButtonItem key="leftBarButtonItem" title="Back" id="g2m-PY-JVi">
                             <connections>
-                                <segue destination="vXZ-lx-hvc" kind="modal" identifier="homeScreen" modalTransitionStyle="flipHorizontal" id="huj-Ob-UpI"/>
+                                <segue destination="3Eg-ig-t8E" kind="modal" identifier="homeScreen" modalTransitionStyle="flipHorizontal" id="qnk-BN-Vs0"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -389,7 +389,4 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
-    <inferredMetricsTieBreakers>
-        <segue reference="huj-Ob-UpI"/>
-    </inferredMetricsTieBreakers>
 </document>
