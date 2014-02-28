@@ -15,5 +15,7 @@
 @property (strong, nonatomic) IBOutlet UIView *contentView;
 
 
+- (IBAction)launchWebsite:(id)sender;
+
 
 @end

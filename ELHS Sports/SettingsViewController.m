@@ -30,4 +30,9 @@
     
 }
 
+- (IBAction)launchWebsite:(id)sender {
+    //open my website
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString: @"http://webpages.charter.net/akath20/"]];
+}
+
 @end
