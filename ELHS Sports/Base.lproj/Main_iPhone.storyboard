@@ -4,6 +4,38 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
+        <!--Settings View Controller - Settings-->
+        <scene sceneID="OPB-iC-svW">
+            <objects>
+                <viewController id="xhM-tj-gUw" customClass="SettingsViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VYb-KZ-1WE">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" id="4ms-a8-ocp">
+                                <rect key="frame" x="0.0" y="65" width="320" height="503"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" id="XLI-TK-C6D">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="503"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
+                            </scrollView>
+                            <imageView userInteractionEnabled="NO" alpha="0.25" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="aboutpage" id="6P5-KN-FWd">
+                                <rect key="frame" x="0.0" y="65" width="320" height="503"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Settings" id="TkG-Uq-Lk1"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="evM-lq-NpY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1402" y="-448"/>
+        </scene>
         <!--View Controller - Home-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
@@ -161,6 +193,9 @@
                     <navigationItem key="navigationItem" title="Home" id="Xjj-aw-CRW">
                         <barButtonItem key="leftBarButtonItem" image="053 Preferences" id="nQt-ES-YvW">
                             <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <connections>
+                                <segue destination="pWZ-S4-08B" kind="modal" id="RFS-vk-Cnu"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -274,6 +309,24 @@
             </objects>
             <point key="canvasLocation" x="453" y="207"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Udx-g1-KAA">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pWZ-S4-08B" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hpM-b5-dbv">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="xhM-tj-gUw" kind="relationship" relationship="rootViewController" id="H8T-Hk-678"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Noh-fp-OcQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="916" y="-448"/>
+        </scene>
     </scenes>
     <resources>
         <image name="053 Preferences" width="32" height="32"/>
@@ -287,6 +340,7 @@
         <image name="Swim" width="128" height="128"/>
         <image name="Track" width="128" height="128"/>
         <image name="Wrestling" width="128" height="128"/>
+        <image name="aboutpage" width="320" height="568"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
