@@ -15,5 +15,19 @@
 @implementation SettingsViewController
 
 
+- (void)viewDidLoad {
+    
+    //version number
+    self.versionLabel.text = [NSString stringWithFormat:@"Version: %@", [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"]];
+    
+    //set the frame if i move it
+    [self.contentView setFrame:CGRectMake(0, 0, 320, self.contentView.frame.size.height)];
+    
+    //set the content size
+    [self.scrollView setContentSize:self.contentView.frame.size];
+    
+    
+    
+}
 
 @end
