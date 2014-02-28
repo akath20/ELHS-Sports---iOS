@@ -15,10 +15,15 @@
 
 @implementation ViewController
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    
+    //hide the ad
+    [self.adBanner setAlpha:0.0];
+    
+    
     
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
         //iPhone
@@ -78,8 +83,6 @@
     
 }
 
-
-
 - (IBAction)iconClicked:(UIButton *)sender {
     
     //get title of the selected image
@@ -109,6 +112,32 @@
     //switch the view
     [self performSegueWithIdentifier:@"showWebPage" sender:Nil];
 }
+
+- (void)bannerViewDidLoadAd:(ADBannerView *)banner {
+    
+    if (self.adBanner.alpha < 1) {
+        [self.adBanner setAlpha:1];
+    }
+    
+    
+}
+
+- (void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error {
+    if (self.adBanner.alpha > 0) {
+        [self.adBanner setAlpha:0];
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 @end

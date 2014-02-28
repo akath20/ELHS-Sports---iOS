@@ -7,13 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <iAd/iAd.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <ADBannerViewDelegate>
 
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *allButtons;
 
 @property (strong, nonatomic) IBOutletCollection(UILabel) NSArray *allLabels;
 
+@property (strong, nonatomic) IBOutlet ADBannerView *adBanner;
 
 - (IBAction)iconClicked:(UIButton *)sender;
 

@@ -151,6 +151,9 @@
                             <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="vjX-2b-eAr">
                                 <rect key="frame" x="0.0" y="64" width="320" height="50"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="0z1-Lx-Cw5"/>
+                                </connections>
                             </adBannerView>
                         </subviews>
                         <color key="backgroundColor" red="0.85377471301020402" green="0.0092643148213790404" blue="0.0" alpha="0.68000000000000005" colorSpace="calibratedRGB"/>
@@ -161,6 +164,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="adBanner" destination="vjX-2b-eAr" id="vgU-QN-BHQ"/>
                         <outletCollection property="allButtons" destination="Gv2-ap-NyX" id="By8-h0-ans"/>
                         <outletCollection property="allButtons" destination="Y60-Sb-fhF" id="me3-vk-bG0"/>
                         <outletCollection property="allButtons" destination="3hr-WZ-YVY" id="bkY-dp-GRY"/>
