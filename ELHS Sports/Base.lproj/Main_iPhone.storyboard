@@ -61,7 +61,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Settings" id="TkG-Uq-Lk1"/>
+                    <navigationItem key="navigationItem" title="Settings" id="TkG-Uq-Lk1">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="g2m-PY-JVi">
+                            <connections>
+                                <segue destination="vXZ-lx-hvc" kind="modal" identifier="homeScreen" modalTransitionStyle="flipHorizontal" id="huj-Ob-UpI"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="contentView" destination="XLI-TK-C6D" id="zOf-9t-UaD"/>
                         <outlet property="scrollView" destination="4ms-a8-ocp" id="qvS-yT-ABG"/>
@@ -230,7 +236,7 @@
                         <barButtonItem key="leftBarButtonItem" image="053 Preferences" id="nQt-ES-YvW">
                             <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                             <connections>
-                                <segue destination="pWZ-S4-08B" kind="modal" id="RFS-vk-Cnu"/>
+                                <segue destination="pWZ-S4-08B" kind="modal" modalTransitionStyle="flipHorizontal" id="RFS-vk-Cnu"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -383,4 +389,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="huj-Ob-UpI"/>
+    </inferredMetricsTieBreakers>
 </document>
