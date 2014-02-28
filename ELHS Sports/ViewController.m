@@ -19,14 +19,25 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
+    
+    if (!((int)[[UIScreen mainScreen] bounds].size.height == 568)) {
+        
+        int magicNumber = 20;
+        
+        for (UIButton *currentButton in [self allButtons]) {
+            [currentButton setFrame:CGRectMake(currentButton.frame.origin.x, (currentButton.frame.origin.y - magicNumber), currentButton.frame.size.width, currentButton.frame.size.height)];
+        }
+ 
+    }
+    
+    
+    
+    
     
 }
+
+
 
 - (IBAction)iconClicked:(UIButton *)sender {
     

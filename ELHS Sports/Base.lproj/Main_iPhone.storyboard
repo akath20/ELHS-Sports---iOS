@@ -157,6 +157,22 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outletCollection property="allButtons" destination="Gv2-ap-NyX" id="By8-h0-ans"/>
+                        <outletCollection property="allButtons" destination="Y60-Sb-fhF" id="me3-vk-bG0"/>
+                        <outletCollection property="allButtons" destination="3hr-WZ-YVY" id="bkY-dp-GRY"/>
+                        <outletCollection property="allButtons" destination="0k6-ei-z19" id="GMJ-4V-qjl"/>
+                        <outletCollection property="allButtons" destination="bes-4Q-iw3" id="dEG-Ki-faB"/>
+                        <outletCollection property="allButtons" destination="cf1-IF-TFi" id="bAo-zO-QEf"/>
+                        <outletCollection property="allButtons" destination="Qe6-KZ-lgV" id="aY3-uc-eU4"/>
+                        <outletCollection property="allButtons" destination="eO8-XE-c7x" id="r7u-9I-tmc"/>
+                        <outletCollection property="allLabels" destination="oYo-qa-NRI" id="xYh-9B-4cE"/>
+                        <outletCollection property="allLabels" destination="ZYF-KK-npX" id="fk5-qv-CpF"/>
+                        <outletCollection property="allLabels" destination="lV0-mV-MeH" id="oR0-Nq-oJh"/>
+                        <outletCollection property="allLabels" destination="1RH-xz-1vb" id="Adg-mc-L8M"/>
+                        <outletCollection property="allLabels" destination="qOH-u1-ZMu" id="J7k-kR-lmE"/>
+                        <outletCollection property="allLabels" destination="biL-Ng-3C8" id="lTq-dg-3Ga"/>
+                        <outletCollection property="allLabels" destination="XLK-td-S51" id="dZx-xQ-3v5"/>
+                        <outletCollection property="allLabels" destination="kXm-a4-emJ" id="cQV-IM-QiY"/>
                         <segue destination="OuM-O5-ulg" kind="push" identifier="showWebPage" id="Lmn-Sx-U0W"/>
                     </connections>
                 </viewController>
