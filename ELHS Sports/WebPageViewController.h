@@ -16,7 +16,7 @@
 @property (strong, nonatomic) IBOutlet UIActivityIndicatorView *loadingAnimation;
 @property (strong, nonatomic) IBOutlet UIButton *backButton;
 @property (strong, nonatomic) IBOutlet UIButton *refreshButton;
-@property (strong, nonatomic) IBOutlet ADBannerView *adBanner;
+@property (strong, nonatomic) ADBannerView *adBanner;
 
 - (IBAction)buttonClicked:(UIButton *)sender;
 

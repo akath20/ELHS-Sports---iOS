@@ -23,7 +23,7 @@
 
 - (void)bannerViewDidLoadAd:(ADBannerView *)banner{
     
-    NSLog(@"BannerLoaded");
+    NSLog(@"\nBanner Loaded");
     
     [[NSNotificationCenter defaultCenter] postNotificationName:@"bannerLoaded" object:self];
     
@@ -31,9 +31,10 @@
 
 - (void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error{
     
-    if (self.adBanner.bannerLoaded == true) {
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"bannerError" object:self];
-    }
+    NSLog(@"\nBanner didn't Load");
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"bannerError" object:self];
+    
 }
 
 @end

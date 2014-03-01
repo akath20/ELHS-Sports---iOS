@@ -301,19 +301,11 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="color" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </activityIndicatorView>
-                            <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="jdE-Y2-kqJ">
-                                <rect key="frame" x="0.0" y="518" width="320" height="50"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <outlet property="delegate" destination="OuM-O5-ulg" id="qqg-Hh-lrY"/>
-                                </connections>
-                            </adBannerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="ySD-uE-uot"/>
                     <connections>
-                        <outlet property="adBanner" destination="jdE-Y2-kqJ" id="yDS-ub-d6x"/>
                         <outlet property="backButton" destination="bFD-cr-YyW" id="Qs1-fJ-4AO"/>
                         <outlet property="loadingAnimation" destination="AGB-11-cmn" id="PYh-mG-85h"/>
                         <outlet property="refreshButton" destination="URy-Av-Lje" id="04c-GM-9Pj"/>

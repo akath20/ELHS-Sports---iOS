@@ -8,6 +8,7 @@
 
 #import "WebPageViewController.h"
 #import "SharedValues.h"
+#import "AppDelegate.h"
 
 @interface WebPageViewController ()
 
@@ -15,14 +16,15 @@
 
 @implementation WebPageViewController
 
-
-- (void)viewDidLoad{
-    [super viewDidLoad];
-	// Do any additional setup after loading the view.
-    
-}
-
 - (void)viewWillAppear:(BOOL)animated {
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadBanner) name:@"bannerLoaded" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(bannerError) name:@"bannerError" object:nil];
+    
+    
+    self.adBanner = SharedAdBannerView;
+    
+    
     
     
     
@@ -50,7 +52,10 @@
         //iPad
     }
   
+    //add the ad
+    [self.view addSubview:self.adBanner];
     
+
     [self setAutomaticallyAdjustsScrollViewInsets:false];
     
     //Setup The Web View
@@ -77,6 +82,12 @@
         [self.refreshButton setFrame:CGRectMake(self.refreshButton.frame.origin.x, self.refreshButton.frame.origin.y - 50, self.refreshButton.frame.size.width, self.refreshButton.frame.size.height)];
         [self.webView setFrame:CGRectMake(self.webView.frame.origin.x, self.webView.frame.origin.y, self.webView.frame.size.width, self.webView.frame.size.height - 50)];
         
+    }
+    
+    if (SharedAdBannerView.isBannerLoaded) {
+        [self loadBanner];
+    } else {
+        [self bannerError];
     }
     
     
@@ -143,8 +154,8 @@
     
 }
 
-- (void)bannerViewDidLoadAd:(ADBannerView *)banner {
-    [self.adBanner setHidden:false];
+- (void)loadBanner {
+    [self.adBanner setAlpha:1];
     if (![[SharedValues allValues] adDidLoadOnce]) {
         //move everything up
         [self.backButton setFrame:CGRectMake(self.backButton.frame.origin.x, self.backButton.frame.origin.y - 50, self.backButton.frame.size.width, self.backButton.frame.size.height)];
@@ -156,8 +167,8 @@
     
 }
 
-- (void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error {
-    [self.adBanner setHidden:TRUE];
+- (void)bannerError {
+    [self.adBanner setAlpha:0.0];
 }
 
 
