@@ -13,6 +13,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *versionLabel;
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (strong, nonatomic) IBOutlet UIView *contentView;
+@property (strong, nonatomic) IBOutlet UIImageView *backGroundImage;
 
 
 - (IBAction)launchWebsite:(id)sender;

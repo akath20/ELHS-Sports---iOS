@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="3Eg-ig-t8E">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="3Eg-ig-t8E">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
@@ -9,19 +9,15 @@
             <objects>
                 <viewController id="xhM-tj-gUw" customClass="SettingsViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VYb-KZ-1WE">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" alpha="0.25" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="aboutpage" id="6P5-KN-FWd">
-                                <rect key="frame" x="0.0" y="65" width="320" height="503"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <scrollView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" id="4ms-a8-ocp">
-                                <rect key="frame" x="0.0" y="65" width="320" height="503"/>
+                                <rect key="frame" x="0.0" y="65" width="320" height="415"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" id="XLI-TK-C6D">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="503"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="415"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <subviews>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Developed By: Alex Atwater" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Tbi-hY-bSa">
@@ -58,6 +54,10 @@
                                     </view>
                                 </subviews>
                             </scrollView>
+                            <imageView userInteractionEnabled="NO" alpha="0.25" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="aboutpage" id="6P5-KN-FWd">
+                                <rect key="frame" x="0.0" y="65" width="320" height="503"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -69,6 +69,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="backGroundImage" destination="6P5-KN-FWd" id="1gx-vd-hyC"/>
                         <outlet property="contentView" destination="XLI-TK-C6D" id="zOf-9t-UaD"/>
                         <outlet property="scrollView" destination="4ms-a8-ocp" id="qvS-yT-ABG"/>
                         <outlet property="versionLabel" destination="pnv-vM-wtL" id="9FF-ik-5eN"/>
@@ -83,7 +84,7 @@
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="eO8-XE-c7x">
@@ -226,8 +227,7 @@
                         <color key="backgroundColor" red="0.85377471301020402" green="0.0092643148213790404" blue="0.0" alpha="0.68000000000000005" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="Xjj-aw-CRW">
-                        <barButtonItem key="leftBarButtonItem" image="053 Preferences" id="nQt-ES-YvW">
-                            <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <barButtonItem key="leftBarButtonItem" title="About" id="nQt-ES-YvW">
                             <connections>
                                 <segue destination="pWZ-S4-08B" kind="modal" modalTransitionStyle="flipHorizontal" id="RFS-vk-Cnu"/>
                             </connections>
@@ -262,7 +262,7 @@
             <objects>
                 <viewController id="OuM-O5-ulg" customClass="WebPageViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XUA-gI-TzP">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <webView multipleTouchEnabled="YES" contentMode="scaleAspectFit" scalesPageToFit="YES" id="ieR-DP-H6n">
@@ -355,7 +355,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="053 Preferences" width="32" height="32"/>
         <image name="057 CircledArrowLeft" width="32" height="32"/>
         <image name="063 Undo" width="32" height="32"/>
         <image name="Basketball" width="128" height="128"/>
@@ -371,6 +370,6 @@
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
+        <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
 </document>

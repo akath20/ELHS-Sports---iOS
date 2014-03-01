@@ -17,6 +17,16 @@
 
 - (void)viewDidLoad {
     
+    
+    
+    //put the picture in front
+    
+    [self.backGroundImage removeFromSuperview];
+    [self.view insertSubview:self.backGroundImage aboveSubview:self.scrollView];
+    [self.backGroundImage setFrame:CGRectMake(160, 252, 320, 503)];
+    
+    
+    
     //version number
     self.versionLabel.text = [NSString stringWithFormat:@"Version: %@", [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"]];
     
