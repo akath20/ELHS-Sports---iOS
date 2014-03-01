@@ -8,30 +8,80 @@
 
 #import "ViewController.h"
 #import "SharedValues.h"
+#import "AppDelegate.h"
 
-@interface ViewController ()
+@interface ViewController () 
 
 @end
 
-@implementation ViewController
+@implementation ViewController {
+    
+}
+
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
     
-    //hide the ad
-    [self.adBanner setAlpha:0.0];
+    
+    
+    
+    
+    
+    
+    
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadBanner) name:@"bannerLoaded" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(bannerError) name:@"bannerError" object:nil];
+    
+    
+    self.adBanner = SharedAdBannerView;
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
         //iPhone
+        
+        [self.adBanner setFrame:CGRectMake(0, 64, 320, 50)];
+        
         if (!((int)[[UIScreen mainScreen] bounds].size.height == 568)) {
             
             int magicNumber = 25;
             int modNumber = 15;
             float xMove  =.5;
+            
+            
             
             for (UIButton *currentButton in [self allButtons]) {
                 if (currentButton.tag == 1) {
@@ -81,6 +131,21 @@
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    [self.view addSubview:self.adBanner];
+    
+    //hide the ad
+    
+    
+    
+    
+    
 }
 
 - (IBAction)iconClicked:(UIButton *)sender {
@@ -113,23 +178,20 @@
     [self performSegueWithIdentifier:@"showWebPage" sender:Nil];
 }
 
-- (void)bannerViewDidLoadAd:(ADBannerView *)banner {
-    
+
+- (void)loadBanner {
     if (self.adBanner.alpha < 1) {
         [self.adBanner setAlpha:1];
     }
     
-    
 }
 
-- (void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error {
+- (void)bannerError {
     if (self.adBanner.alpha > 0) {
         [self.adBanner setAlpha:0];
     }
+    
 }
-
-
-
 
 
 
