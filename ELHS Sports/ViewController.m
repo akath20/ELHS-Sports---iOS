@@ -122,7 +122,6 @@
     
 }
 
-
 - (IBAction)iconClicked:(UIButton *)sender {
     
     //get title of the selected image

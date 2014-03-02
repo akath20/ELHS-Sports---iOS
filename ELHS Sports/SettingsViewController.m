@@ -7,6 +7,7 @@
 //
 
 #import "SettingsViewController.h"
+#import "SharedValues.h"
 
 @interface SettingsViewController ()
 
@@ -32,8 +33,16 @@
 }
 
 - (IBAction)launchWebsite:(id)sender {
-    //open my website
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString: @"http://webpages.charter.net/akath20/"]];
+//    //open my website
+//    [[UIApplication sharedApplication] openURL:[NSURL URLWithString: @"http://webpages.charter.net/akath20/"]];
+    
+    //keep them in the app to load ads
+    //load the string
+    [[SharedValues allValues] setUrlToLoadAsString:@"http://webpages.charter.net/akath20/"];
+    
+    //switch the view
+    [self performSegueWithIdentifier:@"showMyWebsite" sender:Nil];
+
 }
 
 

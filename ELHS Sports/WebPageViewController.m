@@ -102,14 +102,33 @@
     //get the webpage to load
     NSString *urlToLoadAsString = [[SharedValues allValues] urlToLoadAsString];
     
-    //convert to URL
-    NSURL *urlToLoadAsURL = [[NSURL alloc] initWithString:[NSString stringWithFormat:@"http://www.eastlongmeadowsports.com/%@", urlToLoadAsString]];
+    if (![urlToLoadAsString isEqualToString:@"http://webpages.charter.net/akath20/"]) {
+        //if not coming from my website but from homescreen
+        
+        //convert to URL
+        NSURL *urlToLoadAsURL = [[NSURL alloc] initWithString:[NSString stringWithFormat:@"http://www.eastlongmeadowsports.com/%@", urlToLoadAsString]];
+        
+        //make a load request
+        NSURLRequest *urlToLoadRequest = [[NSURLRequest alloc] initWithURL:urlToLoadAsURL];
+        
+        //load the webpage
+        [self.webView loadRequest:urlToLoadRequest];
+        
+    } else {
+        //if coming from the settings and showing my website
+        
+        //convert to URL
+        NSURL *urlToLoadAsURL = [[NSURL alloc] initWithString:urlToLoadAsString];
+        
+        //make a load request
+        NSURLRequest *urlToLoadRequest = [[NSURLRequest alloc] initWithURL:urlToLoadAsURL];
+        
+        //load the webpage
+        [self.webView loadRequest:urlToLoadRequest];
+        
+        
+    }
     
-    //make a load request
-    NSURLRequest *urlToLoadRequest = [[NSURLRequest alloc] initWithURL:urlToLoadAsURL];
-    
-    //load the webpage
-    [self.webView loadRequest:urlToLoadRequest];
     
 }
 
