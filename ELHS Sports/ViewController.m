@@ -21,11 +21,9 @@
 	// Do any additional setup after loading the view, typically from a nib.
     
     
-    
+    //The ad
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadBanner) name:@"bannerLoaded" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(bannerError) name:@"bannerError" object:nil];
-    
-    
     self.adBanner = SharedAdBannerView;
     
     

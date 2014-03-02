@@ -8,6 +8,7 @@
 
 #import "SettingsViewController.h"
 #import "SharedValues.h"
+#import "AppDelegate.h"
 
 @interface SettingsViewController ()
 
@@ -30,19 +31,78 @@
     
     
     
+    //the ad
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadBanner) name:@"bannerLoaded" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(bannerError) name:@"bannerError" object:nil];
+    self.adBanner = SharedAdBannerView;
+    
+    
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
+        //iPhone
+        
+        [self.adBanner setFrame:CGRectMake(0, 64, 320, 50)];
+        
+    }
+    
+    
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
+        //iPhone
+        
+        [self.adBanner setFrame:CGRectMake(0, 64, 320, 50)];
+        
+        if (!((int)[[UIScreen mainScreen] bounds].size.height == 568)) {
+            
+        } else {
+            //iPad
+            
+        }
+        
+        //add the ad to the view
+        [self.view addSubview:self.adBanner];
+        if (SharedAdBannerView.isBannerLoaded) {
+            [self loadBanner];
+        } else {
+            [self bannerError];
+        }
+        
+        
+    }
+    
+    
+    
 }
 
 - (IBAction)launchWebsite:(id)sender {
-//    //open my website
-//    [[UIApplication sharedApplication] openURL:[NSURL URLWithString: @"http://webpages.charter.net/akath20/"]];
     
-    //keep them in the app to load ads
+    //open my website
+    
     //load the string
     [[SharedValues allValues] setUrlToLoadAsString:@"http://webpages.charter.net/akath20/"];
     
     //switch the view
     [self performSegueWithIdentifier:@"showMyWebsite" sender:Nil];
 
+}
+
+- (void)loadBanner {
+    if (self.adBanner.alpha < 1) {
+        [UIView animateWithDuration:.5 animations:^{
+            [self.adBanner setAlpha:1];
+        }];
+        
+    }
+    
+}
+
+- (void)bannerError {
+    if (self.adBanner.alpha > 0) {
+        [self.adBanner setAlpha:0];
+    }
+    
 }
 
 
