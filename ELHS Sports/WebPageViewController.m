@@ -9,6 +9,7 @@
 #import "WebPageViewController.h"
 #import "SharedValues.h"
 #import "AppDelegate.h"
+#import "Reachability.h"
 
 @interface WebPageViewController ()
 
@@ -167,8 +168,18 @@
 }
 
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
-    UIAlertView *errorAlert = [[UIAlertView alloc] initWithTitle:@"An Error Occured" message:[NSString stringWithFormat:@"An Error Occured. Please try again, if problem continues, please contact support. \n%@", error] delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles: nil];
-    [errorAlert show];
+    
+    //check the internet connection
+    if (![Reachability checkForInternetWithString:nil]) {
+        //no internet
+        [[Reachability showAlertNoInternet] show];
+    } else {
+        //other error
+        UIAlertView *errorAlert = [[UIAlertView alloc] initWithTitle:@"An Error Occured" message:[NSString stringWithFormat:@"An Error Occured. Please try again, if problem continues, please contact support. \n%@", error] delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles: nil];
+        [errorAlert show];
+    }
+    
+    
     [self.navigationController popToRootViewControllerAnimated:TRUE];
     
 }

@@ -16,7 +16,6 @@
     
     if (stringToCheck) {
         //if there is a string to check
-        
         NSURL *scriptUrl = [NSURL URLWithString:stringToCheck];
         NSData *data = [NSData dataWithContentsOfURL:scriptUrl];
         if (data) {
