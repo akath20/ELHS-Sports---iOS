@@ -19,10 +19,10 @@
         NSURL *scriptUrl = [NSURL URLWithString:stringToCheck];
         NSData *data = [NSData dataWithContentsOfURL:scriptUrl];
         if (data) {
-            NSLog(@"Device is connected to the internet");
+            //connected to the internet
             internetAvailable = YES;
         } else {
-            NSLog(@"Device is not connected to the internet");
+            //not connected to the internet
             internetAvailable = NO;
         }
         
@@ -30,10 +30,10 @@
         NSURL *scriptUrl = [NSURL URLWithString:@"http://www.google.com"];
         NSData *data = [NSData dataWithContentsOfURL:scriptUrl];
         if (data) {
-            NSLog(@"Device is connected to the internet");
+            //connected to the internet
             internetAvailable = YES;
         } else {
-            NSLog(@"Device is not connected to the internet");
+            //not connected to the internet
             internetAvailable = NO;
         }
     }
