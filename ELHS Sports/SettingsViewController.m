@@ -9,6 +9,7 @@
 #import "SettingsViewController.h"
 #import "SharedValues.h"
 #import "AppDelegate.h"
+#import "Reachability.h"
 
 @interface SettingsViewController ()
 
@@ -78,13 +79,17 @@
 
 - (IBAction)launchWebsite:(id)sender {
     
-    //open my website
-    
     //load the string
     [[SharedValues allValues] setUrlToLoadAsString:@"http://webpages.charter.net/akath20/"];
     
     //switch the view
-    [self performSegueWithIdentifier:@"showMyWebsite" sender:Nil];
+    //check for internet connection
+    if (![Reachability checkForInternetWithString:Nil]) {
+        //show alert from the class
+        [[Reachability showAlertNoInternet] show];
+    } else {
+        [self performSegueWithIdentifier:@"showMyWebsite" sender:Nil];
+    }
 
 }
 

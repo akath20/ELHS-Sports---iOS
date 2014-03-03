@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "SharedValues.h"
 #import "AppDelegate.h"
+#import "Reachability.h"
 
 @interface ViewController () 
 
@@ -19,6 +20,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    
+    
+    //check for internet connection
+    if (![Reachability checkForInternetWithString:Nil]) {
+        //show alert from the class
+        [[Reachability showAlertNoInternet] show];
+    }
+    
     
     
     //The ad
@@ -147,7 +157,14 @@
     }
     
     //switch the view
-    [self performSegueWithIdentifier:@"showWebPage" sender:Nil];
+    //check for internet connection
+    if (![Reachability checkForInternetWithString:Nil]) {
+        //show alert from the class
+        [[Reachability showAlertNoInternet] show];
+    } else {
+        [self performSegueWithIdentifier:@"showWebPage" sender:Nil];
+    }
+    
 }
 
 - (void)loadBanner {

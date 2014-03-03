@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FA12F46818C029AB009EE855 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA12F46718C029AB009EE855 /* SettingsViewController.m */; };
+		FA4C399B18C3D08C001847C7 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = FA4C399A18C3D08C001847C7 /* Reachability.m */; };
 		FA6ED98618B9587400CA58B5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA6ED98518B9587400CA58B5 /* Foundation.framework */; };
 		FA6ED98818B9587400CA58B5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA6ED98718B9587400CA58B5 /* CoreGraphics.framework */; };
 		FA6ED98A18B9587400CA58B5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA6ED98918B9587400CA58B5 /* UIKit.framework */; };
@@ -41,6 +42,8 @@
 /* Begin PBXFileReference section */
 		FA12F46618C029AB009EE855 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		FA12F46718C029AB009EE855 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		FA4C399918C3D08C001847C7 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		FA4C399A18C3D08C001847C7 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		FA6ED98218B9587400CA58B5 /* ELHS Sports.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ELHS Sports.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA6ED98518B9587400CA58B5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FA6ED98718B9587400CA58B5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -202,6 +205,8 @@
 			children = (
 				FA80B93A18B97D680029119C /* SharedValues.h */,
 				FA80B93B18B97D680029119C /* SharedValues.m */,
+				FA4C399918C3D08C001847C7 /* Reachability.h */,
+				FA4C399A18C3D08C001847C7 /* Reachability.m */,
 			);
 			name = "Shared Values";
 			sourceTree = "<group>";
@@ -310,6 +315,7 @@
 				FA80B93C18B97D680029119C /* SharedValues.m in Sources */,
 				FA80B93818B96DC70029119C /* WebPageViewController.m in Sources */,
 				FA6ED99F18B9587400CA58B5 /* ViewController.m in Sources */,
+				FA4C399B18C3D08C001847C7 /* Reachability.m in Sources */,
 				FA12F46818C029AB009EE855 /* SettingsViewController.m in Sources */,
 				FA6ED99618B9587400CA58B5 /* AppDelegate.m in Sources */,
 				FA6ED99218B9587400CA58B5 /* main.m in Sources */,
