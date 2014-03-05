@@ -94,8 +94,13 @@
     
 }
 
--(void)viewWillDisappear:(BOOL)animated {
+- (void)viewWillDisappear:(BOOL)animated {
     self.webView = nil;
+}
+
+- (void)viewDidDisappear:(BOOL)animated {
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"bannerLoaded" object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"bannerError" object:nil];
 }
 
 - (void)setupTheWebView {
@@ -135,7 +140,7 @@
 
 - (IBAction)buttonClicked:(UIButton *)sender {
     
-    if ([sender.titleLabel.text isEqualToString:@"Back"]) {
+    if (sender.tag == 0) {
         //if the back button
         [self.webView goBack];
         
@@ -181,6 +186,16 @@
     
     
     [self.navigationController popToRootViewControllerAnimated:TRUE];
+    
+}
+
+- (void)iPadOrientationSetUp {
+    if ([[UIApplication sharedApplication] statusBarOrientation] == UIInterfaceOrientationPortrait || [[UIApplication sharedApplication] statusBarOrientation] == UIInterfaceOrientationPortraitUpsideDown) {
+        //if portrait
+    } else {
+        
+    }
+    
     
 }
 

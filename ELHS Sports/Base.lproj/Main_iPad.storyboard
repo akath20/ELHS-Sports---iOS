@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--View Controller - Home-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
@@ -29,6 +29,9 @@
                                 <state key="normal" backgroundImage="Track">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="iconClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="o66-QP-9S6"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dsd-r2-9WA">
                                 <rect key="frame" x="566" y="442" width="151" height="140"/>
@@ -36,6 +39,9 @@
                                 <state key="normal" backgroundImage="Hockey">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="iconClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Slb-aD-0Yi"/>
+                                </connections>
                             </button>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Kb-3P-ahJ">
                                 <rect key="frame" x="83" y="136" width="174" height="163"/>
@@ -43,6 +49,9 @@
                                 <state key="normal" backgroundImage="Basketball">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="iconClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wv3-PY-Ooe"/>
+                                </connections>
                             </button>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uDl-Ni-cel">
                                 <rect key="frame" x="515" y="138" width="158" height="158"/>
@@ -50,6 +59,9 @@
                                 <state key="normal" backgroundImage="Swim">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="iconClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CON-LY-hmH"/>
+                                </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Skiing" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ldC-5O-3aD">
                                 <rect key="frame" x="83" y="906" width="111" height="41"/>
@@ -59,11 +71,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3as-el-bek">
-                                <rect key="frame" x="214" y="214" width="369" height="568"/>
+                                <rect key="frame" x="273" y="318" width="250" height="387"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="Home">
+                                <state key="normal" backgroundImage="Home">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="iconClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="srA-Ok-JG5"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CPx-5j-D36">
                                 <rect key="frame" x="57" y="431" width="162" height="162"/>
@@ -71,6 +86,9 @@
                                 <state key="normal" backgroundImage="Soccer">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="iconClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MNs-OO-3mf"/>
+                                </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Wrestling" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NGG-ra-i20">
                                 <rect key="frame" x="326" y="911" width="145" height="34"/>
@@ -101,11 +119,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vvh-b9-8Pl">
-                                <rect key="frame" x="314" y="752" width="169" height="127"/>
+                                <rect key="frame" x="305" y="738" width="187" height="141"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="Wrestling">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="iconClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ns3-qE-1hb"/>
+                                </connections>
                             </button>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kSW-D6-IVb">
                                 <rect key="frame" x="72" y="731" width="152" height="148"/>
@@ -113,6 +134,9 @@
                                 <state key="normal" backgroundImage="Ski">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="iconClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xCm-Zo-5aB"/>
+                                </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Basketball" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0dU-rN-ewJ">
                                 <rect key="frame" x="92" y="325" width="156" height="43"/>
@@ -131,11 +155,84 @@
                         </subviews>
                         <color key="backgroundColor" red="0.85377471299999996" green="0.0092643148209999998" blue="0.0" alpha="0.68000000000000005" colorSpace="calibratedRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" id="uPa-zX-keI"/>
+                    <navigationItem key="navigationItem" title="Home" id="uPa-zX-keI">
+                        <barButtonItem key="leftBarButtonItem" title="About" id="Z6W-l5-J9w"/>
+                    </navigationItem>
+                    <connections>
+                        <outletCollection property="allLabels" destination="0dU-rN-ewJ" id="6u3-XX-kIE"/>
+                        <outletCollection property="allLabels" destination="eqk-ne-X6c" id="KOP-hW-oBl"/>
+                        <outletCollection property="allLabels" destination="vMf-cn-UQr" id="y7v-fu-twG"/>
+                        <outletCollection property="allLabels" destination="8IZ-UY-a3p" id="g8W-PJ-0Tc"/>
+                        <outletCollection property="allLabels" destination="v6l-WF-8xD" id="JRi-bt-fxw"/>
+                        <outletCollection property="allLabels" destination="ldC-5O-3aD" id="vhw-BK-Kle"/>
+                        <outletCollection property="allLabels" destination="NGG-ra-i20" id="KLl-wx-vek"/>
+                        <outletCollection property="allLabels" destination="8vZ-g0-KNj" id="sng-1H-qah"/>
+                        <outletCollection property="allButtons" destination="6Kb-3P-ahJ" id="S6t-Xd-7Kz"/>
+                        <outletCollection property="allButtons" destination="uDl-Ni-cel" id="eK5-G7-NME"/>
+                        <outletCollection property="allButtons" destination="CPx-5j-D36" id="5hj-Ue-Kcv"/>
+                        <outletCollection property="allButtons" destination="3as-el-bek" id="VN2-Dl-gRb"/>
+                        <outletCollection property="allButtons" destination="dsd-r2-9WA" id="hwm-rZ-pfZ"/>
+                        <outletCollection property="allButtons" destination="kSW-D6-IVb" id="8aN-sa-0TK"/>
+                        <outletCollection property="allButtons" destination="Vvh-b9-8Pl" id="ptj-sL-eXl"/>
+                        <outletCollection property="allButtons" destination="PdR-Zr-wfO" id="cOY-EP-MXO"/>
+                        <segue destination="h0T-RU-hHX" kind="push" identifier="showWebPage" id="JhK-Ac-kMg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1122" y="-72"/>
+            <point key="canvasLocation" x="1150" y="-72"/>
+        </scene>
+        <!--Web Page View Controller-->
+        <scene sceneID="U7z-KS-0EI">
+            <objects>
+                <viewController id="h0T-RU-hHX" customClass="WebPageViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="75q-bc-vez"/>
+                        <viewControllerLayoutGuide type="bottom" id="24I-uI-TiH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="z3Y-yg-ZeS">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gdT-GU-dhg">
+                                <rect key="frame" x="0.0" y="64" width="768" height="960"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hQe-td-Yo9">
+                                <rect key="frame" x="20" y="965" width="39" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="057 CircledArrowLeft">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k2H-FB-REH">
+                                <rect key="frame" x="709" y="965" width="39" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="063 Undo">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="CTp-bw-o3y">
+                                <rect key="frame" x="366" y="525" width="37" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="color" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="e1t-xp-acb"/>
+                    <connections>
+                        <outlet property="backButton" destination="hQe-td-Yo9" id="cIN-Gn-lqj"/>
+                        <outlet property="loadingAnimation" destination="CTp-bw-o3y" id="I29-3M-Vfh"/>
+                        <outlet property="refreshButton" destination="k2H-FB-REH" id="H0z-wA-vQB"/>
+                        <outlet property="topNavBar" destination="e1t-xp-acb" id="iFr-dy-as0"/>
+                        <outlet property="webView" destination="gdT-GU-dhg" id="Hhx-85-wwC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G7P-A0-B1Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2079" y="-72"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="AsS-c4-dXW">
@@ -157,6 +254,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="057 CircledArrowLeft" width="32" height="32"/>
+        <image name="063 Undo" width="32" height="32"/>
         <image name="Basketball" width="128" height="128"/>
         <image name="Hockey" width="128" height="128"/>
         <image name="Home" width="320" height="568"/>

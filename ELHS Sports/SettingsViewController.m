@@ -92,6 +92,11 @@
 
 }
 
+- (void)viewDidDisappear:(BOOL)animated {
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"bannerLoaded" object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"bannerError" object:nil];
+}
+
 - (void)loadBanner {
     if (self.adBanner.alpha < 1) {
         [UIView animateWithDuration:.5 animations:^{

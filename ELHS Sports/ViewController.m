@@ -92,7 +92,7 @@
         }
     } else {
         //iPad
-        
+        [self iPadOrientationSetUp];
     }
     
     
@@ -167,6 +167,21 @@
     
 }
 
+- (void)viewDidDisappear:(BOOL)animated {
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"bannerLoaded" object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"bannerError" object:nil];
+}
+
+- (void)iPadOrientationSetUp {
+    if ([[UIApplication sharedApplication] statusBarOrientation] == UIInterfaceOrientationPortrait || [[UIApplication sharedApplication] statusBarOrientation] == UIInterfaceOrientationPortraitUpsideDown) {
+        //if portrait
+    } else {
+        
+    }
+    
+    
+}
+
 - (void)loadBanner {
     if (self.adBanner.alpha < 1) {
         [UIView animateWithDuration:.5 animations:^{
@@ -183,5 +198,19 @@
     }
     
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @end

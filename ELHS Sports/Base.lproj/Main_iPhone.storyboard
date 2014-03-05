@@ -284,7 +284,7 @@
                                     <action selector="buttonClicked:" destination="OuM-O5-ulg" eventType="touchUpInside" id="fkS-4T-WOd"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="URy-Av-Lje">
+                            <button opaque="NO" alpha="0.75" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="URy-Av-Lje">
                                 <rect key="frame" x="281" y="527" width="32" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Refresh" image="063 Undo">
