@@ -25,10 +25,6 @@
     
     self.adBanner = SharedAdBannerView;
     
-    
-    
-    
-    
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
         //iPhone
         //set the screen accordingly with the phone model
@@ -51,6 +47,7 @@
         
     } else {
         //iPad
+        [self iPadOrientationSetUp];
     }
   
     //add the ad
@@ -70,7 +67,6 @@
     }
     
     //configure the buttons at the bottem
-    
     if (self.webView.canGoBack) {
         [self.backButton setHidden:false];
     } else {
@@ -189,10 +185,29 @@
     
 }
 
+- (void)viewDidLayoutSubviews {
+    if (!(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)) {
+        //if iPad (should only be iPad that rotates)
+        [self iPadOrientationSetUp];
+    }
+}
+
 - (void)iPadOrientationSetUp {
     if ([[UIApplication sharedApplication] statusBarOrientation] == UIInterfaceOrientationPortrait || [[UIApplication sharedApplication] statusBarOrientation] == UIInterfaceOrientationPortraitUpsideDown) {
         //if portrait
+        [self.webView setFrame:CGRectMake(0, 64, 768, 960)];
+        [self.adBanner setFrame:CGRectMake(0, 958, 768, 66)];
+        [self.refreshButton setFrame:CGRectMake(709, 965, self.refreshButton.frame.size.width, self.refreshButton.frame.size.height)];
+        [self.backButton setFrame:CGRectMake(20, 965, self.backButton.frame.size.width, self.backButton.frame.size.height)];
+        [self.loadingAnimation setFrame:CGRectMake(366, 525, self.loadingAnimation.frame.size.width, self.loadingAnimation.frame.size.height)];
+        
     } else {
+        //if landscape
+        [self.backButton setFrame:CGRectMake(20, 709, self.backButton.frame.size.width, self.backButton.frame.size.height)];
+        [self.refreshButton setFrame:CGRectMake(965, 709, self.refreshButton.frame.size.width, self.refreshButton.frame.size.height)];
+        [self.webView setFrame:CGRectMake(0, 64, 1024, 704)];
+        [self.loadingAnimation setFrame:CGRectMake(494, 397, self.loadingAnimation.frame.size.width, self.loadingAnimation.frame.size.height)];
+        [self.adBanner setFrame:CGRectMake(0, 702, 1024, 66)];
         
     }
     
