@@ -175,7 +175,29 @@
 - (void)iPadOrientationSetUp {
     if ([[UIApplication sharedApplication] statusBarOrientation] == UIInterfaceOrientationPortrait || [[UIApplication sharedApplication] statusBarOrientation] == UIInterfaceOrientationPortraitUpsideDown) {
         //if portrait
+        for (UIButton *currentButton in self.allButtons) {
+            if ([currentButton.titleLabel.text isEqualToString:@"Basketball"]) {
+                [currentButton setFrame:CGRectMake(94, 115, currentButton.frame.size.width, currentButton.frame.size.height)];
+            } else if ([currentButton.titleLabel.text isEqualToString:@"Soccer"]) {
+                [currentButton setFrame:CGRectMake(57, 431, currentButton.frame.size.width, currentButton.frame.size.height)];
+            } else if ([currentButton.titleLabel.text isEqualToString:@"Skiing"]) {
+                [currentButton setFrame:CGRectMake(72, 731, currentButton.frame.size.width, currentButton.frame.size.height)];
+            } else if ([currentButton.titleLabel.text isEqualToString:@"Wrestling"]) {
+                [currentButton setFrame:CGRectMake(305, 738, currentButton.frame.size.width, currentButton.frame.size.height)];
+            } else if ([currentButton.titleLabel.text isEqualToString:@"Track"]) {
+                [currentButton setFrame:CGRectMake(566, 757, currentButton.frame.size.width, currentButton.frame.size.height)];
+            } else if ([currentButton.titleLabel.text isEqualToString:@"Hockey"]) {
+                [currentButton setFrame:CGRectMake(566, 442, currentButton.frame.size.width, currentButton.frame.size.height)];
+            } else if ([currentButton.titleLabel.text isEqualToString:@"Swimming"]) {
+                [currentButton setFrame:CGRectMake(496, 118, currentButton.frame.size.width, currentButton.frame.size.height)];
+            } else if ([currentButton.titleLabel.text isEqualToString:@"Home"]) {
+                [currentButton setFrame:CGRectMake(273, 318, currentButton.frame.size.width, currentButton.frame.size.height)];
+            } else {
+                NSLog(@"\nError. ViewController -> iPadOrientationSetUp");
+            }
+        }
     } else {
+        //if landscape
         
     }
     
