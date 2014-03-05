@@ -52,8 +52,8 @@
   
     //add the ad
     [self.view addSubview:self.adBanner];
-    
 
+    
     [self setAutomaticallyAdjustsScrollViewInsets:false];
     
     //Setup The Web View
@@ -213,8 +213,8 @@
     
     //the iAd
     if ([[SharedValues allValues] adDidLoadOnce]) {
-        [self.backButton setFrame:CGRectMake(self.backButton.frame.origin.x, self.backButton.frame.origin.y - 66, self.backButton.frame.size.width, self.backButton.frame.size.height)];
-        [self.refreshButton setFrame:CGRectMake(self.refreshButton.frame.origin.x, self.refreshButton.frame.origin.y - 66, self.refreshButton.frame.size.width, self.refreshButton.frame.size.height)];
+        [self.backButton setFrame:CGRectMake(self.backButton.frame.origin.x, self.backButton.frame.origin.y - 60, self.backButton.frame.size.width, self.backButton.frame.size.height)];
+        [self.refreshButton setFrame:CGRectMake(self.refreshButton.frame.origin.x, self.refreshButton.frame.origin.y - 60, self.refreshButton.frame.size.width, self.refreshButton.frame.size.height)];
         [self.webView setFrame:CGRectMake(self.webView.frame.origin.x, self.webView.frame.origin.y, self.webView.frame.size.width, self.webView.frame.size.height - 66)];
         
     }

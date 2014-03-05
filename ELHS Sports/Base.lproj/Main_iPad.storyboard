@@ -199,6 +199,9 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="h0T-RU-hHX" id="fhJ-Bz-F8Q"/>
+                                </connections>
                             </webView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="hQe-td-Yo9">
                                 <rect key="frame" x="20" y="965" width="39" height="39"/>
@@ -206,6 +209,9 @@
                                 <state key="normal" backgroundImage="057 CircledArrowLeft">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="buttonClicked:" destination="h0T-RU-hHX" eventType="touchUpInside" id="EUM-fK-hdh"/>
+                                </connections>
                             </button>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="k2H-FB-REH">
                                 <rect key="frame" x="709" y="965" width="39" height="39"/>
@@ -213,9 +219,12 @@
                                 <state key="normal" backgroundImage="063 Undo">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="buttonClicked:" destination="h0T-RU-hHX" eventType="touchUpInside" id="RcY-BR-zIl"/>
+                                </connections>
                             </button>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" id="CTp-bw-o3y">
-                                <rect key="frame" x="366" y="525" width="37" height="37"/>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" id="Lc0-q9-BL3">
+                                <rect key="frame" x="366" y="493" width="37" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="color" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                             </activityIndicatorView>
@@ -225,7 +234,7 @@
                     <navigationItem key="navigationItem" id="e1t-xp-acb"/>
                     <connections>
                         <outlet property="backButton" destination="hQe-td-Yo9" id="cIN-Gn-lqj"/>
-                        <outlet property="loadingAnimation" destination="CTp-bw-o3y" id="cIz-c8-S1g"/>
+                        <outlet property="loadingAnimation" destination="Lc0-q9-BL3" id="j3W-ad-xk4"/>
                         <outlet property="refreshButton" destination="k2H-FB-REH" id="H0z-wA-vQB"/>
                         <outlet property="topNavBar" destination="e1t-xp-acb" id="iFr-dy-as0"/>
                         <outlet property="webView" destination="gdT-GU-dhg" id="Hhx-85-wwC"/>
