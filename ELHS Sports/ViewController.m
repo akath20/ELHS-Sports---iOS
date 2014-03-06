@@ -98,10 +98,12 @@
     
     
     
+
     
 }
 
 - (void)viewWillAppear:(BOOL)animated {
+    
     
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
         //iPhone
@@ -109,14 +111,14 @@
         [self.adBanner setFrame:CGRectMake(0, 64, 320, 50)];
         
         if (!((int)[[UIScreen mainScreen] bounds].size.height == 568)) {
-            
+            //3.5 inch
         } else {
-            //iPad
+            //4 inch
             
         }
         
         //add the ad to the view
-        [self.view addSubview:self.adBanner];
+        
         if (SharedAdBannerView.isBannerLoaded) {
             [self loadBanner];
         } else {
@@ -127,6 +129,15 @@
     }
     
     
+    [self.view addSubview:self.adBanner];
+    
+    
+    
+    
+    
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
     
 }
 
@@ -171,7 +182,9 @@
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
         //iPhone
         
-        [self.adBanner setFrame:CGRectMake(0, 64, 320, 50)];
+        
+        //BUG WAS HERE
+        //[self.adBanner setFrame:CGRectMake(0, 64, 320, 50)];
         
         if (!((int)[[UIScreen mainScreen] bounds].size.height == 568)) {
             
@@ -281,7 +294,8 @@
         }
         
         
-        
+        //set the ad frame
+        [self.adBanner setFrame:CGRectMake(0, 64, 768, 66)];
         
         
     } else {
@@ -333,6 +347,9 @@
             }
         }
         
+        
+        //set the ad frame
+        [self.adBanner setFrame:CGRectMake(0, 62, 1024, 66)];
 
         
     }
@@ -359,16 +376,6 @@
     }
     
 }
-
-
-
-
-
-
-
-
-
-
 
 
 

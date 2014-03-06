@@ -50,8 +50,7 @@
         [self iPadOrientationSetUp];
     }
   
-    //add the ad
-    [self.view addSubview:self.adBanner];
+    
 
     
     [self setAutomaticallyAdjustsScrollViewInsets:false];
@@ -87,6 +86,13 @@
         [self bannerError];
     }
     
+    //add the ad
+    [self.view addSubview:self.adBanner];
+    
+    
+}
+
+- (void)viewDidAppear:(BOOL)animated {
     
 }
 
