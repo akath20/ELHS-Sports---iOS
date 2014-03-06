@@ -92,7 +92,7 @@
         }
     } else {
         //iPad
-        [self iPadOrientationSetUp];
+        //[self iPadOrientationSetUp];
     }
     
     
@@ -175,6 +175,8 @@
 - (void)iPadOrientationSetUp {
     if ([[UIApplication sharedApplication] statusBarOrientation] == UIInterfaceOrientationPortrait || [[UIApplication sharedApplication] statusBarOrientation] == UIInterfaceOrientationPortraitUpsideDown) {
         //if portrait
+        
+        //set the buttons
         for (UIButton *currentButton in self.allButtons) {
             if ([currentButton.titleLabel.text isEqualToString:@"Basketball"]) {
                 [currentButton setFrame:CGRectMake(94, 115, currentButton.frame.size.width, currentButton.frame.size.height)];
@@ -193,13 +195,64 @@
             } else if ([currentButton.titleLabel.text isEqualToString:@"Home"]) {
                 [currentButton setFrame:CGRectMake(273, 318, currentButton.frame.size.width, currentButton.frame.size.height)];
             } else {
-                NSLog(@"\nError. ViewController -> iPadOrientationSetUp");
+                NSLog(@"\nError. ViewController -> iPadOrientationSetUp, portrait, buttons");
             }
         }
     } else {
         //if landscape
         
+        //set the buttons
+        for (UIButton *currentButton in self.allButtons) {
+            if ([currentButton.titleLabel.text isEqualToString:@"Basketball"]) {
+                [currentButton setFrame:CGRectMake(94, 115, currentButton.frame.size.width, currentButton.frame.size.height)];
+            } else if ([currentButton.titleLabel.text isEqualToString:@"Soccer"]) {
+                [currentButton setFrame:CGRectMake(57, 431, currentButton.frame.size.width, currentButton.frame.size.height)];
+            } else if ([currentButton.titleLabel.text isEqualToString:@"Skiing"]) {
+                [currentButton setFrame:CGRectMake(72, 731, currentButton.frame.size.width, currentButton.frame.size.height)];
+            } else if ([currentButton.titleLabel.text isEqualToString:@"Wrestling"]) {
+                [currentButton setFrame:CGRectMake(305, 738, currentButton.frame.size.width, currentButton.frame.size.height)];
+            } else if ([currentButton.titleLabel.text isEqualToString:@"Track"]) {
+                [currentButton setFrame:CGRectMake(566, 757, currentButton.frame.size.width, currentButton.frame.size.height)];
+            } else if ([currentButton.titleLabel.text isEqualToString:@"Hockey"]) {
+                [currentButton setFrame:CGRectMake(566, 442, currentButton.frame.size.width, currentButton.frame.size.height)];
+            } else if ([currentButton.titleLabel.text isEqualToString:@"Swimming"]) {
+                [currentButton setFrame:CGRectMake(496, 118, currentButton.frame.size.width, currentButton.frame.size.height)];
+            } else if ([currentButton.titleLabel.text isEqualToString:@"Home"]) {
+                [currentButton setFrame:CGRectMake(273, 318, currentButton.frame.size.width, currentButton.frame.size.height)];
+            } else {
+                NSLog(@"\nError. ViewController -> iPadOrientationSetUp, landscape, buttons");
+            }
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        //set the labels
+        for (UILabel *currentLabel in self.allLabels) {
+            for (UIButton *currentButton in self.allButtons) {
+                if ([currentLabel.text isEqualToString:currentButton.titleLabel.text]) {
+                    [currentLabel setFrame:CGRectMake(currentButton.frame.origin.x, currentButton.frame.origin.y-26, currentLabel.frame.size.width, currentLabel.frame.size.height)];
+                } else if ([currentLabel.text isEqualToString:@"Swimming & Diving"]) {
+                    [currentLabel setFrame:CGRectMake(self.swimButton.frame.origin.x, self.swimButton.frame.origin.y - 26, currentLabel.frame.size.width, currentLabel.frame.size.height)];
+                }
+            }
+        }
+        
     }
+    
+    
+    
     
     
 }

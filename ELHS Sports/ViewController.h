@@ -14,6 +14,7 @@
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *allButtons;
 @property (strong, nonatomic) ADBannerView *adBanner;
 @property (strong, nonatomic) IBOutletCollection(UILabel) NSArray *allLabels;
+@property (strong, nonatomic) IBOutlet UIButton *swimButton;
 
 
 - (IBAction)iconClicked:(UIButton *)sender;
