@@ -133,7 +133,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="kSW-D6-IVb">
-                                <rect key="frame" x="42" y="760" width="152" height="148"/>
+                                <rect key="frame" x="51" y="760" width="152" height="148"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Skiing" backgroundImage="Ski">
                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -157,10 +157,6 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="8Wq-4E-vHw">
-                                <rect key="frame" x="0.0" y="64" width="768" height="66"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                            </adBannerView>
                         </subviews>
                         <color key="backgroundColor" red="0.85377471299999996" green="0.0092643148209999998" blue="0.0" alpha="0.68000000000000005" colorSpace="calibratedRGB"/>
                     </view>
@@ -422,10 +418,6 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="PLs-Jg-ziO">
-                                <rect key="frame" x="0.0" y="64" width="1024" height="66"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                            </adBannerView>
                         </subviews>
                         <color key="backgroundColor" red="0.85377471299999996" green="0.0092643148209999998" blue="0.0" alpha="0.68000000000000005" colorSpace="calibratedRGB"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
