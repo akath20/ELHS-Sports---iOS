@@ -92,9 +92,6 @@
     
 }
 
-
-
-
 - (void)viewDidDisappear:(BOOL)animated {
     [[NSNotificationCenter defaultCenter] removeObserver:self name:@"bannerLoaded" object:nil];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:@"bannerError" object:nil];

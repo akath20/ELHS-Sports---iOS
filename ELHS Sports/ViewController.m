@@ -179,65 +179,7 @@ NSLog(@"\nSharedAdBannerView x: %f y:%f", SharedAdBannerView.frame.origin.x, Sha
     
 }
 
-- (void)viewDidLayoutSubviews {
-    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
-        //iPhone
-        
-        
-        //BUG WAS HERE
-        //[self.adBanner setFrame:CGRectMake(0, 64, 320, 50)];
-        
-        if (!((int)[[UIScreen mainScreen] bounds].size.height == 568)) {
-            
-            int magicNumber = 25;
-            int modNumber = 15;
-            float xMove  =.5;
-            
-            
-            
-            for (UIButton *currentButton in [self allButtons]) {
-                if (currentButton.tag == 1) {
-                    //top line
-                    [currentButton setFrame:CGRectMake(currentButton.frame.origin.x, (currentButton.frame.origin.y - magicNumber  + modNumber), (currentButton.frame.size.width - magicNumber), (currentButton.frame.size.height - magicNumber))];
-                } else if (currentButton.tag == 2) {
-                    //bottem line
-                    [currentButton setFrame:CGRectMake(currentButton.frame.origin.x, (currentButton.frame.origin.y - magicNumber - modNumber), (currentButton.frame.size.width - magicNumber), (currentButton.frame.size.height - magicNumber))];
-                } else {
-                    //middle line
-                    [currentButton setFrame:CGRectMake(currentButton.frame.origin.x, (currentButton.frame.origin.y - magicNumber), (currentButton.frame.size.width - magicNumber), (currentButton.frame.size.height - magicNumber))];
-                }
-                
-                [currentButton setFrame:CGRectMake((currentButton.frame.origin.x + (magicNumber * xMove)), currentButton.frame.origin.y, currentButton.frame.size.width, currentButton.frame.size.height)];
-                
-            }
-            
-            for (UILabel *currentLabel in [self allLabels]) {
-                
-                
-                
-                
-                if (currentLabel.tag == 1) {
-                    //top line
-                    [currentLabel setFrame:CGRectMake(currentLabel.frame.origin.x, (currentLabel.frame.origin.y - (magicNumber * 1.75) + (modNumber  * .75)), currentLabel.frame.size.width, currentLabel.frame.size.height)];
-                } else if (currentLabel.tag == 2) {
-                    //bottem line
-                    [currentLabel setFrame:CGRectMake(currentLabel.frame.origin.x, (currentLabel.frame.origin.y - (magicNumber * 1.75) - (modNumber  * .75)), currentLabel.frame.size.width, currentLabel.frame.size.height)];
-                } else {
-                    //middle line
-                    [currentLabel setFrame:CGRectMake(currentLabel.frame.origin.x, (currentLabel.frame.origin.y - (magicNumber * 1.75)), currentLabel.frame.size.width, currentLabel.frame.size.height)];
-                }
-                
-                
-                
-                
-            }
-            
-        }
-    } else {
-        //iPad
-        [self iPadOrientationSetUp];
-    }
-}
+
 
 - (void)viewDidDisappear:(BOOL)animated {
     [[NSNotificationCenter defaultCenter] removeObserver:self name:@"bannerLoaded" object:nil];
