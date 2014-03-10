@@ -92,17 +92,13 @@
     
 }
 
-- (void)viewDidAppear:(BOOL)animated {
-    
-}
 
-- (void)viewWillDisappear:(BOOL)animated {
-    self.webView = nil;
-}
+
 
 - (void)viewDidDisappear:(BOOL)animated {
     [[NSNotificationCenter defaultCenter] removeObserver:self name:@"bannerLoaded" object:nil];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:@"bannerError" object:nil];
+    self.webView = nil;
 }
 
 - (void)setupTheWebView {
@@ -248,7 +244,7 @@
         if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
             //iPhone
             //set the screen accordingly with the phone model
-            if ((int)[[UIScreen mainScreen] bounds].size.height == 568) {
+            if ((int)[[UIScreen mainScreen] bounds].size.height  == 568) {
                 // This is iPhone 5 screen
                 [self.backButton setFrame:CGRectMake(10, 527, 32, 29)];
                 [self.refreshButton setFrame:CGRectMake(281, 527, 32, 29)];

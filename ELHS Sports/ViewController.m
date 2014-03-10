@@ -34,6 +34,7 @@
     //The ad
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadBanner) name:@"bannerLoaded" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(bannerError) name:@"bannerError" object:nil];
+    NSLog(@"\nSharedAdBannerView x: %f y:%f", SharedAdBannerView.frame.origin.x, SharedAdBannerView.frame.origin.y);
     self.adBanner = SharedAdBannerView;
     
     
@@ -98,7 +99,7 @@
     
     
     
-
+NSLog(@"\nSharedAdBannerView x: %f y:%f", SharedAdBannerView.frame.origin.x, SharedAdBannerView.frame.origin.y);
     
 }
 
