@@ -134,13 +134,11 @@
 			isa = PBXGroup;
 			children = (
 				FA6ED9BE18B9588600CA58B5 /* App Delegate */,
-				FA80B93918B97D4F0029119C /* Shared Values */,
+				FA80B93918B97D4F0029119C /* Custom Classes */,
 				FA6ED9BF18B9589100CA58B5 /* View Controllers */,
 				FA6ED9BD18B9587F00CA58B5 /* Interfaces */,
 				FA6ED9A018B9587400CA58B5 /* Images.xcassets */,
 				FA6ED98C18B9587400CA58B5 /* Supporting Files */,
-				FAAA17B518CE8B8400FF699C /* UINavController.h */,
-				FAAA17B618CE8B8400FF699C /* UINavController.m */,
 			);
 			path = "ELHS Sports";
 			sourceTree = "<group>";
@@ -205,15 +203,17 @@
 			name = "View Controllers";
 			sourceTree = "<group>";
 		};
-		FA80B93918B97D4F0029119C /* Shared Values */ = {
+		FA80B93918B97D4F0029119C /* Custom Classes */ = {
 			isa = PBXGroup;
 			children = (
+				FAAA17B518CE8B8400FF699C /* UINavController.h */,
+				FAAA17B618CE8B8400FF699C /* UINavController.m */,
 				FA80B93A18B97D680029119C /* SharedValues.h */,
 				FA80B93B18B97D680029119C /* SharedValues.m */,
 				FA4C399918C3D08C001847C7 /* Reachability.h */,
 				FA4C399A18C3D08C001847C7 /* Reachability.m */,
 			);
-			name = "Shared Values";
+			name = "Custom Classes";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

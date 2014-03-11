@@ -99,7 +99,7 @@
     
     
     
-NSLog(@"\nSharedAdBannerView x: %f y:%f", SharedAdBannerView.frame.origin.x, SharedAdBannerView.frame.origin.y);
+    NSLog(@"\nSharedAdBannerView x: %f y:%f", SharedAdBannerView.frame.origin.x, SharedAdBannerView.frame.origin.y);
     
 }
 

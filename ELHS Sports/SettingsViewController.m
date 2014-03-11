@@ -97,6 +97,36 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self name:@"bannerError" object:nil];
 }
 
+- (void)viewDidLayoutSubviews {
+    
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
+        //iPhone
+        
+        if ([[UIApplication sharedApplication] statusBarOrientation] == UIInterfaceOrientationPortrait || [[UIApplication sharedApplication] statusBarOrientation] == UIInterfaceOrientationPortraitUpsideDown) {
+            //if portrait
+            
+        } else {
+            //if landscape
+            
+        }
+        
+        
+    } else {
+        //iPad
+        
+        if ([[UIApplication sharedApplication] statusBarOrientation] == UIInterfaceOrientationPortrait || [[UIApplication sharedApplication] statusBarOrientation] == UIInterfaceOrientationPortraitUpsideDown) {
+            //if portrait
+            
+        } else {
+            //if landscape
+            
+        }
+    }
+    
+    
+    
+}
+
 - (void)loadBanner {
     if (self.adBanner.alpha < 1) {
         [UIView animateWithDuration:.5 animations:^{

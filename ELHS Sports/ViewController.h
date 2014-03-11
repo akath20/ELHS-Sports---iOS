@@ -15,7 +15,7 @@
 @property (strong, nonatomic) ADBannerView *adBanner;
 @property (strong, nonatomic) IBOutletCollection(UILabel) NSArray *allLabels;
 @property (strong, nonatomic) IBOutlet UIButton *swimButton;
-@property BOOL landscapeRotate;
+
 
 
 - (IBAction)iconClicked:(UIButton *)sender;
