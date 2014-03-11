@@ -104,7 +104,14 @@
 }
 
 - (BOOL)shouldAutorotate {
-    return false;
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
+        //iPhone
+        return false;
+    } else {
+        //iPad
+        return true;
+    }
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -302,6 +309,17 @@
     
     
     
+    
+}
+
+- (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation {
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
+        //iPhone
+        return UIInterfaceOrientationPortrait;
+    } else {
+        //iPad
+        return UIInterfaceOrientationLandscapeLeft + UIInterfaceOrientationLandscapeRight + UIInterfaceOrientationPortrait + UIInterfaceOrientationPortraitUpsideDown;
+    }
     
 }
 

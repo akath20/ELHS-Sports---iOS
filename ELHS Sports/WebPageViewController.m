@@ -185,10 +185,43 @@
 }
 
 - (void)viewDidLayoutSubviews {
-    if (!(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)) {
-        //if iPad (should only be iPad that rotates)
+//    if (!(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)) {
+//        //if iPad (should only be iPad that rotates)
+//        [self iPadOrientationSetUp];
+//    }
+    
+    
+    
+    
+        
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
+        //iPhone
+        
+        if ([[UIApplication sharedApplication] statusBarOrientation] == UIInterfaceOrientationPortrait || [[UIApplication sharedApplication] statusBarOrientation] == UIInterfaceOrientationPortraitUpsideDown) {
+            //if portrait
+            [self.webView setFrame:CGRectMake(0, 64, 320, 504)];
+            [self.backButton setFrame:CGRectMake(10, 527, 32, 29)];
+            [self.refreshButton setFrame:CGRectMake(281, 527, 32, 29)];
+            [self.loadingAnimation setFrame:CGRectMake(142, 281, self.loadingAnimation.frame.origin.x, self.loadingAnimation.frame.origin.y)];
+            
+            
+        } else {
+            //if landscape
+            [self.webView setFrame:CGRectMake(0, 64, 568, 256)];
+            [self.backButton setFrame:CGRectMake(10, 280, 32, 29)];
+            [self.refreshButton setFrame:CGRectMake(528, 280, 32, 29)];
+            [self.loadingAnimation setFrame:CGRectMake(266, 153, self.loadingAnimation.frame.origin.x, self.loadingAnimation.frame.origin.y)];
+            
+        }
+        
+        
+    } else {
         [self iPadOrientationSetUp];
-    }
+}
+    
+    
+    
+    
 }
 
 - (void)iPadOrientationSetUp {
