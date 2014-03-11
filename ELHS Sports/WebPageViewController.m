@@ -33,14 +33,14 @@
             [self.backButton setFrame:CGRectMake(10, 527, 32, 29)];
             [self.refreshButton setFrame:CGRectMake(281, 527, 32, 29)];
             [self.webView setFrame:CGRectMake(0, 64, 320, 504)];
-            [self.loadingAnimation setFrame:CGRectMake(142, 298, self.loadingAnimation.frame.size.width, self.loadingAnimation.frame.size.height)];
+            //[self.loadingAnimation setFrame:CGRectMake(142, 298, self.loadingAnimation.frame.size.width, self.loadingAnimation.frame.size.height)];
             [self.adBanner setFrame:CGRectMake(0, 518, 320, 50)];
         } else {
             //this is the 4/4s screen
             [self.backButton setFrame:CGRectMake(10, 444, 32, 29)];
             [self.refreshButton setFrame:CGRectMake(281, 444, 32, 29)];
             [self.webView setFrame:CGRectMake(0, 64, 320, 416)];
-            [self.loadingAnimation setFrame:CGRectMake(142, 243, self.loadingAnimation.frame.size.width, self.loadingAnimation.frame.size.height)];
+            //[self.loadingAnimation setFrame:CGRectMake(142, 243, self.loadingAnimation.frame.size.width, self.loadingAnimation.frame.size.height)];
             [self.adBanner setFrame:CGRectMake(0, 430, 320, 50)];
             
         }
@@ -77,7 +77,6 @@
         [self.backButton setFrame:CGRectMake(self.backButton.frame.origin.x, self.backButton.frame.origin.y - 50, self.backButton.frame.size.width, self.backButton.frame.size.height)];
         [self.refreshButton setFrame:CGRectMake(self.refreshButton.frame.origin.x, self.refreshButton.frame.origin.y - 50, self.refreshButton.frame.size.width, self.refreshButton.frame.size.height)];
         [self.webView setFrame:CGRectMake(self.webView.frame.origin.x, self.webView.frame.origin.y, self.webView.frame.size.width, self.webView.frame.size.height - 50)];
-        
     }
     
     if (SharedAdBannerView.isBannerLoaded) {
@@ -198,21 +197,36 @@
         //iPhone
         
         if ([[UIApplication sharedApplication] statusBarOrientation] == UIInterfaceOrientationPortrait || [[UIApplication sharedApplication] statusBarOrientation] == UIInterfaceOrientationPortraitUpsideDown) {
+            
             //if portrait
-            [self.webView setFrame:CGRectMake(0, 64, 320, 504)];
-            [self.backButton setFrame:CGRectMake(10, 527, 32, 29)];
-            [self.refreshButton setFrame:CGRectMake(281, 527, 32, 29)];
-            [self.loadingAnimation setFrame:CGRectMake(142, 281, self.loadingAnimation.frame.origin.x, self.loadingAnimation.frame.origin.y)];
+            if ((int)[[UIScreen mainScreen] bounds].size.height == 568) {
+                //4 inch
+                [self.webView setFrame:CGRectMake(0, 64, 320, 504)];
+                [self.backButton setFrame:CGRectMake(10, 527, 32, 29)];
+                [self.refreshButton setFrame:CGRectMake(281, 527, 32, 29)];
+                //[self.loadingAnimation setFrame:CGRectMake(142, 281, self.loadingAnimation.frame.origin.x, self.loadingAnimation.frame.origin.y)];
+            } else {
+                //3.5 inch
+                
+            }
+            
             
             
         } else {
             //if landscape
-            [self.webView setFrame:CGRectMake(0, 64, 568, 256)];
-            [self.backButton setFrame:CGRectMake(10, 280, 32, 29)];
-            [self.refreshButton setFrame:CGRectMake(528, 280, 32, 29)];
-            [self.loadingAnimation setFrame:CGRectMake(266, 153, self.loadingAnimation.frame.origin.x, self.loadingAnimation.frame.origin.y)];
-            
+            if ((int)[[UIScreen mainScreen] bounds].size.height == 568) {
+                [self.webView setFrame:CGRectMake(0, 52, 568, 268)];
+                [self.backButton setFrame:CGRectMake(10, 283, 32, 29)];
+                [self.refreshButton setFrame:CGRectMake(530, 283, 32, 29)];
+                //[self.loadingAnimation setFrame:CGRectMake(266, 153, self.loadingAnimation.frame.origin.x, self.loadingAnimation.frame.origin.y)];
+            } else {
+                //3.5 inch
+                
+            }
         }
+        
+       
+        [self.loadingAnimation setFrame:CGRectMake(CGRectGetMidX(self.view.bounds)-(self.loadingAnimation.frame.size.width / 2), CGRectGetMidY(self.view.bounds), self.loadingAnimation.frame.size.width, self.loadingAnimation.frame.size.height)];
         
         
     } else {
@@ -297,8 +311,6 @@
     }
     [self.adBanner setAlpha:0.0];
 }
-
-
 
 
 
