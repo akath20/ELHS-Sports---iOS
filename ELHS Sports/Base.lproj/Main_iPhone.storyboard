@@ -361,7 +361,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <webView multipleTouchEnabled="YES" contentMode="scaleAspectFit" scalesPageToFit="YES" id="7WD-U3-5bm">
-                                <rect key="frame" x="0.0" y="52" width="568" height="268"/>
+                                <rect key="frame" x="0.0" y="52" width="480" height="268"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES"/>
@@ -381,7 +381,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" alpha="0.75" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="fJw-Pa-ASx">
-                                <rect key="frame" x="528" y="283" width="32" height="29"/>
+                                <rect key="frame" x="440" y="283" width="32" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Refresh" image="063 Undo">
                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -401,7 +401,6 @@
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <size key="freeformSize" width="568" height="320"/>
                     <connections>
                         <outlet property="backButton" destination="z9g-Bm-aTk" id="I7o-8c-Nlr"/>
