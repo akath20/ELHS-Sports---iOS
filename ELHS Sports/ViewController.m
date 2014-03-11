@@ -103,6 +103,10 @@ NSLog(@"\nSharedAdBannerView x: %f y:%f", SharedAdBannerView.frame.origin.x, Sha
     
 }
 
+- (BOOL)shouldAutorotate {
+    return false;
+}
+
 - (void)viewWillAppear:(BOOL)animated {
     
     
@@ -178,8 +182,6 @@ NSLog(@"\nSharedAdBannerView x: %f y:%f", SharedAdBannerView.frame.origin.x, Sha
     }
     
 }
-
-
 
 - (void)viewDidDisappear:(BOOL)animated {
     [[NSNotificationCenter defaultCenter] removeObserver:self name:@"bannerLoaded" object:nil];

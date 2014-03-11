@@ -27,6 +27,7 @@
 		FA80B93818B96DC70029119C /* WebPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA80B93718B96DC70029119C /* WebPageViewController.m */; };
 		FA80B93C18B97D680029119C /* SharedValues.m in Sources */ = {isa = PBXBuildFile; fileRef = FA80B93B18B97D680029119C /* SharedValues.m */; };
 		FA80B93E18BAC68D0029119C /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA80B93D18BAC68D0029119C /* iAd.framework */; };
+		FAAA17B718CE8B8400FF699C /* UINavController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAAA17B618CE8B8400FF699C /* UINavController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,8 @@
 		FA80B93A18B97D680029119C /* SharedValues.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SharedValues.h; sourceTree = "<group>"; };
 		FA80B93B18B97D680029119C /* SharedValues.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SharedValues.m; sourceTree = "<group>"; };
 		FA80B93D18BAC68D0029119C /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
+		FAAA17B518CE8B8400FF699C /* UINavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UINavController.h; sourceTree = "<group>"; };
+		FAAA17B618CE8B8400FF699C /* UINavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UINavController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +139,8 @@
 				FA6ED9BD18B9587F00CA58B5 /* Interfaces */,
 				FA6ED9A018B9587400CA58B5 /* Images.xcassets */,
 				FA6ED98C18B9587400CA58B5 /* Supporting Files */,
+				FAAA17B518CE8B8400FF699C /* UINavController.h */,
+				FAAA17B618CE8B8400FF699C /* UINavController.m */,
 			);
 			path = "ELHS Sports";
 			sourceTree = "<group>";
@@ -315,6 +320,7 @@
 				FA80B93C18B97D680029119C /* SharedValues.m in Sources */,
 				FA80B93818B96DC70029119C /* WebPageViewController.m in Sources */,
 				FA6ED99F18B9587400CA58B5 /* ViewController.m in Sources */,
+				FAAA17B718CE8B8400FF699C /* UINavController.m in Sources */,
 				FA4C399B18C3D08C001847C7 /* Reachability.m in Sources */,
 				FA12F46818C029AB009EE855 /* SettingsViewController.m in Sources */,
 				FA6ED99618B9587400CA58B5 /* AppDelegate.m in Sources */,
