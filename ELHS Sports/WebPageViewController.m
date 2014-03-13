@@ -195,14 +195,14 @@
                 //4 inch
                 [self.webView setFrame:CGRectMake(0, 64, 320, 504)];
                 [self.backButton setFrame:CGRectMake(10, 527, 32, 29)];
+                [self.adBanner setFrame:CGRectMake(0, 430, 320, 50)];
                 [self.refreshButton setFrame:CGRectMake(281, 527, 32, 29)];
-                //[self.loadingAnimation setFrame:CGRectMake(142, 281, self.loadingAnimation.frame.origin.x, self.loadingAnimation.frame.origin.y)];
+                
             } else {
                 //3.5 inch
                 [self.backButton setFrame:CGRectMake(10, 444, 32, 29)];
                 [self.refreshButton setFrame:CGRectMake(281, 444, 32, 29)];
                 [self.webView setFrame:CGRectMake(0, 64, 320, 416)];
-                //[self.loadingAnimation setFrame:CGRectMake(142, 243, self.loadingAnimation.frame.size.width, self.loadingAnimation.frame.size.height)];
                 [self.adBanner setFrame:CGRectMake(0, 430, 320, 50)];
                 
             }
