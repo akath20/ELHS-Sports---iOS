@@ -57,10 +57,30 @@
     
     
     
+    //set up the data content
+    [self setTableContentToDisplay];
     
     
     
     
+    
+    
+}
+
+- (void)setTableContentToDisplay {
+    
+    NSDictionary *home = [[NSDictionary alloc] initWithObjectsAndKeys:@"Home", @"Title", nil];
+    NSDictionary *soccer = [[NSDictionary alloc] initWithObjectsAndKeys:@"Soccer", @"Title", nil];
+    NSDictionary *basketball = [[NSDictionary alloc] initWithObjectsAndKeys:@"Basketball", @"Title", nil];
+    NSDictionary *skiing = [[NSDictionary alloc] initWithObjectsAndKeys:@"Skiing", @"Title", nil];
+    NSDictionary *wrestling = [[NSDictionary alloc] initWithObjectsAndKeys:@"Wrestling", @"Title", nil];
+    NSDictionary *swimming = [[NSDictionary alloc] initWithObjectsAndKeys:@"Swimming & Diving", @"Title", nil];
+    NSDictionary *hockey = [[NSDictionary alloc] initWithObjectsAndKeys:@"Hockey", @"Title", nil];
+    NSDictionary *track = [[NSDictionary alloc] initWithObjectsAndKeys:@"Track", @"Title", nil];
+    
+    NSArray *allSports = [[NSArray alloc] initWithObjects:soccer, basketball, skiing, home, wrestling, swimming, hockey, home, track, nil];
+    
+    self.tableContent = [[NSArray alloc] initWithArray:allSports copyItems:true];
 }
 
 #pragma mark - Table view data source
@@ -69,14 +89,13 @@
 {
 
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 1;
+    return [self.tableContent count];
 }
 
 
@@ -94,15 +113,47 @@
 
 
 
-//- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-//    
-//    // Configure the cell...
-//    
-//    return cell;
-//}
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    
+    // Configure the cell...
+    
+    NSArray *tableData = self.tableContent;
+    
+    cell.textLabel.text = [[tableData objectAtIndex:indexPath.row] objectForKey:@"Title"];
+    
+    return cell;
+    
+}
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    //when the user selectes the row
+    
+    
+    
+    //decide what to set the value as
+    if ([[tableView cellForRowAtIndexPath:indexPath].textLabel.text isEqualToString:@"Home"]) {
+        [[SharedValues allValues] setUrlToLoadAsString:@""];
+    } else if ([[tableView cellForRowAtIndexPath:indexPath].textLabel.text isEqualToString:@"Swimming & Diving"]) {
+        [[SharedValues allValues] setUrlToLoadAsString:@"Swimming"];
+    } else {
+        //set the webpage to load as the given title in the table that was selected
+        [[SharedValues allValues] setUrlToLoadAsString:[tableView cellForRowAtIndexPath:indexPath].textLabel.text];
+    }
+    
+    //switch the view
+    //check for internet connection
+    if (![Reachability checkForInternetWithString:Nil]) {
+        //show alert from the class
+        [[Reachability showAlertNoInternet] show];
+    } else {
+        [self performSegueWithIdentifier:@"showWebPage" sender:Nil];
+    }
+
+    
+    
+}
 
 /*
 // Override to support conditional editing of the table view.
@@ -127,9 +178,9 @@
 */
 
 
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
+//// Override to support rearranging the table view.
+//- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
+//}
 
 
 /*

@@ -12,5 +12,6 @@
 @interface MainMenuTableViewController : UITableViewController
 
 @property (strong, nonatomic) ADBannerView *adBanner;
+@property (strong, nonatomic) NSArray *tableContent;
 
 @end
