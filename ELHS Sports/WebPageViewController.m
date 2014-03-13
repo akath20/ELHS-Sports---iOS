@@ -193,7 +193,7 @@
                 } else {
                     //3.5 inch
                     [self.backButton setFrame:CGRectMake(10, 394, 32, 29)];
-                    [self.refreshButton setFrame:CGRectMake(281, 349, 32, 29)];
+                    [self.refreshButton setFrame:CGRectMake(281, 394, 32, 29)];
                     [self.webView setFrame:CGRectMake(0, 64, 320, 366)];
                     [self.adBanner setFrame:CGRectMake(0, 430, 320, 50)];
                 }
@@ -208,21 +208,21 @@
         } else {
             
             int magicNumber = 52;
-            int magicNumber2 = 3;
+            
             
             //if landscape
             if (![[SharedValues allValues] adIsLoaded]) {
                 //if no ad present
                 if ((int)[[UIScreen mainScreen] bounds].size.height == 568) {
                     //4 inch
-                    [self.webView setFrame:CGRectMake(0, magicNumber, 568, 268 + magicNumber2)];
+                    [self.webView setFrame:CGRectMake(0, magicNumber, 568, 268)];
                     [self.backButton setFrame:CGRectMake(10, 283, 32, 29)];
                     [self.refreshButton setFrame:CGRectMake(530, 283, 32, 29)];
                     [self.adBanner setFrame:CGRectMake(0, 288, 568, 32)];
                     
                 } else {
                     //3.5 inch
-                    [self.webView setFrame:CGRectMake(0, magicNumber, 480, 268 + magicNumber2)];
+                    [self.webView setFrame:CGRectMake(0, magicNumber, 480, 268)];
                     [self.backButton setFrame:CGRectMake(10, 283, 32, 29)];
                     [self.refreshButton setFrame:CGRectMake(442, 283, 32, 29)];
                     [self.adBanner setFrame:CGRectMake(0, 288, 480, 32)];
@@ -230,6 +230,8 @@
                 }
                 
             } else {
+                
+                int magicNumber2 = 3;
                 
                 //if ad is present
                 if ((int)[[UIScreen mainScreen] bounds].size.height == 568) {
