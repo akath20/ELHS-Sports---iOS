@@ -209,6 +209,7 @@
             
             int magicNumber = 52;
             int magicNumber2 = 3;
+            
             //if landscape
             if (![[SharedValues allValues] adIsLoaded]) {
                 //if no ad present
@@ -223,7 +224,7 @@
                     //3.5 inch
                     [self.webView setFrame:CGRectMake(0, magicNumber, 480, 268 + magicNumber2)];
                     [self.backButton setFrame:CGRectMake(10, 283, 32, 29)];
-                    [self.refreshButton setFrame:CGRectMake(440, 283, 32, 29)];
+                    [self.refreshButton setFrame:CGRectMake(442, 283, 32, 29)];
                     [self.adBanner setFrame:CGRectMake(0, 288, 480, 32)];
                     
                 }
@@ -231,18 +232,17 @@
             } else {
                 
                 //if ad is present
-                
                 if ((int)[[UIScreen mainScreen] bounds].size.height == 568) {
                     //4 inch
                     [self.webView setFrame:CGRectMake(0, magicNumber, 568, 233 + magicNumber2)];
-                    [self.backButton setFrame:CGRectMake(10, 442, 32, 29)];
+                    [self.backButton setFrame:CGRectMake(10, 248, 32, 29)];
                     [self.adBanner setFrame:CGRectMake(0, 288, 568, 32)];
-                    [self.refreshButton setFrame:CGRectMake(281, 442, 32, 29)];
+                    [self.refreshButton setFrame:CGRectMake(530, 248, 32, 29)];
                     
                 } else {
                     //3.5 inch
-                    [self.backButton setFrame:CGRectMake(10, 359, 32, 29)];
-                    [self.refreshButton setFrame:CGRectMake(281, 314, 32, 29)];
+                    [self.backButton setFrame:CGRectMake(10, 248, 32, 29)];
+                    [self.refreshButton setFrame:CGRectMake(442, 248, 32, 29)];
                     [self.webView setFrame:CGRectMake(0, magicNumber, 480, 223 + magicNumber2)];
                     [self.adBanner setFrame:CGRectMake(0, 288, 480, 32)];
                 }
@@ -256,14 +256,7 @@
             
         }
         
-        
-        
-        
-        
-        
-        
-        
-       
+      
         [self.loadingAnimation setFrame:CGRectMake(CGRectGetMidX(self.view.bounds)-(self.loadingAnimation.frame.size.width / 2), CGRectGetMidY(self.view.bounds), self.loadingAnimation.frame.size.width, self.loadingAnimation.frame.size.height)];
         
         
