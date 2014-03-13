@@ -76,6 +76,17 @@
     
 }
 
+- (void)viewDidLayoutSubviews {
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
+        //iPhone
+        if ((int)[[UIScreen mainScreen] bounds].size.height == 568) {
+            //4 inch
+            
+        }
+    }
+    
+}
+
 - (IBAction)launchWebsite:(id)sender {
     
     //load the string

@@ -10,6 +10,7 @@
 		FA12F46818C029AB009EE855 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA12F46718C029AB009EE855 /* SettingsViewController.m */; };
 		FA4C399B18C3D08C001847C7 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = FA4C399A18C3D08C001847C7 /* Reachability.m */; };
 		FA6ED63C18D13BC400B03171 /* MainMenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6ED63B18D13BC400B03171 /* MainMenuTableViewController.m */; };
+		FA6ED64518D1539A00B03171 /* SettingsCustomNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6ED64418D1539A00B03171 /* SettingsCustomNavController.m */; };
 		FA6ED98618B9587400CA58B5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA6ED98518B9587400CA58B5 /* Foundation.framework */; };
 		FA6ED98818B9587400CA58B5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA6ED98718B9587400CA58B5 /* CoreGraphics.framework */; };
 		FA6ED98A18B9587400CA58B5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA6ED98918B9587400CA58B5 /* UIKit.framework */; };
@@ -18,7 +19,6 @@
 		FA6ED99618B9587400CA58B5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6ED99518B9587400CA58B5 /* AppDelegate.m */; };
 		FA6ED99918B9587400CA58B5 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA6ED99718B9587400CA58B5 /* Main_iPhone.storyboard */; };
 		FA6ED99C18B9587400CA58B5 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA6ED99A18B9587400CA58B5 /* Main_iPad.storyboard */; };
-		FA6ED99F18B9587400CA58B5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6ED99E18B9587400CA58B5 /* ViewController.m */; };
 		FA6ED9A118B9587400CA58B5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA6ED9A018B9587400CA58B5 /* Images.xcassets */; };
 		FA6ED9A818B9587400CA58B5 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA6ED9A718B9587400CA58B5 /* XCTest.framework */; };
 		FA6ED9A918B9587500CA58B5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA6ED98518B9587400CA58B5 /* Foundation.framework */; };
@@ -47,6 +47,8 @@
 		FA4C399A18C3D08C001847C7 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		FA6ED63A18D13BC400B03171 /* MainMenuTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuTableViewController.h; sourceTree = "<group>"; };
 		FA6ED63B18D13BC400B03171 /* MainMenuTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenuTableViewController.m; sourceTree = "<group>"; };
+		FA6ED64318D1539A00B03171 /* SettingsCustomNavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsCustomNavController.h; sourceTree = "<group>"; };
+		FA6ED64418D1539A00B03171 /* SettingsCustomNavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsCustomNavController.m; sourceTree = "<group>"; };
 		FA6ED98218B9587400CA58B5 /* ELHS Sports.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ELHS Sports.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA6ED98518B9587400CA58B5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FA6ED98718B9587400CA58B5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -59,8 +61,6 @@
 		FA6ED99518B9587400CA58B5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		FA6ED99818B9587400CA58B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		FA6ED99B18B9587400CA58B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
-		FA6ED99D18B9587400CA58B5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		FA6ED99E18B9587400CA58B5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		FA6ED9A018B9587400CA58B5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		FA6ED9A618B9587400CA58B5 /* ELHS SportsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ELHS SportsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA6ED9A718B9587400CA58B5 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -193,8 +193,6 @@
 		FA6ED9BF18B9589100CA58B5 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				FA6ED99D18B9587400CA58B5 /* ViewController.h */,
-				FA6ED99E18B9587400CA58B5 /* ViewController.m */,
 				FA80B93618B96DC70029119C /* WebPageViewController.h */,
 				FA80B93718B96DC70029119C /* WebPageViewController.m */,
 				FA12F46618C029AB009EE855 /* SettingsViewController.h */,
@@ -212,6 +210,8 @@
 				FA80B93B18B97D680029119C /* SharedValues.m */,
 				FA4C399918C3D08C001847C7 /* Reachability.h */,
 				FA4C399A18C3D08C001847C7 /* Reachability.m */,
+				FA6ED64318D1539A00B03171 /* SettingsCustomNavController.h */,
+				FA6ED64418D1539A00B03171 /* SettingsCustomNavController.m */,
 			);
 			name = "Custom Classes";
 			sourceTree = "<group>";
@@ -320,9 +320,9 @@
 				FA80B93C18B97D680029119C /* SharedValues.m in Sources */,
 				FA6ED63C18D13BC400B03171 /* MainMenuTableViewController.m in Sources */,
 				FA80B93818B96DC70029119C /* WebPageViewController.m in Sources */,
-				FA6ED99F18B9587400CA58B5 /* ViewController.m in Sources */,
 				FA4C399B18C3D08C001847C7 /* Reachability.m in Sources */,
 				FA12F46818C029AB009EE855 /* SettingsViewController.m in Sources */,
+				FA6ED64518D1539A00B03171 /* SettingsCustomNavController.m in Sources */,
 				FA6ED99618B9587400CA58B5 /* AppDelegate.m in Sources */,
 				FA6ED99218B9587400CA58B5 /* main.m in Sources */,
 			);

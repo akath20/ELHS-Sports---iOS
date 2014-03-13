@@ -194,10 +194,10 @@
             </objects>
             <point key="canvasLocation" x="916" y="207"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Settings Custom Nav Controller-->
         <scene sceneID="Udx-g1-KAA">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pWZ-S4-08B" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pWZ-S4-08B" customClass="SettingsCustomNavController" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="hpM-b5-dbv">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -224,6 +224,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="rvf-3b-Ro2"/>
+        <segue reference="kIT-vm-Uce"/>
     </inferredMetricsTieBreakers>
 </document>
