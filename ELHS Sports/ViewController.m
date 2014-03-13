@@ -190,6 +190,19 @@
     
 }
 
+- (void)viewDidLayoutSubviews {
+    
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
+        //iPhone
+        [self.adBanner setFrame:CGRectMake(0, 64, 320, 50)];
+        
+    } else {
+        //iPad
+        [self iPadOrientationSetUp];
+        
+    }
+}
+
 - (void)viewDidDisappear:(BOOL)animated {
     [[NSNotificationCenter defaultCenter] removeObserver:self name:@"bannerLoaded" object:nil];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:@"bannerError" object:nil];

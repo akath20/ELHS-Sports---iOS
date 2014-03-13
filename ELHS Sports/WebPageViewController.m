@@ -25,30 +25,30 @@
     
     self.adBanner = SharedAdBannerView;
     
-    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
-        //iPhone
-        //set the screen accordingly with the phone model
-        if ((int)[[UIScreen mainScreen] bounds].size.height == 568) {
-            // This is iPhone 5 screen
-            [self.backButton setFrame:CGRectMake(10, 527, 32, 29)];
-            [self.refreshButton setFrame:CGRectMake(281, 527, 32, 29)];
-            [self.webView setFrame:CGRectMake(0, 64, 320, 504)];
-            //[self.loadingAnimation setFrame:CGRectMake(142, 298, self.loadingAnimation.frame.size.width, self.loadingAnimation.frame.size.height)];
-            [self.adBanner setFrame:CGRectMake(0, 518, 320, 50)];
-        } else {
-            //this is the 4/4s screen
-            [self.backButton setFrame:CGRectMake(10, 444, 32, 29)];
-            [self.refreshButton setFrame:CGRectMake(281, 444, 32, 29)];
-            [self.webView setFrame:CGRectMake(0, 64, 320, 416)];
-            //[self.loadingAnimation setFrame:CGRectMake(142, 243, self.loadingAnimation.frame.size.width, self.loadingAnimation.frame.size.height)];
-            [self.adBanner setFrame:CGRectMake(0, 430, 320, 50)];
-            
-        }
-        
-    } else {
-        //iPad
-        [self iPadOrientationSetUp];
-    }
+//    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
+//        //iPhone
+//        //set the screen accordingly with the phone model
+//        if ((int)[[UIScreen mainScreen] bounds].size.height == 568) {
+//            // This is iPhone 5 screen
+//            [self.backButton setFrame:CGRectMake(10, 527, 32, 29)];
+//            [self.refreshButton setFrame:CGRectMake(281, 527, 32, 29)];
+//            [self.webView setFrame:CGRectMake(0, 64, 320, 504)];
+//            //[self.loadingAnimation setFrame:CGRectMake(142, 298, self.loadingAnimation.frame.size.width, self.loadingAnimation.frame.size.height)];
+//            [self.adBanner setFrame:CGRectMake(0, 518, 320, 50)];
+//        } else {
+//            //this is the 4/4s screen
+//            [self.backButton setFrame:CGRectMake(10, 444, 32, 29)];
+//            [self.refreshButton setFrame:CGRectMake(281, 444, 32, 29)];
+//            [self.webView setFrame:CGRectMake(0, 64, 320, 416)];
+//            //[self.loadingAnimation setFrame:CGRectMake(142, 243, self.loadingAnimation.frame.size.width, self.loadingAnimation.frame.size.height)];
+//            [self.adBanner setFrame:CGRectMake(0, 430, 320, 50)];
+//            
+//        }
+//        
+//    } else {
+//        //iPad
+//        [self iPadOrientationSetUp];
+//    }
   
     
 
@@ -184,15 +184,7 @@
 }
 
 - (void)viewDidLayoutSubviews {
-//    if (!(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)) {
-//        //if iPad (should only be iPad that rotates)
-//        [self iPadOrientationSetUp];
-//    }
-    
-    
-    
-    
-        
+
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
         //iPhone
         
@@ -295,30 +287,40 @@
 - (void)bannerError {
     if ([[SharedValues allValues] adDidLoadOnce]) {
         
-        if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
-            //iPhone
-            //set the screen accordingly with the phone model
-            if ((int)[[UIScreen mainScreen] bounds].size.height  == 568) {
-                // This is iPhone 5 screen
-                [self.backButton setFrame:CGRectMake(10, 527, 32, 29)];
-                [self.refreshButton setFrame:CGRectMake(281, 527, 32, 29)];
-                [self.webView setFrame:CGRectMake(0, 64, 320, 504)];
-                [self.loadingAnimation setFrame:CGRectMake(142, 298, self.loadingAnimation.frame.size.width, self.loadingAnimation.frame.size.height)];
-                [self.adBanner setFrame:CGRectMake(0, 518, 320, 50)];
-            } else {
-                //this is the 4/4s screen
-                [self.backButton setFrame:CGRectMake(10, 444, 32, 29)];
-                [self.refreshButton setFrame:CGRectMake(281, 444, 32, 29)];
-                [self.webView setFrame:CGRectMake(0, 64, 320, 416)];
-                [self.loadingAnimation setFrame:CGRectMake(142, 243, self.loadingAnimation.frame.size.width, self.loadingAnimation.frame.size.height)];
-                [self.adBanner setFrame:CGRectMake(0, 430, 320, 50)];
-                
-            }
-            
-        } else {
-            //iPad
-        }
+//        if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
+//            //iPhone
+//            //set the screen accordingly with the phone model
+//            if ((int)[[UIScreen mainScreen] bounds].size.height  == 568) {
+//                // This is iPhone 5 screen
+//                [self.backButton setFrame:CGRectMake(10, 527, 32, 29)];
+//                [self.refreshButton setFrame:CGRectMake(281, 527, 32, 29)];
+//                [self.webView setFrame:CGRectMake(0, 64, 320, 504)];
+//                [self.loadingAnimation setFrame:CGRectMake(142, 298, self.loadingAnimation.frame.size.width, self.loadingAnimation.frame.size.height)];
+//                [self.adBanner setFrame:CGRectMake(0, 518, 320, 50)];
+//            } else {
+//                //this is the 4/4s screen
+//                [self.backButton setFrame:CGRectMake(10, 444, 32, 29)];
+//                [self.refreshButton setFrame:CGRectMake(281, 444, 32, 29)];
+//                [self.webView setFrame:CGRectMake(0, 64, 320, 416)];
+//                [self.loadingAnimation setFrame:CGRectMake(142, 243, self.loadingAnimation.frame.size.width, self.loadingAnimation.frame.size.height)];
+//                [self.adBanner setFrame:CGRectMake(0, 430, 320, 50)];
+//                
+//            }
+//            
+//        } else {
+//            //iPad
+//        }
+//    }
+        
+        //move everything up
+        [self.backButton setFrame:CGRectMake(self.backButton.frame.origin.x, self.backButton.frame.origin.y + 50, self.backButton.frame.size.width, self.backButton.frame.size.height)];
+        [self.refreshButton setFrame:CGRectMake(self.refreshButton.frame.origin.x, self.refreshButton.frame.origin.y + 50, self.refreshButton.frame.size.width, self.refreshButton.frame.size.height)];
+        
+        [self.webView setFrame:CGRectMake(self.webView.frame.origin.x, self.webView.frame.origin.y, self.webView.frame.size.width, self.webView.frame.size.height + 50)];
+        [[SharedValues allValues] setAdDidLoadOnce:false];
+        
     }
+    
     [self.adBanner setAlpha:0.0];
 }
 
