@@ -156,8 +156,9 @@
 - (void)viewDidLayoutSubviews {
 
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
-        //iPhone
         
+    
+        //iPhone
         if ([[UIApplication sharedApplication] statusBarOrientation] == UIInterfaceOrientationPortrait) {
             
             //if portrait
@@ -264,7 +265,7 @@
         
     } else {
         [self iPadOrientationSetUp];
-}
+    }
     
     
     
@@ -306,85 +307,142 @@
 }
 
 - (void)loadBanner {
+    
+    
     //show the ad regardless
     [self.adBanner setAlpha:1];
     
-    
-    //move if neccessary
-    if (!contentIsMoved) {
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
         
-        //move everything up
-        if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
-            //iPhone
-            if ([[UIApplication sharedApplication] statusBarOrientation] == UIInterfaceOrientationPortrait) {
-                
-                //if portrait
-                [self.backButton setFrame:CGRectMake(self.backButton.frame.origin.x, self.adBanner.frame.origin.y - 12, self.backButton.frame.size.width, self.backButton.frame.size.height)];
-                [self.refreshButton setFrame:CGRectMake(self.refreshButton.frame.origin.x, self.adBanner.frame.origin.y - 12, self.refreshButton.frame.size.width, self.refreshButton.frame.size.height)];
-                [self.webView setFrame:CGRectMake(self.webView.frame.origin.x, self.webView.frame.origin.y, self.webView.frame.size.width, self.adBanner.frame.origin.y)];
-
+        //iPhone
+        if ([[UIApplication sharedApplication] statusBarOrientation] == UIInterfaceOrientationPortrait) {
+            
+            //if portrait
+            //if ad is present
+            if ((int)[[UIScreen mainScreen] bounds].size.height == 568) {
+                //4 inch
+                [self.webView setFrame:CGRectMake(0, 64, 320, 454)];
+                [self.backButton setFrame:CGRectMake(10, 477, 32, 29)];
+                [self.adBanner setFrame:CGRectMake(0, 518, 320, 50)];
+                [self.refreshButton setFrame:CGRectMake(281, 477, 32, 29)];
                 
             } else {
-                //if landscape
-                [self.backButton setFrame:CGRectMake(self.backButton.frame.origin.x, self.backButton.frame.origin.y - 32, self.backButton.frame.size.width, self.backButton.frame.size.height)];
-                [self.refreshButton setFrame:CGRectMake(self.refreshButton.frame.origin.x, self.refreshButton.frame.origin.y - 32, self.refreshButton.frame.size.width, self.refreshButton.frame.size.height)];
-                [self.webView setFrame:CGRectMake(self.webView.frame.origin.x, self.webView.frame.origin.y, self.webView.frame.size.width, self.webView.frame.size.height - 32)];
+                //3.5 inch
+                [self.backButton setFrame:CGRectMake(10, 394, 32, 29)];
+                [self.refreshButton setFrame:CGRectMake(281, 394, 32, 29)];
+                [self.webView setFrame:CGRectMake(0, 64, 320, 366)];
+                [self.adBanner setFrame:CGRectMake(0, 430, 320, 50)];
+            }
                 
             
+            } else {
+            
+                int magicNumber = 52;
+                int magicNumber2 = 3;
+                
+                //if landscape
+                //if ad is present
+                if ((int)[[UIScreen mainScreen] bounds].size.height == 568) {
+                    //4 inch
+                    [self.webView setFrame:CGRectMake(0, magicNumber, 568, 233 + magicNumber2)];
+                    [self.backButton setFrame:CGRectMake(10, 248, 32, 29)];
+                    [self.adBanner setFrame:CGRectMake(0, 288, 568, 32)];
+                    [self.refreshButton setFrame:CGRectMake(530, 248, 32, 29)];
+                    
+                } else {
+                    //3.5 inch
+                    [self.backButton setFrame:CGRectMake(10, 248, 32, 29)];
+                    [self.refreshButton setFrame:CGRectMake(442, 248, 32, 29)];
+                    [self.webView setFrame:CGRectMake(0, magicNumber, 480, 223 + magicNumber2)];
+                    [self.adBanner setFrame:CGRectMake(0, 288, 480, 32)];
+                }
+                
             }
-        } else {
-            //iPad
-        }
         
-
+            
+    } else {
+        //iPad
         
-        contentIsMoved = true;
     }
+    
+    [self.loadingAnimation setFrame:CGRectMake(CGRectGetMidX(self.view.bounds)-(self.loadingAnimation.frame.size.width / 2), CGRectGetMidY(self.view.bounds), self.loadingAnimation.frame.size.width, self.loadingAnimation.frame.size.height)];
     
 }
 
 - (void)bannerError {
-    if (contentIsMoved) {
+
+    [self.adBanner setAlpha:0.0];
+
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
         
-        if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
-            //iPhone
-            //set the screen accordingly with the phone model
-            if ((int)[[UIScreen mainScreen] bounds].size.height  == 568) {
-                // This is iPhone 5 screen
-//                [self.backButton setFrame:CGRectMake(10, 527, 32, 29)];
-//                [self.refreshButton setFrame:CGRectMake(281, 527, 32, 29)];
-//                [self.webView setFrame:CGRectMake(0, 64, 320, 504)];
-//                [self.loadingAnimation setFrame:CGRectMake(142, 298, self.loadingAnimation.frame.size.width, self.loadingAnimation.frame.size.height)];
-//                [self.adBanner setFrame:CGRectMake(0, 518, 320, 50)];
+        
+        //iPhone
+        if ([[UIApplication sharedApplication] statusBarOrientation] == UIInterfaceOrientationPortrait) {
+            
+            //if portrait
+            
+            
+            //if no ad present
+            
+            if ((int)[[UIScreen mainScreen] bounds].size.height == 568) {
+                //4 inch
+                [self.webView setFrame:CGRectMake(0, 64, 320, 504)];
+                [self.backButton setFrame:CGRectMake(10, 527, 32, 29)];
+                [self.adBanner setFrame:CGRectMake(0, 518, 320, 50)];
+                [self.refreshButton setFrame:CGRectMake(281, 527, 32, 29)];
+                
             } else {
-                //this is the 4/4s screen
-//                [self.backButton setFrame:CGRectMake(10, 444, 32, 29)];
-//                [self.refreshButton setFrame:CGRectMake(281, 444, 32, 29)];
-//                [self.webView setFrame:CGRectMake(0, 64, 320, 416)];
-//                [self.loadingAnimation setFrame:CGRectMake(142, 243, self.loadingAnimation.frame.size.width, self.loadingAnimation.frame.size.height)];
-//                [self.adBanner setFrame:CGRectMake(0, 430, 320, 50)];
+                //3.5 inch
+                [self.backButton setFrame:CGRectMake(10, 444, 32, 29)];
+                [self.refreshButton setFrame:CGRectMake(281, 444, 32, 29)];
+                [self.webView setFrame:CGRectMake(0, 64, 320, 416)];
+                [self.adBanner setFrame:CGRectMake(0, 430, 320, 50)];
+            }
+       
+            
+        } else {
+            
+            //if landscape
+            
+            int magicNumber = 52;
+            
+
+            //if no ad present
+            if ((int)[[UIScreen mainScreen] bounds].size.height == 568) {
+                //4 inch
+                [self.webView setFrame:CGRectMake(0, magicNumber, 568, 268)];
+                [self.backButton setFrame:CGRectMake(10, 283, 32, 29)];
+                [self.refreshButton setFrame:CGRectMake(530, 283, 32, 29)];
+                [self.adBanner setFrame:CGRectMake(0, 288, 568, 32)];
+                
+            } else {
+                //3.5 inch
+                [self.webView setFrame:CGRectMake(0, magicNumber, 480, 268)];
+                [self.backButton setFrame:CGRectMake(10, 283, 32, 29)];
+                [self.refreshButton setFrame:CGRectMake(442, 283, 32, 29)];
+                [self.adBanner setFrame:CGRectMake(0, 288, 480, 32)];
                 
             }
             
-        } else {
-            //iPad
         }
+        
+        
+        [self.loadingAnimation setFrame:CGRectMake(CGRectGetMidX(self.view.bounds)-(self.loadingAnimation.frame.size.width / 2), CGRectGetMidY(self.view.bounds), self.loadingAnimation.frame.size.width, self.loadingAnimation.frame.size.height)];
+        
+        
+    } else {
+        //iPad
+        
     }
     
-        //move everything up
-        [self.backButton setFrame:CGRectMake(self.backButton.frame.origin.x, self.backButton.frame.origin.y + 50, self.backButton.frame.size.width, self.backButton.frame.size.height)];
-        [self.refreshButton setFrame:CGRectMake(self.refreshButton.frame.origin.x, self.refreshButton.frame.origin.y + 50, self.refreshButton.frame.size.width, self.refreshButton.frame.size.height)];
-        [self.webView setFrame:CGRectMake(self.webView.frame.origin.x, self.webView.frame.origin.y, self.webView.frame.size.width, self.webView.frame.size.height + 50)];
-    
-    
-    contentIsMoved = false;
     
     
     
-    [self.adBanner setAlpha:0.0];
+    
+    
+    
+    
 }
-
-
 
 
 @end
