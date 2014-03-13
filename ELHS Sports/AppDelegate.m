@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "SharedValues.h"
 
 @implementation AppDelegate
 
@@ -18,20 +19,25 @@
     self.adBanner = [[ADBannerView alloc] initWithFrame:CGRectZero];
     [self.adBanner setDelegate:self];
     [self.adBanner setAlpha:0.0];
+    [[SharedValues allValues] setAdIsLoaded:false];
     return YES;
 }
 
 - (void)bannerViewDidLoadAd:(ADBannerView *)banner{
     
     NSLog(@"\nBanner Loaded");
+    [[SharedValues allValues] setAdIsLoaded:true];
     [[NSNotificationCenter defaultCenter] postNotificationName:@"bannerLoaded" object:self];
+    
     
 }
 
 - (void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error{
     
     NSLog(@"\nBanner failed to load");
+    [[SharedValues allValues] setAdIsLoaded:false];
     [[NSNotificationCenter defaultCenter] postNotificationName:@"bannerError" object:self];
+    
     
 }
 

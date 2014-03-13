@@ -20,7 +20,11 @@
 
 - (IBAction)buttonClicked:(UIButton *)sender;
 
+
+
 @end
+
+bool contentIsMoved;
 
 
 
