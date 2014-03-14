@@ -31,7 +31,10 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(bannerError) name:@"bannerError" object:nil];
     
     
-    [self setTableContentToDisplay];
+    
+   
+   //set the shared content to the local content
+    self.tableContent = [[SharedValues allValues] sharedTableContent];
     
     
     
@@ -205,26 +208,13 @@
     
 }
 
-- (void)setTableContentToDisplay {
-    
-    NSDictionary *home = [[NSDictionary alloc] initWithObjectsAndKeys:@"Home", @"Title", nil];
-    NSDictionary *soccer = [[NSDictionary alloc] initWithObjectsAndKeys:@"Soccer", @"Title", nil];
-    NSDictionary *basketball = [[NSDictionary alloc] initWithObjectsAndKeys:@"Basketball", @"Title", nil];
-    NSDictionary *skiing = [[NSDictionary alloc] initWithObjectsAndKeys:@"Skiing", @"Title", nil];
-    NSDictionary *wrestling = [[NSDictionary alloc] initWithObjectsAndKeys:@"Wrestling", @"Title", nil];
-    NSDictionary *swimming = [[NSDictionary alloc] initWithObjectsAndKeys:@"Swimming & Diving", @"Title", nil];
-    NSDictionary *hockey = [[NSDictionary alloc] initWithObjectsAndKeys:@"Hockey", @"Title", nil];
-    NSDictionary *track = [[NSDictionary alloc] initWithObjectsAndKeys:@"Track", @"Title", nil];
-    
-    NSArray *allSports = [[NSArray alloc] initWithObjects:soccer, basketball, skiing, home, wrestling, swimming, hockey, home, track, nil];
-    
-    self.tableContent = [[NSArray alloc] initWithArray:allSports copyItems:true];
-}
-
 #pragma mark iAds
 - (void)loadBanner {
     
     [self.adBanner setAlpha:1];
+    
+    //maybe remove that
+    [self viewDidLayoutSubviews];
     
     
     
@@ -234,6 +224,9 @@
 - (void)bannerError {
     
     [self.adBanner setAlpha:0];
+    
+    //maybe remove that
+    [self viewDidLayoutSubviews];
     
 }
 

@@ -27,6 +27,12 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadBanner) name:@"bannerLoaded" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(bannerError) name:@"bannerError" object:nil];
     
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+        //if iPad
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(setupTheWebView) name:@"reloadWebPage" object:nil];
+    }
+    
+    
     self.adBanner = SharedAdBannerView;
     
     [self setAutomaticallyAdjustsScrollViewInsets:false];
@@ -34,13 +40,7 @@
     //Setup The Web View
     [self setupTheWebView];
     
-    //set the title of the nav bar
-    if ([[[SharedValues allValues] urlToLoadAsString] isEqualToString:@""]) {
-        self.topNavBar.title = @"Home";
-    } else {
-        self.topNavBar.title = [[SharedValues allValues] urlToLoadAsString];
-    }
-    
+
     //configure the buttons at the bottem
     if (self.webView.canGoBack) {
         [self.backButton setHidden:false];
@@ -63,6 +63,14 @@
 - (void)viewDidDisappear:(BOOL)animated {
     [[NSNotificationCenter defaultCenter] removeObserver:self name:@"bannerLoaded" object:nil];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:@"bannerError" object:nil];
+    
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+        //if iPad
+        //this shouldn't even be called on an iPad
+        [[NSNotificationCenter defaultCenter] removeObserver:self name:@"reloadWebPage" object:nil];
+    }
+    
+    
     self.webView = nil;
 }
 
@@ -83,6 +91,7 @@
         //load the webpage
         [self.webView loadRequest:urlToLoadRequest];
         
+        
     } else {
         //if coming from the settings and showing my website
         
@@ -96,6 +105,15 @@
         [self.webView loadRequest:urlToLoadRequest];
         
         
+    }
+    
+    //set the title of the nav bar
+    if ([[[SharedValues allValues] urlToLoadAsString] isEqualToString:@""]) {
+        self.topNavBar.title = @"Home";
+    } else if ([urlToLoadAsString isEqualToString:@"http://webpages.charter.net/akath20/"]) {
+        self.topNavBar.title = @"AKA Software Development";
+    } else {
+        self.topNavBar.title = [[SharedValues allValues] urlToLoadAsString];
     }
     
     
@@ -307,137 +325,15 @@
     
     //show the ad regardless
     [self.adBanner setAlpha:1];
-    
-    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
-        
-        //iPhone
-        if ([[UIApplication sharedApplication] statusBarOrientation] == UIInterfaceOrientationPortrait) {
-            
-            //if portrait
-            //if ad is present
-            if ((int)[[UIScreen mainScreen] bounds].size.height == 568) {
-                //4 inch
-                [self.webView setFrame:CGRectMake(0, 64, 320, 454)];
-                [self.backButton setFrame:CGRectMake(10, 477, 32, 29)];
-                [self.adBanner setFrame:CGRectMake(0, 518, 320, 50)];
-                [self.refreshButton setFrame:CGRectMake(281, 477, 32, 29)];
-                
-            } else {
-                //3.5 inch
-                [self.backButton setFrame:CGRectMake(10, 394, 32, 29)];
-                [self.refreshButton setFrame:CGRectMake(281, 394, 32, 29)];
-                [self.webView setFrame:CGRectMake(0, 64, 320, 366)];
-                [self.adBanner setFrame:CGRectMake(0, 430, 320, 50)];
-            }
-                
-            
-            } else {
-            
-                int magicNumber = 52;
-                int magicNumber2 = 3;
-                
-                //if landscape
-                //if ad is present
-                if ((int)[[UIScreen mainScreen] bounds].size.height == 568) {
-                    //4 inch
-                    [self.webView setFrame:CGRectMake(0, magicNumber, 568, 233 + magicNumber2)];
-                    [self.backButton setFrame:CGRectMake(10, 248, 32, 29)];
-                    [self.adBanner setFrame:CGRectMake(0, 288, 568, 32)];
-                    [self.refreshButton setFrame:CGRectMake(530, 248, 32, 29)];
-                    
-                } else {
-                    //3.5 inch
-                    [self.backButton setFrame:CGRectMake(10, 248, 32, 29)];
-                    [self.refreshButton setFrame:CGRectMake(442, 248, 32, 29)];
-                    [self.webView setFrame:CGRectMake(0, magicNumber, 480, 223 + magicNumber2)];
-                    [self.adBanner setFrame:CGRectMake(0, 288, 480, 32)];
-                }
-                
-            }
-        
-            
-    } else {
-        //iPad
-        
-    }
-    
-    [self.loadingAnimation setFrame:CGRectMake(CGRectGetMidX(self.view.bounds)-(self.loadingAnimation.frame.size.width / 2), CGRectGetMidY(self.view.bounds), self.loadingAnimation.frame.size.width, self.loadingAnimation.frame.size.height)];
-    
+    [self viewDidLayoutSubviews];
 }
 
 - (void)bannerError {
 
     [self.adBanner setAlpha:0.0];
+    [self viewDidLayoutSubviews];
 
-    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
-        
-        
-        //iPhone
-        if ([[UIApplication sharedApplication] statusBarOrientation] == UIInterfaceOrientationPortrait) {
-            
-            //if portrait
-            
-            
-            //if no ad present
-            
-            if ((int)[[UIScreen mainScreen] bounds].size.height == 568) {
-                //4 inch
-                [self.webView setFrame:CGRectMake(0, 64, 320, 504)];
-                [self.backButton setFrame:CGRectMake(10, 527, 32, 29)];
-                [self.adBanner setFrame:CGRectMake(0, 518, 320, 50)];
-                [self.refreshButton setFrame:CGRectMake(281, 527, 32, 29)];
-                
-            } else {
-                //3.5 inch
-                [self.backButton setFrame:CGRectMake(10, 444, 32, 29)];
-                [self.refreshButton setFrame:CGRectMake(281, 444, 32, 29)];
-                [self.webView setFrame:CGRectMake(0, 64, 320, 416)];
-                [self.adBanner setFrame:CGRectMake(0, 430, 320, 50)];
-            }
-       
-            
-        } else {
-            
-            //if landscape
-            
-            int magicNumber = 52;
-            
 
-            //if no ad present
-            if ((int)[[UIScreen mainScreen] bounds].size.height == 568) {
-                //4 inch
-                [self.webView setFrame:CGRectMake(0, magicNumber, 568, 268)];
-                [self.backButton setFrame:CGRectMake(10, 283, 32, 29)];
-                [self.refreshButton setFrame:CGRectMake(530, 283, 32, 29)];
-                [self.adBanner setFrame:CGRectMake(0, 288, 568, 32)];
-                
-            } else {
-                //3.5 inch
-                [self.webView setFrame:CGRectMake(0, magicNumber, 480, 268)];
-                [self.backButton setFrame:CGRectMake(10, 283, 32, 29)];
-                [self.refreshButton setFrame:CGRectMake(442, 283, 32, 29)];
-                [self.adBanner setFrame:CGRectMake(0, 288, 480, 32)];
-                
-            }
-            
-        }
-        
-        
-        [self.loadingAnimation setFrame:CGRectMake(CGRectGetMidX(self.view.bounds)-(self.loadingAnimation.frame.size.width / 2), CGRectGetMidY(self.view.bounds), self.loadingAnimation.frame.size.width, self.loadingAnimation.frame.size.height)];
-        
-        
-    } else {
-        //iPad
-        
-    }
-    
-    
-    
-    
-    
-    
-    
-    
 }
 
 

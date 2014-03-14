@@ -20,6 +20,14 @@
     [self.adBanner setDelegate:self];
     [self.adBanner setAlpha:0.0];
     [[SharedValues allValues] setAdIsLoaded:false];
+    
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+        [[SharedValues allValues] setUrlToLoadAsString:@""];
+    }
+    
+    //create the table view content
+    [[SharedValues allValues] createSharedTableContent];
+    
     return YES;
 }
 

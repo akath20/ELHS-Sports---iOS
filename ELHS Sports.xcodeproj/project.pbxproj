@@ -11,6 +11,7 @@
 		FA4C399B18C3D08C001847C7 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = FA4C399A18C3D08C001847C7 /* Reachability.m */; };
 		FA6ED64518D1539A00B03171 /* SettingsCustomNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6ED64418D1539A00B03171 /* SettingsCustomNavController.m */; };
 		FA6ED64E18D2561300B03171 /* MainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6ED64D18D2561300B03171 /* MainMenuViewController.m */; };
+		FA6ED65318D299A200B03171 /* iPadTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6ED65218D299A200B03171 /* iPadTableViewController.m */; };
 		FA6ED98618B9587400CA58B5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA6ED98518B9587400CA58B5 /* Foundation.framework */; };
 		FA6ED98818B9587400CA58B5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA6ED98718B9587400CA58B5 /* CoreGraphics.framework */; };
 		FA6ED98A18B9587400CA58B5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA6ED98918B9587400CA58B5 /* UIKit.framework */; };
@@ -49,6 +50,8 @@
 		FA6ED64418D1539A00B03171 /* SettingsCustomNavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsCustomNavController.m; sourceTree = "<group>"; };
 		FA6ED64C18D2561300B03171 /* MainMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuViewController.h; sourceTree = "<group>"; };
 		FA6ED64D18D2561300B03171 /* MainMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenuViewController.m; sourceTree = "<group>"; };
+		FA6ED65118D299A200B03171 /* iPadTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iPadTableViewController.h; sourceTree = "<group>"; };
+		FA6ED65218D299A200B03171 /* iPadTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iPadTableViewController.m; sourceTree = "<group>"; };
 		FA6ED98218B9587400CA58B5 /* ELHS Sports.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ELHS Sports.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA6ED98518B9587400CA58B5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FA6ED98718B9587400CA58B5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -209,6 +212,8 @@
 				FA6ED64C18D2561300B03171 /* MainMenuViewController.h */,
 				FA6ED64D18D2561300B03171 /* MainMenuViewController.m */,
 				FA6ED64F18D256B500B03171 /* Settings Screen */,
+				FA6ED65118D299A200B03171 /* iPadTableViewController.h */,
+				FA6ED65218D299A200B03171 /* iPadTableViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -326,6 +331,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA80B93C18B97D680029119C /* SharedValues.m in Sources */,
+				FA6ED65318D299A200B03171 /* iPadTableViewController.m in Sources */,
 				FA80B93818B96DC70029119C /* WebPageViewController.m in Sources */,
 				FA4C399B18C3D08C001847C7 /* Reachability.m in Sources */,
 				FA6ED64E18D2561300B03171 /* MainMenuViewController.m in Sources */,
@@ -473,10 +479,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ELHS Sports/ELHS Sports-Prefix.pch";
 				INFOPLIST_FILE = "ELHS Sports/ELHS Sports-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "644416A4-F50E-4BA8-A532-66606D1660F1";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -490,10 +496,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ELHS Sports/ELHS Sports-Prefix.pch";
 				INFOPLIST_FILE = "ELHS Sports/ELHS Sports-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "3232622D-59D2-499A-BE42-BB8D31BA47EB";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

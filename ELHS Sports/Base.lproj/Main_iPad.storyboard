@@ -4,192 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--View Controller - Home-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Soccer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vMf-cn-UQr">
-                                <rect key="frame" x="68" y="645" width="119" height="51"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="PdR-Zr-wfO">
-                                <rect key="frame" x="559" y="770" width="172" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Track" backgroundImage="Track">
-                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="iconClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="o66-QP-9S6"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="dsd-r2-9WA">
-                                <rect key="frame" x="570" y="453" width="151" height="140"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Hockey" backgroundImage="Hockey">
-                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="iconClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Slb-aD-0Yi"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="6Kb-3P-ahJ">
-                                <rect key="frame" x="140" y="153" width="165" height="163"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Basketball" backgroundImage="Basketball">
-                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="iconClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wv3-PY-Ooe"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="uDl-Ni-cel">
-                                <rect key="frame" x="469" y="155" width="158" height="158"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Swimming" backgroundImage="Swim">
-                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="iconClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CON-LY-hmH"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Skiing" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ldC-5O-3aD">
-                                <rect key="frame" x="56" y="908" width="111" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="3as-el-bek">
-                                <rect key="frame" x="244" y="375" width="281" height="273"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <inset key="contentEdgeInsets" minX="0.0" minY="-58" maxX="0.0" maxY="-104"/>
-                                <state key="normal" title="Home" image="Home">
-                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="iconClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="srA-Ok-JG5"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="CPx-5j-D36">
-                                <rect key="frame" x="46" y="431" width="162" height="162"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Soccer" backgroundImage="Soccer">
-                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="iconClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MNs-OO-3mf"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wrestling" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="NGG-ra-i20">
-                                <rect key="frame" x="312" y="915" width="145" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hockey" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="v6l-WF-8xD">
-                                <rect key="frame" x="587" y="646" width="116" height="49"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8IZ-UY-a3p">
-                                <rect key="frame" x="331" y="656" width="107" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Track" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8vZ-g0-KNj">
-                                <rect key="frame" x="585" y="911" width="120" height="38"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Vvh-b9-8Pl">
-                                <rect key="frame" x="291" y="763" width="187" height="141"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Wrestling" backgroundImage="Wrestling">
-                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="iconClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ns3-qE-1hb"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="kSW-D6-IVb">
-                                <rect key="frame" x="51" y="760" width="152" height="148"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Skiing" backgroundImage="Ski">
-                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="iconClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xCm-Zo-5aB"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Basketball" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0dU-rN-ewJ">
-                                <rect key="frame" x="144" y="324" width="156" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swimming &amp; Diving" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eqk-ne-X6c">
-                                <rect key="frame" x="458" y="297" width="180" height="97"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" red="0.85377471299999996" green="0.0092643148209999998" blue="0.0" alpha="0.68000000000000005" colorSpace="calibratedRGB"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Home" id="uPa-zX-keI">
-                        <barButtonItem key="leftBarButtonItem" title="About" id="Z6W-l5-J9w"/>
-                    </navigationItem>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
-                    <connections>
-                        <outlet property="swimButton" destination="uDl-Ni-cel" id="ZFy-Qn-ykH"/>
-                        <outletCollection property="allLabels" destination="0dU-rN-ewJ" id="6u3-XX-kIE"/>
-                        <outletCollection property="allLabels" destination="eqk-ne-X6c" id="KOP-hW-oBl"/>
-                        <outletCollection property="allLabels" destination="vMf-cn-UQr" id="y7v-fu-twG"/>
-                        <outletCollection property="allLabels" destination="8IZ-UY-a3p" id="g8W-PJ-0Tc"/>
-                        <outletCollection property="allLabels" destination="v6l-WF-8xD" id="JRi-bt-fxw"/>
-                        <outletCollection property="allLabels" destination="ldC-5O-3aD" id="vhw-BK-Kle"/>
-                        <outletCollection property="allLabels" destination="NGG-ra-i20" id="KLl-wx-vek"/>
-                        <outletCollection property="allLabels" destination="8vZ-g0-KNj" id="sng-1H-qah"/>
-                        <outletCollection property="allButtons" destination="6Kb-3P-ahJ" id="S6t-Xd-7Kz"/>
-                        <outletCollection property="allButtons" destination="uDl-Ni-cel" id="eK5-G7-NME"/>
-                        <outletCollection property="allButtons" destination="CPx-5j-D36" id="5hj-Ue-Kcv"/>
-                        <outletCollection property="allButtons" destination="3as-el-bek" id="VN2-Dl-gRb"/>
-                        <outletCollection property="allButtons" destination="dsd-r2-9WA" id="hwm-rZ-pfZ"/>
-                        <outletCollection property="allButtons" destination="kSW-D6-IVb" id="8aN-sa-0TK"/>
-                        <outletCollection property="allButtons" destination="Vvh-b9-8Pl" id="ptj-sL-eXl"/>
-                        <outletCollection property="allButtons" destination="PdR-Zr-wfO" id="cOY-EP-MXO"/>
-                        <segue destination="h0T-RU-hHX" kind="push" identifier="showWebPage" id="JhK-Ac-kMg"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="882" y="-72"/>
-        </scene>
-        <!--Web Page View Controller-->
+        <!--Web Page View Controller - Title-->
         <scene sceneID="U7z-KS-0EI">
             <objects>
                 <viewController id="h0T-RU-hHX" customClass="WebPageViewController" sceneMemberID="viewController">
@@ -234,7 +49,22 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="e1t-xp-acb"/>
+                    <navigationItem key="navigationItem" title="Title" id="e1t-xp-acb">
+                        <barButtonItem key="leftBarButtonItem" title="About" id="SZ5-nL-mBj">
+                            <connections>
+                                <segue destination="jfQ-KH-eQk" kind="popover" popoverAnchorBarButtonItem="SZ5-nL-mBj" id="6FH-Ds-tbr">
+                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                </segue>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Select Sport" id="iZ5-nc-8LL">
+                            <connections>
+                                <segue destination="Wbj-v9-VIU" kind="popover" popoverAnchorBarButtonItem="iZ5-nc-8LL" id="Vbj-pi-NFu">
+                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                </segue>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="backButton" destination="hQe-td-Yo9" id="cIN-Gn-lqj"/>
                         <outlet property="loadingAnimation" destination="Lc0-q9-BL3" id="j3W-ad-xk4"/>
@@ -245,7 +75,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G7P-A0-B1Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2079" y="-72"/>
+            <point key="canvasLocation" x="863" y="-200"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="AsS-c4-dXW">
@@ -258,25 +88,87 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="6ua-Ap-rzt"/>
+                        <segue destination="h0T-RU-hHX" kind="relationship" relationship="rootViewController" id="Rxl-3M-m2e"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="57A-aZ-en0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-164" y="-200"/>
         </scene>
+        <!--View Controller - About-->
+        <scene sceneID="4em-zQ-Uiv">
+            <objects>
+                <viewController id="rri-0I-im1" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XrV-2e-GMx">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="450"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="About" id="U1u-B5-h5H"/>
+                    <value key="contentSizeForViewInPopover" type="size" width="320" height="450"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="450"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KB1-lI-Xla" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="863" y="-829"/>
+        </scene>
+        <!--I Pad Table View Controller-->
+        <scene sceneID="0BQ-kr-jpa">
+            <objects>
+                <tableViewController id="Wbj-v9-VIU" customClass="iPadTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="jNK-hD-UBR">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="450"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="hkt-3X-Ket">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hkt-3X-Ket" id="VWG-I1-C57">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Wbj-v9-VIU" id="Fzh-AY-yLh"/>
+                            <outlet property="delegate" destination="Wbj-v9-VIU" id="Tof-IH-pI7"/>
+                        </connections>
+                    </tableView>
+                    <value key="contentSizeForViewInPopover" type="size" width="320" height="450"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="450"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VRf-Nc-g7f" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1311" y="-829"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="e3Q-AL-d4d">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jfQ-KH-eQk" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <value key="contentSizeForViewInPopover" type="size" width="320" height="500"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="500"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ku3-et-Ijg">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="rri-0I-im1" kind="relationship" relationship="rootViewController" id="eWV-kM-Hqb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U6M-uQ-BZx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="284" y="-829"/>
+        </scene>
     </scenes>
     <resources>
         <image name="057 CircledArrowLeft" width="32" height="32"/>
         <image name="063 Undo" width="32" height="32"/>
-        <image name="Basketball" width="128" height="128"/>
-        <image name="Hockey" width="128" height="128"/>
-        <image name="Home" width="320" height="568"/>
-        <image name="Ski" width="128" height="128"/>
-        <image name="Soccer" width="128" height="128"/>
-        <image name="Swim" width="128" height="128"/>
-        <image name="Track" width="128" height="128"/>
-        <image name="Wrestling" width="128" height="128"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackOpaque"/>

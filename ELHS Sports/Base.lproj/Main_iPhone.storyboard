@@ -78,28 +78,6 @@
             </objects>
             <point key="canvasLocation" x="1402" y="-448"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="6z7-xO-2Uu">
-            <objects>
-                <viewController id="9dr-go-Kln" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="v3X-g4-AIJ">
-                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="dcO-rP-b0A">
-                                <rect key="frame" x="0.0" y="288" width="568" height="32"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                            </adBannerView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    </view>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yf5-4o-AbC" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1333" y="221"/>
-        </scene>
         <!--Web Page View Controller - Title-->
         <scene sceneID="I7O-xn-nMa">
             <objects>

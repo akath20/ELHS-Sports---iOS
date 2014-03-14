@@ -11,9 +11,11 @@
 @interface SharedValues : NSObject
 
 @property (strong, nonatomic) NSString *urlToLoadAsString;
+@property (strong, nonatomic) NSArray *sharedTableContent;
 @property BOOL adIsLoaded;
 
 + (SharedValues *)allValues;
+- (void)createSharedTableContent;
 
 
 @end
