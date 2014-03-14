@@ -25,17 +25,100 @@
         [[Reachability showAlertNoInternet] show];
     }
     
-    
-    
     //The ad
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadBanner) name:@"bannerLoaded" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(bannerError) name:@"bannerError" object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(switchToWeb) name:@"performSegue" object:nil];
     
     self.adBanner = SharedAdBannerView;
     
     [self setTableContentToDisplay];
+ 
+}
+
+- (void)viewDidLayoutSubviews {
     
+
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
+        
+        
+        //iPhone
+        if ([[UIApplication sharedApplication] statusBarOrientation] == UIInterfaceOrientationPortrait) {
+            
+            //if portrait
+            
+            if (![[SharedValues allValues] adIsLoaded]) {
+                //if no ad present
+                
+                if ((int)[[UIScreen mainScreen] bounds].size.height == 568) {
+                    //4 inch
+                    
+                    
+                } else {
+                    //3.5 inch
+                    
+                }
+                
+            } else {
+                
+                //if ad is present
+                if ((int)[[UIScreen mainScreen] bounds].size.height == 568) {
+                    //4 inch
+                    
+                    
+                } else {
+                    //3.5 inch
+                }
+                
+            }
+            
+        } else {
+            
+            
+            
+            
+            //if landscape
+            if (![[SharedValues allValues] adIsLoaded]) {
+                //if no ad present
+                if ((int)[[UIScreen mainScreen] bounds].size.height == 568) {
+                    //4 inch
+                    
+                    
+                } else {
+                    //3.5 inch
+                    
+                    
+                }
+                
+            } else {
+                
+                
+                
+                //if ad is present
+                if ((int)[[UIScreen mainScreen] bounds].size.height == 568) {
+                    //4 inch
+
+                } else {
+                    //3.5 inch
+                    
+                }
+                
+            }
+            
+            
+            
+            
+            
+            
+        }
+        
+        
+        
+        
+        
+    } else {
+        [self iPadOrientationSetUp];
+    }
+        
     
     
     
@@ -50,14 +133,12 @@
     return 1;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
     return [self.tableContent count];
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
     // Configure the cell...
@@ -91,7 +172,7 @@
         //show alert from the class
         [[Reachability showAlertNoInternet] show];
     } else {
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"performSegue" object:nil];
+        [self performSegueWithIdentifier:@"showWebPage" sender:Nil];
     }
     
     
@@ -114,16 +195,9 @@
     self.tableContent = [[NSArray alloc] initWithArray:allSports copyItems:true];
 }
 
-
-
-
-
-
-
-
-
-
+#pragma mark iAds
 - (void)loadBanner {
+    
     
     
     
@@ -134,9 +208,6 @@
     
 }
 
-- (void)switchToWeb {
-    //swith to the web view
-    [self performSegueWithIdentifier:@"showWebPage" sender:Nil];
-}
+
 
 @end
