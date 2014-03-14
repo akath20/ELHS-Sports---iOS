@@ -110,15 +110,6 @@
 			name = "Settings Screen";
 			sourceTree = "<group>";
 		};
-		FA6ED65018D256C300B03171 /* Main Menu Screen */ = {
-			isa = PBXGroup;
-			children = (
-				FA6ED64C18D2561300B03171 /* MainMenuViewController.h */,
-				FA6ED64D18D2561300B03171 /* MainMenuViewController.m */,
-			);
-			name = "Main Menu Screen";
-			sourceTree = "<group>";
-		};
 		FA6ED97918B9587400CA58B5 = {
 			isa = PBXGroup;
 			children = (
@@ -215,8 +206,9 @@
 			children = (
 				FA80B93618B96DC70029119C /* WebPageViewController.h */,
 				FA80B93718B96DC70029119C /* WebPageViewController.m */,
+				FA6ED64C18D2561300B03171 /* MainMenuViewController.h */,
+				FA6ED64D18D2561300B03171 /* MainMenuViewController.m */,
 				FA6ED64F18D256B500B03171 /* Settings Screen */,
-				FA6ED65018D256C300B03171 /* Main Menu Screen */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";

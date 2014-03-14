@@ -19,6 +19,7 @@
 @implementation MainMenuViewController
 
 - (void)viewDidLoad {
+    
     //check for internet connection
     if (![Reachability checkForInternetWithString:Nil]) {
         //show alert from the class
@@ -29,10 +30,28 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadBanner) name:@"bannerLoaded" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(bannerError) name:@"bannerError" object:nil];
     
-    self.adBanner = SharedAdBannerView;
     
     [self setTableContentToDisplay];
+    
+    
+    
  
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    
+    self.adBanner = SharedAdBannerView;
+    
+    
+    
+    if ([[SharedValues allValues] adIsLoaded]) {
+        [self loadBanner];
+    } else {
+        [self bannerError];
+    }
+    
+    [self.view addSubview:self.adBanner];
+    
 }
 
 - (void)viewDidLayoutSubviews {
@@ -51,10 +70,14 @@
                 
                 if ((int)[[UIScreen mainScreen] bounds].size.height == 568) {
                     //4 inch
+                    [self.tableView setFrame:CGRectMake(0, 0, 320, 568)];
+                    [self.adBanner setFrame:CGRectMake(0, 518, 320, 50)];
                     
                     
                 } else {
                     //3.5 inch
+                    [self.tableView setFrame:CGRectMake(0, 0, 320, 480)];
+                    [self.adBanner setFrame:CGRectMake(0, 430, 320, 50)];
                     
                 }
                 
@@ -63,10 +86,14 @@
                 //if ad is present
                 if ((int)[[UIScreen mainScreen] bounds].size.height == 568) {
                     //4 inch
+                    [self.tableView setFrame:CGRectMake(0, 0, 320, 518)];
+                    [self.adBanner setFrame:CGRectMake(0, 518, 320, 50)];
                     
                     
                 } else {
                     //3.5 inch
+                    [self.tableView setFrame:CGRectMake(0, 0, 320, 430)];
+                    [self.adBanner setFrame:CGRectMake(0, 430, 320, 50)];
                 }
                 
             }
@@ -81,33 +108,32 @@
                 //if no ad present
                 if ((int)[[UIScreen mainScreen] bounds].size.height == 568) {
                     //4 inch
-                    
+                    [self.tableView setFrame:CGRectMake(0, 0, 568, 320)];
+                    [self.adBanner setFrame:CGRectMake(0, 288, 568, 32)];
                     
                 } else {
                     //3.5 inch
-                    
-                    
+                    [self.tableView setFrame:CGRectMake(0, 0, 480, 320)];
+                    [self.adBanner setFrame:CGRectMake(0, 288, 480, 32)];
+                
                 }
                 
             } else {
-                
-                
-                
+            
                 //if ad is present
                 if ((int)[[UIScreen mainScreen] bounds].size.height == 568) {
                     //4 inch
+                    [self.tableView setFrame:CGRectMake(0, 0, 568, 288)];
+                    [self.adBanner setFrame:CGRectMake(0, 288, 568, 32)];
 
                 } else {
                     //3.5 inch
+                    [self.tableView setFrame:CGRectMake(0, 0, 480, 288)];
+                    [self.adBanner setFrame:CGRectMake(0, 288, 480, 32)];
                     
                 }
                 
             }
-            
-            
-            
-            
-            
             
         }
         
@@ -116,7 +142,7 @@
         
         
     } else {
-        [self iPadOrientationSetUp];
+        //iPad
     }
         
     
@@ -198,6 +224,8 @@
 #pragma mark iAds
 - (void)loadBanner {
     
+    [self.adBanner setAlpha:1];
+    
     
     
     
@@ -205,6 +233,7 @@
 
 - (void)bannerError {
     
+    [self.adBanner setAlpha:0];
     
 }
 
