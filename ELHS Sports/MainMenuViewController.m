@@ -37,7 +37,6 @@
     self.tableContent = [[SharedValues allValues] sharedTableContent];
     
     
-    
  
 }
 
@@ -176,13 +175,23 @@
     
     cell.textLabel.text = [[tableData objectAtIndex:indexPath.row] objectForKey:@"Title"];
     
+    //image
+    if ([[tableData objectAtIndex:indexPath.row] objectForKey:@"image"]) {
+        //if valid image, set it
+        cell.imageView.image = [[tableData objectAtIndex:indexPath.row] objectForKey:@"image"];
+    }
+    
     return cell;
     
 }
 
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     //when the user selectes the row
     
+    
+    //deselect the selected row
+    [tableView deselectRowAtIndexPath:indexPath animated:true];
     
     
     //decide what to set the value as

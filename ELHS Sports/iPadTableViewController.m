@@ -61,7 +61,6 @@
     cell.textLabel.text = [[tableData objectAtIndex:indexPath.row] objectForKey:@"Title"];
     
     
-    //NEW
     //image
     if ([[tableData objectAtIndex:indexPath.row] objectForKey:@"image"]) {
         //if valid image, set it
@@ -72,10 +71,12 @@
     
 }
 
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     //when the user selectes the row
     
-    
+    //deselect the selected row
+    [tableView deselectRowAtIndexPath:indexPath animated:true];
     
     //decide what to set the value as
     if ([[tableView cellForRowAtIndexPath:indexPath].textLabel.text isEqualToString:@"Home"]) {
