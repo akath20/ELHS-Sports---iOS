@@ -9,21 +9,13 @@
 #import "iPadTableViewController.h"
 #import "SharedValues.h"
 #import "Reachability.h"
+#import "iPadTableViewController.h"
 
 @interface iPadTableViewController ()
 
 @end
 
 @implementation iPadTableViewController
-
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
 
 - (void)viewDidLoad
 {
@@ -39,7 +31,12 @@
     self.tableContent = [[SharedValues allValues] sharedTableContent];
     
     
+    
+    
 }
+
+
+
 
 #pragma mark - Table view data source
 
@@ -92,9 +89,13 @@
     }
     
     //make view disappear
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"dismissPopover" object:nil];
     
     
     
 }
+
+
+
 
 @end

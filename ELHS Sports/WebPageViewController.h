@@ -17,6 +17,7 @@
 @property (strong, nonatomic) IBOutlet UIButton *backButton;
 @property (strong, nonatomic) IBOutlet UIButton *refreshButton;
 @property (strong, nonatomic) ADBannerView *adBanner;
+@property (strong, nonatomic) UIPopoverController *myPopoverController;
 
 - (IBAction)buttonClicked:(UIButton *)sender;
 

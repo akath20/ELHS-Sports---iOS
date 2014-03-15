@@ -59,7 +59,7 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Select Sport" id="iZ5-nc-8LL">
                             <connections>
-                                <segue destination="Wbj-v9-VIU" kind="popover" popoverAnchorBarButtonItem="iZ5-nc-8LL" id="Vbj-pi-NFu">
+                                <segue destination="Wbj-v9-VIU" kind="popover" identifier="popOverSegue" popoverAnchorBarButtonItem="iZ5-nc-8LL" id="Vbj-pi-NFu">
                                     <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                 </segue>
                             </connections>

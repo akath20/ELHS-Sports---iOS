@@ -33,6 +33,7 @@
     }
     
     
+    
     self.adBanner = SharedAdBannerView;
     
     [self setAutomaticallyAdjustsScrollViewInsets:false];
@@ -74,6 +75,28 @@
     self.webView = nil;
 }
 
+
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"popOverSegue"]) {
+        if ([segue isKindOfClass:[UIStoryboardPopoverSegue class]]) {
+            UIStoryboardPopoverSegue *popoverSegue = (UIStoryboardPopoverSegue *)segue;
+            self.myPopoverController = popoverSegue.popoverController;
+            [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(dismissPopover) name:@"dismissPopover" object:nil];
+        }
+    }
+}
+
+
+- (void)dismissPopover {
+    
+    [self.myPopoverController dismissPopoverAnimated:true];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"dismissPopover" object:nil];
+    
+}
+
+
 - (void)setupTheWebView {
     
     //get the webpage to load
@@ -90,6 +113,7 @@
         
         //load the webpage
         [self.webView loadRequest:urlToLoadRequest];
+        
         
         
     } else {
