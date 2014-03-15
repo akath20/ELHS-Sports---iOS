@@ -49,6 +49,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" title="Title" id="e1t-xp-acb">
                         <barButtonItem key="leftBarButtonItem" title="About" id="SZ5-nL-mBj">
                             <connections>
@@ -57,9 +58,9 @@
                                 </segue>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Select Sport" id="iZ5-nc-8LL">
+                        <barButtonItem key="rightBarButtonItem" title="Select Sport" id="QmB-CR-gBK">
                             <connections>
-                                <segue destination="Wbj-v9-VIU" kind="popover" identifier="popOverSegue" popoverAnchorBarButtonItem="iZ5-nc-8LL" id="Vbj-pi-NFu">
+                                <segue destination="Wbj-v9-VIU" kind="popover" identifier="popOverSegue" popoverAnchorBarButtonItem="QmB-CR-gBK" id="TBt-TC-YWt">
                                     <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                 </segue>
                             </connections>
@@ -69,6 +70,7 @@
                         <outlet property="backButton" destination="hQe-td-Yo9" id="cIN-Gn-lqj"/>
                         <outlet property="loadingAnimation" destination="Lc0-q9-BL3" id="j3W-ad-xk4"/>
                         <outlet property="refreshButton" destination="k2H-FB-REH" id="H0z-wA-vQB"/>
+                        <outlet property="selectSportButton" destination="QmB-CR-gBK" id="UVs-ba-jB9"/>
                         <outlet property="topNavBar" destination="e1t-xp-acb" id="iFr-dy-as0"/>
                         <outlet property="webView" destination="gdT-GU-dhg" id="Hhx-85-wwC"/>
                     </connections>

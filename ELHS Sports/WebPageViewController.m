@@ -30,6 +30,13 @@
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
         //if iPad
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(setupTheWebView) name:@"reloadWebPage" object:nil];
+        
+        
+        //set the top bar with custom buttons
+//        UIBarButtonItem *selectSportButton = [[UIBarButtonItem alloc] initWithTitle:@"Select Sport" style:UIBarButtonItemStyleBordered target:self action:@selector(navBarButtonClicked)];
+        UIBarButtonItem *shareButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(navBarButtonClicked)];
+        NSArray *myButtonArray = [[NSArray alloc] initWithObjects:self.selectSportButton, shareButton, nil];
+        self.topNavBar.rightBarButtonItems = myButtonArray;
     }
     
     
@@ -135,6 +142,10 @@
         self.topNavBar.title = [[SharedValues allValues] urlToLoadAsString];
     }
     
+    
+}
+
+- (void)navBarButtonClicked {
     
 }
 
