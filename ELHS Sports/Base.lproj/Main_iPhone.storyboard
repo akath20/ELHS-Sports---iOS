@@ -125,7 +125,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="ySD-uE-uot"/>
+                    <navigationItem key="navigationItem" title="Title" id="ySD-uE-uot">
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="MO1-GU-lgK">
+                            <connections>
+                                <action selector="shareButtonClicked:" destination="OuM-O5-ulg" id="NEz-MS-jx8"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="backButton" destination="bFD-cr-YyW" id="Qs1-fJ-4AO"/>
                         <outlet property="loadingAnimation" destination="AGB-11-cmn" id="PYh-mG-85h"/>

@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <iAd/iAd.h>
 
-@interface WebPageViewController : UIViewController <UIWebViewDelegate, ADBannerViewDelegate>
+@interface WebPageViewController : UIViewController <UIWebViewDelegate, ADBannerViewDelegate, UIActionSheetDelegate>
 
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
 @property (strong, nonatomic) IBOutlet UINavigationItem *topNavBar;
@@ -20,7 +20,9 @@
 @property (strong, nonatomic) UIPopoverController *myPopoverController;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *selectSportButton;
 
+
 - (IBAction)buttonClicked:(UIButton *)sender;
+- (IBAction)shareButtonClicked:(id)sender;
 
 
 

@@ -10,6 +10,7 @@
 #import "SharedValues.h"
 #import "AppDelegate.h"
 #import "Reachability.h"
+#import <Social/Social.h>
 
 @interface WebPageViewController ()
 
@@ -33,8 +34,7 @@
         
         
         //set the top bar with custom buttons
-//        UIBarButtonItem *selectSportButton = [[UIBarButtonItem alloc] initWithTitle:@"Select Sport" style:UIBarButtonItemStyleBordered target:self action:@selector(navBarButtonClicked)];
-        UIBarButtonItem *shareButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(navBarButtonClicked)];
+        UIBarButtonItem *shareButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(shareButtonClicked:)];
         NSArray *myButtonArray = [[NSArray alloc] initWithObjects:self.selectSportButton, shareButton, nil];
         self.topNavBar.rightBarButtonItems = myButtonArray;
     }
@@ -145,9 +145,7 @@
     
 }
 
-- (void)navBarButtonClicked {
-    
-}
+
 
 - (IBAction)buttonClicked:(UIButton *)sender {
     
@@ -161,6 +159,54 @@
         [self.webView reload];
         
     }
+    
+}
+
+- (IBAction)shareButtonClicked:(id)sender {
+    
+    UIActionSheet *twitterOrFacebook = [[UIActionSheet alloc] initWithTitle:@"Social Network" delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Twitter", @"Facebook", nil];
+    [twitterOrFacebook showInView:self.view];
+    
+}
+
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
+    
+    //title of the webpage to share
+    NSString *pageTitle = [self.webView stringByEvaluatingJavaScriptFromString:@"document.title"];
+    pageTitle = [pageTitle stringByReplacingOccurrencesOfString:@"s.com" withString:@"s .com"];
+    
+    NSURL *currentURL = [NSURL URLWithString:self.webView.request.URL.absoluteString];
+    
+    if (buttonIndex == 1) {
+        
+        //Facebook
+        SLComposeViewController *facebookSheet = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
+        [facebookSheet setInitialText:pageTitle];
+        [facebookSheet addURL:currentURL];
+        
+        //present
+        [self presentViewController:facebookSheet animated:true completion:nil];
+        
+    } else if (buttonIndex == 0) {
+        
+        //Twitter
+        SLComposeViewController *tweetSheet = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
+        [tweetSheet addURL:currentURL];
+        [tweetSheet setInitialText:pageTitle];
+        
+        [self presentViewController:tweetSheet animated:true completion:nil];
+        
+        
+    } else if (buttonIndex == -1) {
+        //cancel button
+        
+    } else {
+        //error
+        NSLog(@"share sheet error -> action sheet -> clikced Button at index");
+
+    }
+    
+    
     
 }
 
@@ -184,8 +230,8 @@
     }
     
     
-    //HERE TWEET
-    NSLog(@"%@", [webView stringByEvaluatingJavaScriptFromString:@"document.title"]);
+    
+    
 }
 
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
