@@ -109,9 +109,9 @@
                                 <rect key="frame" x="0.0" y="64" width="320" height="384"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="KlQ-x1-mPp">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" id="KlQ-x1-mPp">
                                 <rect key="frame" x="0.0" y="65" width="320" height="385"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" id="X49-5t-bc2">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="385"/>
@@ -160,6 +160,7 @@
                     <size key="freeformSize" width="320" height="450"/>
                     <connections>
                         <outlet property="contentView" destination="X49-5t-bc2" id="Qhc-ar-wPT"/>
+                        <outlet property="scrollView" destination="KlQ-x1-mPp" id="4s0-Pw-8Ab"/>
                         <outlet property="versionLabel" destination="R71-zA-aT9" id="WYL-2l-tVa"/>
                     </connections>
                 </viewController>

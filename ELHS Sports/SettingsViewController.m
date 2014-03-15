@@ -31,10 +31,7 @@
     
     
     
-    //the ad
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadBanner) name:@"bannerLoaded" object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(bannerError) name:@"bannerError" object:nil];
-    self.adBanner = SharedAdBannerView;
+    //[self setAutomaticallyAdjustsScrollViewInsets:false];
     
     
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
@@ -42,6 +39,15 @@
         
         [self.adBanner setFrame:CGRectMake(0, 64, 320, 50)];
         
+        //the ad
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadBanner) name:@"bannerLoaded" object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(bannerError) name:@"bannerError" object:nil];
+        self.adBanner = SharedAdBannerView;
+        
+    } else {
+        
+        //temp fix
+        [self.scrollView setScrollEnabled:false];
     }
     
     
@@ -51,15 +57,6 @@
     
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
         //iPhone
-        
-        [self.adBanner setFrame:CGRectMake(0, 64, 320, 50)];
-        
-        if (!((int)[[UIScreen mainScreen] bounds].size.height == 568)) {
-            
-        } else {
-            //iPad
-            
-        }
         
         //add the ad to the view
         [self.view addSubview:self.adBanner];
@@ -76,16 +73,7 @@
     
 }
 
-- (void)viewDidLayoutSubviews {
-    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
-        //iPhone
-        if ((int)[[UIScreen mainScreen] bounds].size.height == 568) {
-            //4 inch
-            
-        }
-    }
-    
-}
+
 
 - (IBAction)launchWebsite:(id)sender {
     
@@ -117,8 +105,12 @@
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"bannerLoaded" object:nil];
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"bannerError" object:nil];
+    
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
+        [[NSNotificationCenter defaultCenter] removeObserver:self name:@"bannerLoaded" object:nil];
+        [[NSNotificationCenter defaultCenter] removeObserver:self name:@"bannerError" object:nil];
+    }
+    
 }
 
 - (void)loadBanner {
