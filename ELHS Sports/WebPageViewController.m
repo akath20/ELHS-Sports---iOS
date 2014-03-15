@@ -252,7 +252,6 @@
 
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
         
-    
         //iPhone
         if ([[UIApplication sharedApplication] statusBarOrientation] == UIInterfaceOrientationPortrait) {
             
@@ -303,10 +302,10 @@
             
         } else {
             
+            //if landscape
+            
             int magicNumber = 52;
             
-            
-            //if landscape
             if (![[SharedValues allValues] adIsLoaded]) {
                 //if no ad present
                 if ((int)[[UIScreen mainScreen] bounds].size.height == 568) {
@@ -341,7 +340,7 @@
                     //3.5 inch
                     [self.backButton setFrame:CGRectMake(10, 248, 32, 29)];
                     [self.refreshButton setFrame:CGRectMake(442, 248, 32, 29)];
-                    [self.webView setFrame:CGRectMake(0, magicNumber, 480, 223 + magicNumber2)];
+                    [self.webView setFrame:CGRectMake(0, magicNumber, 480, 233 + magicNumber2)];
                     [self.adBanner setFrame:CGRectMake(0, 288, 480, 32)];
                 }
                 
