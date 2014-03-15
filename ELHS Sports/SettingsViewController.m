@@ -98,7 +98,20 @@
         //show alert from the class
         [[Reachability showAlertNoInternet] show];
     } else {
-        [self performSegueWithIdentifier:@"showMyWebsite" sender:Nil];
+        
+        if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
+            //iPhone
+            //swith view
+            [self performSegueWithIdentifier:@"showMyWebsite" sender:Nil];
+            
+        } else {
+            //iPad
+            //reload webpage and dismiss popover
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"reloadWebPage" object:nil];
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"dismissPopover" object:nil];
+            
+        }
+        
     }
 
 }

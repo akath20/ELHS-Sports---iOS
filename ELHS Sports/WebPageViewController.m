@@ -83,7 +83,7 @@
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([segue.identifier isEqualToString:@"popOverSegue"]) {
+    if ([segue.identifier isEqualToString:@"popOverSegue"] || [segue.identifier isEqualToString:@"showSettings"]) {
         if ([segue isKindOfClass:[UIStoryboardPopoverSegue class]]) {
             UIStoryboardPopoverSegue *popoverSegue = (UIStoryboardPopoverSegue *)segue;
             self.myPopoverController = popoverSegue.popoverController;
@@ -144,7 +144,6 @@
     
     
 }
-
 
 
 - (IBAction)buttonClicked:(UIButton *)sender {

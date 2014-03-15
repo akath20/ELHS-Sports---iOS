@@ -53,7 +53,7 @@
                     <navigationItem key="navigationItem" title="Title" id="e1t-xp-acb">
                         <barButtonItem key="leftBarButtonItem" title="About" id="SZ5-nL-mBj">
                             <connections>
-                                <segue destination="jfQ-KH-eQk" kind="popover" popoverAnchorBarButtonItem="SZ5-nL-mBj" id="6FH-Ds-tbr">
+                                <segue destination="jfQ-KH-eQk" kind="popover" identifier="showSettings" popoverAnchorBarButtonItem="SZ5-nL-mBj" id="6FH-Ds-tbr">
                                     <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                 </segue>
                             </connections>
@@ -97,19 +97,71 @@
             </objects>
             <point key="canvasLocation" x="-164" y="-200"/>
         </scene>
-        <!--View Controller - About-->
+        <!--Settings View Controller - About-->
         <scene sceneID="4em-zQ-Uiv">
             <objects>
-                <viewController id="rri-0I-im1" sceneMemberID="viewController">
+                <viewController id="rri-0I-im1" customClass="SettingsViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XrV-2e-GMx">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="450"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.10000000000000001" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="aboutpage" id="tS9-p7-sO7">
+                                <rect key="frame" x="0.0" y="64" width="320" height="384"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="KlQ-x1-mPp">
+                                <rect key="frame" x="0.0" y="65" width="320" height="385"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" id="X49-5t-bc2">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="385"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <subviews>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Developed By: Alex Atwater" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="b66-UK-WXN">
+                                                <rect key="frame" x="24" y="88" width="272" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="R71-zA-aT9">
+                                                <rect key="frame" x="106" y="117" width="109" height="23"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Need Support?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="s9k-Fe-PmR">
+                                                <rect key="frame" x="90" y="164" width="140" height="24"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="6Mn-93-tGx">
+                                                <rect key="frame" x="125" y="201" width="71" height="36"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <state key="normal" title="Website">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="launchWebsite:" destination="rri-0I-im1" eventType="touchUpInside" id="LdD-DD-gua"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </view>
+                                </subviews>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="About" id="U1u-B5-h5H"/>
                     <value key="contentSizeForViewInPopover" type="size" width="320" height="450"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="450"/>
+                    <connections>
+                        <outlet property="contentView" destination="X49-5t-bc2" id="Qhc-ar-wPT"/>
+                        <outlet property="versionLabel" destination="R71-zA-aT9" id="WYL-2l-tVa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KB1-lI-Xla" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -160,9 +212,9 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jfQ-KH-eQk" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <value key="contentSizeForViewInPopover" type="size" width="320" height="500"/>
+                    <value key="contentSizeForViewInPopover" type="size" width="320" height="450"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="320" height="500"/>
+                    <size key="freeformSize" width="320" height="450"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ku3-et-Ijg">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -180,6 +232,7 @@
     <resources>
         <image name="057 CircledArrowLeft" width="32" height="32"/>
         <image name="063 Undo" width="32" height="32"/>
+        <image name="aboutpage" width="320" height="568"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackOpaque"/>

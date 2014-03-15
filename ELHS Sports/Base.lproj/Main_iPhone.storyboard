@@ -195,7 +195,7 @@
                     <navigationItem key="navigationItem" title="Home" id="FlA-dk-ydj">
                         <barButtonItem key="leftBarButtonItem" title="About" id="Vfa-n3-E61">
                             <connections>
-                                <segue destination="pWZ-S4-08B" kind="modal" identifier="showSettings" modalTransitionStyle="flipHorizontal" id="a2I-Qq-mQQ"/>
+                                <segue destination="pWZ-S4-08B" kind="modal" identifier="" modalTransitionStyle="flipHorizontal" id="a2I-Qq-mQQ"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -238,6 +238,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="Svs-ob-k8d"/>
+        <segue reference="kIT-vm-Uce"/>
     </inferredMetricsTieBreakers>
 </document>
