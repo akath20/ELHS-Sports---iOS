@@ -20,15 +20,11 @@
 @property (strong, nonatomic) UIPopoverController *myPopoverController;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *selectSportButton;
 
-
 - (IBAction)buttonClicked:(UIButton *)sender;
 - (IBAction)shareButtonClicked:(id)sender;
 
-
-
 @end
 
-bool contentIsMoved;
 
 
 

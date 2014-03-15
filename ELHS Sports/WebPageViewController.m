@@ -21,10 +21,6 @@
 - (void)viewWillAppear:(BOOL)animated {
     
     
-    //default this to false and change otherwise
-    contentIsMoved = false;
-    
-    
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadBanner) name:@"bannerLoaded" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(bannerError) name:@"bannerError" object:nil];
     
@@ -209,12 +205,13 @@
 
 - (void)webViewDidStartLoad:(UIWebView *)webView {
     [self.loadingAnimation setHidden:false];
-    [self.refreshButton setHidden:TRUE];
     [self.loadingAnimation startAnimating];
-    [self.backButton setHidden:true];
+    //[self.refreshButton setHidden:TRUE];
+    //[self.backButton setHidden:true];
 }
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
+    
     [self.loadingAnimation setHidden:TRUE];
     [self.loadingAnimation stopAnimating];
     [self.refreshButton setHidden:false];
@@ -227,8 +224,6 @@
     }
     
     
-    
-    
 }
 
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
@@ -238,9 +233,17 @@
         //no internet
         [[Reachability showAlertNoInternet] show];
     } else {
-        //other error
-        UIAlertView *errorAlert = [[UIAlertView alloc] initWithTitle:@"An Error Occured" message:[NSString stringWithFormat:@"An Error Occured. Please try again, if problem continues, please contact support. \n%@", error] delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles: nil];
-        [errorAlert show];
+        
+        NSLog(@"\nWebView Error Code #: %li", (long)error.code);
+        
+        if (error.code == NSURLErrorCancelled) {
+            //this is the error when the user tries to load another page before the other is done, just ignore this
+            return;
+        } else {
+            //other error
+            UIAlertView *errorAlert = [[UIAlertView alloc] initWithTitle:@"An Error Occured" message:[NSString stringWithFormat:@"An Error Occured. Please try again, if problem continues, please contact support. \n\n%@", error] delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles: nil];
+            [errorAlert show];
+        }
     }
     
     
