@@ -75,10 +75,7 @@
     self.webView = nil;
 }
 
-
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"popOverSegue"]) {
         if ([segue isKindOfClass:[UIStoryboardPopoverSegue class]]) {
             UIStoryboardPopoverSegue *popoverSegue = (UIStoryboardPopoverSegue *)segue;
@@ -88,14 +85,12 @@
     }
 }
 
-
 - (void)dismissPopover {
     
     [self.myPopoverController dismissPopoverAnimated:true];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:@"dismissPopover" object:nil];
     
 }
-
 
 - (void)setupTheWebView {
     
@@ -176,6 +171,10 @@
     } else {
         [self.backButton setHidden:TRUE];
     }
+    
+    
+    //HERE TWEET
+    NSLog(@"%@", [webView stringByEvaluatingJavaScriptFromString:@"document.title"]);
 }
 
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
