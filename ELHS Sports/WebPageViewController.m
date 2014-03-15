@@ -321,7 +321,6 @@
                     [self.backButton setFrame:CGRectMake(10, 283, 32, 29)];
                     [self.refreshButton setFrame:CGRectMake(442, 283, 32, 29)];
                     [self.adBanner setFrame:CGRectMake(0, 288, 480, 32)];
-                    
                 }
                 
             } else {
