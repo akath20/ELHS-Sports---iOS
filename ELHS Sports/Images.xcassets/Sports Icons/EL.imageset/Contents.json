@@ -3,7 +3,11 @@
     {
       "idiom" : "universal",
       "scale" : "1x",
-      "filename" : "simple-grey-house-md.png"
+      "filename" : "EL-Logo.png"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
     }
   ],
   "info" : {

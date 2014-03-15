@@ -145,7 +145,6 @@
     
 }
 
-
 - (IBAction)buttonClicked:(UIButton *)sender {
     
     if (sender.tag == 0) {
@@ -200,8 +199,7 @@
         //cancel button
         
     } else {
-        //error
-        NSLog(@"share sheet error -> action sheet -> clikced Button at index");
+        //error OR user clicked off the actionsheet
 
     }
     

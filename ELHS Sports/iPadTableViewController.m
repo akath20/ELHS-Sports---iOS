@@ -60,6 +60,14 @@
     
     cell.textLabel.text = [[tableData objectAtIndex:indexPath.row] objectForKey:@"Title"];
     
+    
+    //NEW
+    //image
+    if ([[tableData objectAtIndex:indexPath.row] objectForKey:@"image"]) {
+        //if valid image, set it
+        cell.imageView.image = [[tableData objectAtIndex:indexPath.row] objectForKey:@"image"];
+    }
+    
     return cell;
     
 }
