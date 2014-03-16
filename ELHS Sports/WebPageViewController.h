@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import <iAd/iAd.h>
+#import <MessageUI/MessageUI.h>
 
-@interface WebPageViewController : UIViewController <UIWebViewDelegate, ADBannerViewDelegate, UIActionSheetDelegate>
+@interface WebPageViewController : UIViewController <UIWebViewDelegate, ADBannerViewDelegate, UIActionSheetDelegate, UIAlertViewDelegate, MFMailComposeViewControllerDelegate, MFMessageComposeViewControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
 @property (strong, nonatomic) IBOutlet UINavigationItem *topNavBar;

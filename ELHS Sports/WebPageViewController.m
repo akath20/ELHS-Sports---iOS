@@ -12,6 +12,7 @@
 #import "Reachability.h"
 #import <Social/Social.h>
 
+
 @interface WebPageViewController ()
 
 @end
@@ -158,7 +159,7 @@
 
 - (IBAction)shareButtonClicked:(id)sender {
     
-    UIActionSheet *twitterOrFacebook = [[UIActionSheet alloc] initWithTitle:@"Social Network" delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Twitter", @"Facebook", nil];
+    UIActionSheet *twitterOrFacebook = [[UIActionSheet alloc] initWithTitle:@"Share" delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Twitter", @"Facebook", @"SMS", @"Email", @"Copy Link", @"Open in Safari", nil];
     [twitterOrFacebook showInView:self.view];
     
 }
@@ -167,11 +168,22 @@
     
     //title of the webpage to share
     NSString *pageTitle = [self.webView stringByEvaluatingJavaScriptFromString:@"document.title"];
+    NSString *justPageTitle = [NSString stringWithString:pageTitle];
+    justPageTitle = [justPageTitle stringByReplacingOccurrencesOfString:@" - East Longmeadow Sports.com" withString:@""];
     pageTitle = [pageTitle stringByReplacingOccurrencesOfString:@"s.com" withString:@"s .com"];
     
     NSURL *currentURL = [NSURL URLWithString:self.webView.request.URL.absoluteString];
     
-    if (buttonIndex == 1) {
+    if (buttonIndex == 0) {
+        
+        //Twitter
+        SLComposeViewController *tweetSheet = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
+        [tweetSheet addURL:currentURL];
+        [tweetSheet setInitialText:justPageTitle];
+        
+        [self presentViewController:tweetSheet animated:true completion:nil];
+        
+    } else if (buttonIndex == 1) {
         
         //Facebook
         SLComposeViewController *facebookSheet = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
@@ -181,17 +193,56 @@
         //present
         [self presentViewController:facebookSheet animated:true completion:nil];
         
-    } else if (buttonIndex == 0) {
+    } else if (buttonIndex == 2) {
         
-        //Twitter
-        SLComposeViewController *tweetSheet = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
-        [tweetSheet addURL:currentURL];
-        [tweetSheet setInitialText:pageTitle];
+        //SMS
+        MFMessageComposeViewController *messageSheet = [[MFMessageComposeViewController alloc] init];
         
-        [self presentViewController:tweetSheet animated:true completion:nil];
+        messageSheet.messageComposeDelegate = self;
+        
+        [messageSheet setBody:[NSString stringWithFormat:@"%@\n%@", justPageTitle, currentURL.absoluteString]];
+        
+        [self presentViewController:messageSheet animated:true completion:nil];
+        
+        
+        
+        
+    } else if (buttonIndex == 3) {
+        
+        //Email
+        
+        MFMailComposeViewController *emailSheet = [[MFMailComposeViewController alloc] init];
+        
+        emailSheet.mailComposeDelegate = self;
+        
+        [emailSheet setSubject: justPageTitle];
+        
+        
+        // Fill out the email body text.
+    
+        NSString *emailBody = [NSString stringWithFormat:@"%@\n%@ \n\r\n\r\n\rSent from the ELHS Sports iPhone App.", justPageTitle, currentURL.absoluteString];
+        [emailSheet setMessageBody:emailBody isHTML:NO];
+        
+        // Present the mail composition interface.
+        [self presentViewController:emailSheet animated:true completion:nil];
+        
+    } else if (buttonIndex == 4) {
+        
+        //Copy Link
+        UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
+        pasteboard.string = [NSString stringWithFormat:@"%@\n%@", justPageTitle, currentURL.absoluteString];
+        
+    } else if (buttonIndex == 5) {
+        
+        //Open in Safari
+        
+        UIAlertView *areYouSure = [[UIAlertView alloc] initWithTitle:@"Are You Sure?" message:@"Are you sure you want to leave the app?" delegate:self cancelButtonTitle:@"No" otherButtonTitles:@"Yes", nil];
+        [areYouSure show];
+        
         
         
     } else if (buttonIndex == -1) {
+        
         //cancel button
         
     } else {
@@ -201,6 +252,29 @@
     
     
     
+}
+
+- (void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error {
+    [controller dismissViewControllerAnimated:true completion:nil];
+}
+
+- (void)messageComposeViewController:(MFMessageComposeViewController *)controller didFinishWithResult:(MessageComposeResult)result {
+    [controller dismissViewControllerAnimated:true completion:nil];
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if ([alertView.title isEqualToString:@"Are You Sure?"]) {
+        if (buttonIndex == 0) {
+            //hit cancel
+            return;
+        } else if (buttonIndex == 1) {
+            NSURL *currentURL = [NSURL URLWithString:self.webView.request.URL.absoluteString];
+            [[UIApplication sharedApplication] openURL:currentURL];
+        } else {
+            NSLog(@"\nAlert buttonIndex Error");
+        }
+        
+    }
 }
 
 - (void)webViewDidStartLoad:(UIWebView *)webView {

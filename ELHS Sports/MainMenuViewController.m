@@ -36,7 +36,22 @@
    //set the shared content to the local content
     self.tableContent = [[SharedValues allValues] sharedTableContent];
     
-    
+    //add background - help with landscape view
+//    UIImageView *tempImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"SpartanHead"]];
+//    
+//    [tempImageView setFrame:self.tableView.frame];
+//    [tempImageView setFrame:CGRectMake(tempImageView.frame.origin.x, tempImageView.frame.origin.y + 30, tempImageView.frame.size.width, tempImageView.frame.size.height - 10)];
+//    
+//    
+//    
+//    tempImageView.alpha = .25;
+//    
+//    
+//    
+//    self.tableView.backgroundView = nil;
+//    self.tableView.backgroundColor = [UIColor clearColor];
+//    
+//    [self.view addSubview:tempImageView];
  
 }
 
@@ -66,6 +81,7 @@
         if ([[UIApplication sharedApplication] statusBarOrientation] == UIInterfaceOrientationPortrait) {
             
             //if portrait
+            
             
             if (![[SharedValues allValues] adIsLoaded]) {
                 //if no ad present
@@ -181,10 +197,14 @@
         cell.imageView.image = [[tableData objectAtIndex:indexPath.row] objectForKey:@"image"];
     }
     
+    
+    //be able to show the picture in the background
+    cell.backgroundColor = [UIColor clearColor];
+    
+    
     return cell;
     
 }
-
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     //when the user selectes the row

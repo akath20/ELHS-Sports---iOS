@@ -30,6 +30,13 @@
     
     self.tableContent = [[SharedValues allValues] sharedTableContent];
     
+    UIImageView *tempImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"SpartanHead"]];
+    [tempImageView setFrame:self.tableView.frame];
+    
+    tempImageView.alpha = .25;
+    
+    self.tableView.backgroundView = tempImageView;
+    
     
     
     

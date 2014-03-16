@@ -13,6 +13,7 @@
 		FA6ED64E18D2561300B03171 /* MainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6ED64D18D2561300B03171 /* MainMenuViewController.m */; };
 		FA6ED65318D299A200B03171 /* iPadTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6ED65218D299A200B03171 /* iPadTableViewController.m */; };
 		FA6ED65818D4C4B700B03171 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA6ED65718D4C4B700B03171 /* Social.framework */; };
+		FA6ED65A18D52D5E00B03171 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA6ED65918D52D5E00B03171 /* MessageUI.framework */; };
 		FA6ED98618B9587400CA58B5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA6ED98518B9587400CA58B5 /* Foundation.framework */; };
 		FA6ED98818B9587400CA58B5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA6ED98718B9587400CA58B5 /* CoreGraphics.framework */; };
 		FA6ED98A18B9587400CA58B5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA6ED98918B9587400CA58B5 /* UIKit.framework */; };
@@ -54,6 +55,7 @@
 		FA6ED65118D299A200B03171 /* iPadTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iPadTableViewController.h; sourceTree = "<group>"; };
 		FA6ED65218D299A200B03171 /* iPadTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iPadTableViewController.m; sourceTree = "<group>"; };
 		FA6ED65718D4C4B700B03171 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		FA6ED65918D52D5E00B03171 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		FA6ED98218B9587400CA58B5 /* ELHS Sports.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ELHS Sports.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA6ED98518B9587400CA58B5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FA6ED98718B9587400CA58B5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -84,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA6ED65A18D52D5E00B03171 /* MessageUI.framework in Frameworks */,
 				FA6ED65818D4C4B700B03171 /* Social.framework in Frameworks */,
 				FA80B93E18BAC68D0029119C /* iAd.framework in Frameworks */,
 				FA6ED98818B9587400CA58B5 /* CoreGraphics.framework in Frameworks */,
@@ -138,6 +141,7 @@
 		FA6ED98418B9587400CA58B5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FA6ED65918D52D5E00B03171 /* MessageUI.framework */,
 				FA6ED65718D4C4B700B03171 /* Social.framework */,
 				FA80B93D18BAC68D0029119C /* iAd.framework */,
 				FA6ED98518B9587400CA58B5 /* Foundation.framework */,
