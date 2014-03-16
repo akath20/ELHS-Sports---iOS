@@ -75,8 +75,8 @@
         [[NSNotificationCenter defaultCenter] removeObserver:self name:@"reloadWebPage" object:nil];
     }
     
-    
-    self.webView = nil;
+    //caused an issue with iPhone composing email's
+    //self.webView = nil;
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
@@ -167,8 +167,8 @@
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
     
     //title of the webpage to share
-    NSString *pageTitle = [self.webView stringByEvaluatingJavaScriptFromString:@"document.title"];
-    NSString *justPageTitle = [NSString stringWithString:pageTitle];
+    NSString *pageTitle = [[NSString alloc] initWithString:[self.webView stringByEvaluatingJavaScriptFromString:@"document.title"]];
+    NSString *justPageTitle = [[NSString alloc] initWithString:pageTitle];
     justPageTitle = [justPageTitle stringByReplacingOccurrencesOfString:@" - East Longmeadow Sports.com" withString:@""];
     pageTitle = [pageTitle stringByReplacingOccurrencesOfString:@"s.com" withString:@"s .com"];
     
@@ -216,7 +216,6 @@
         emailSheet.mailComposeDelegate = self;
         
         [emailSheet setSubject: justPageTitle];
-        
         
         // Fill out the email body text.
     
