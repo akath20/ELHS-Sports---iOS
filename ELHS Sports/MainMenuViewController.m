@@ -36,22 +36,7 @@
    //set the shared content to the local content
     self.tableContent = [[SharedValues allValues] sharedTableContent];
     
-    //add background - help with landscape view
-//    UIImageView *tempImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"SpartanHead"]];
-//    
-//    [tempImageView setFrame:self.tableView.frame];
-//    [tempImageView setFrame:CGRectMake(tempImageView.frame.origin.x, tempImageView.frame.origin.y + 30, tempImageView.frame.size.width, tempImageView.frame.size.height - 10)];
-//    
-//    
-//    
-//    tempImageView.alpha = .25;
-//    
-//    
-//    
-//    self.tableView.backgroundView = nil;
-//    self.tableView.backgroundColor = [UIColor clearColor];
-//    
-//    [self.view addSubview:tempImageView];
+
  
 }
 
