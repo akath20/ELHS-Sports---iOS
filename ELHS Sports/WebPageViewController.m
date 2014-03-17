@@ -305,6 +305,8 @@
     if (![Reachability checkForInternetWithString:nil]) {
         //no internet
         [[Reachability showAlertNoInternet] show];
+        [self.loadingAnimation setHidden:true];
+        [self.topNavBar setTitle:@"Offline"];
     } else {
         
         NSLog(@"\nWebView Error Code #: %li", (long)error.code);
