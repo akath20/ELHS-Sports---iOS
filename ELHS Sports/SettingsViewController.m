@@ -29,11 +29,6 @@
     //set the content size
     [self.scrollView setContentSize:self.contentView.frame.size];
     
-    
-    
-    //[self setAutomaticallyAdjustsScrollViewInsets:false];
-    
-    
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
         //iPhone
         
@@ -45,9 +40,8 @@
         self.adBanner = SharedAdBannerView;
         
     } else {
+        //iPad
         
-        //temp fix
-        [self.scrollView setScrollEnabled:false];
     }
     
     
@@ -68,7 +62,6 @@
         
         
     }
-    
     
     
 }

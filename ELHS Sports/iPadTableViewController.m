@@ -17,8 +17,7 @@
 
 @implementation iPadTableViewController
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
     
     // Uncomment the following line to preserve selection between presentations.
@@ -35,9 +34,6 @@
     
     
 }
-
-
-
 
 #pragma mark - Table view data source
 
@@ -71,7 +67,6 @@
     return cell;
     
 }
-
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     //when the user selectes the row
