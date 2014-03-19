@@ -159,9 +159,8 @@
 
 - (IBAction)shareButtonClicked:(id)sender {
     
-    UIActionSheet *twitterOrFacebook = [[UIActionSheet alloc] initWithTitle:@"Share" delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Twitter", @"Facebook", @"SMS", @"Email", @"Copy Link", @"Open in Safari", nil];
-    [twitterOrFacebook showInView:self.view];
-    
+    UIActionSheet *selectShare = [[UIActionSheet alloc] initWithTitle:@"Share" delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Twitter", @"Facebook", @"SMS", @"Email", @"Copy Link", @"Open in Safari", nil];
+    [selectShare showInView:self.view];
 }
 
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
@@ -169,6 +168,7 @@
     //title of the webpage to share
     NSString *pageTitle = [[NSString alloc] initWithString:[self.webView stringByEvaluatingJavaScriptFromString:@"document.title"]];
     NSString *justPageTitle = [[NSString alloc] initWithString:pageTitle];
+    NSString *appstoreLink = @"https://itunes.apple.com/us/app/elhs-sports/id843919143?ls=1&mt=8";
     justPageTitle = [justPageTitle stringByReplacingOccurrencesOfString:@" - East Longmeadow Sports.com" withString:@""];
     pageTitle = [pageTitle stringByReplacingOccurrencesOfString:@"s.com" withString:@"s .com"];
     
@@ -219,7 +219,7 @@
         
         // Fill out the email body text.
     
-        NSString *emailBody = [NSString stringWithFormat:@"%@\n%@ \n\r\n\r\n\rSent from the ELHS Sports iPhone App.", justPageTitle, currentURL.absoluteString];
+        NSString *emailBody = [NSString stringWithFormat:@"%@\n%@ \n\r\n\r\n\rSent from the ELHS Sports iPhone App.\n\r%@", justPageTitle, currentURL.absoluteString, appstoreLink];
         [emailSheet setMessageBody:emailBody isHTML:NO];
         
         // Present the mail composition interface.
