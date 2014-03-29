@@ -159,7 +159,7 @@
 
 - (IBAction)shareButtonClicked:(id)sender {
     
-    UIActionSheet *selectShare = [[UIActionSheet alloc] initWithTitle:@"Share" delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Twitter", @"Facebook", @"SMS", @"Email", @"Copy Link", @"Open in Safari", nil];
+    UIActionSheet *selectShare = [[UIActionSheet alloc] initWithTitle:@"Share" delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Twitter", @"Facebook", @"Message", @"Email", @"Copy Link", @"Open in Safari", nil];
     [selectShare showInView:self.view];
 }
 
