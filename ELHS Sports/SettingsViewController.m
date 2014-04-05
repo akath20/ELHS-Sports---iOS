@@ -9,7 +9,6 @@
 #import "SettingsViewController.h"
 #import "SharedValues.h"
 #import "AppDelegate.h"
-#import "Reachability.h"
 
 @interface SettingsViewController ()
 
@@ -75,25 +74,21 @@
     
     //switch the view
     //check for internet connection
-    if (![Reachability checkForInternetWithString:Nil]) {
-        //show alert from the class
-        [[Reachability showAlertNoInternet] show];
-    } else {
+
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
+        //iPhone
+        //swith view
+        [self performSegueWithIdentifier:@"showMyWebsite" sender:Nil];
         
-        if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
-            //iPhone
-            //swith view
-            [self performSegueWithIdentifier:@"showMyWebsite" sender:Nil];
-            
-        } else {
-            //iPad
-            //reload webpage and dismiss popover
-            [[NSNotificationCenter defaultCenter] postNotificationName:@"reloadWebPage" object:nil];
-            [[NSNotificationCenter defaultCenter] postNotificationName:@"dismissPopover" object:nil];
-            
-        }
+    } else {
+        //iPad
+        //reload webpage and dismiss popover
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"reloadWebPage" object:nil];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"dismissPopover" object:nil];
         
     }
+    
+
 
 }
 

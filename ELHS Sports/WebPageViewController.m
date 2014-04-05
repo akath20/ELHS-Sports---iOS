@@ -19,8 +19,12 @@
 
 @implementation WebPageViewController
 
+
+
+
 - (void)viewWillAppear:(BOOL)animated {
     
+   
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadBanner) name:@"bannerLoaded" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(bannerError) name:@"bannerError" object:nil];
@@ -42,8 +46,7 @@
     
     [self setAutomaticallyAdjustsScrollViewInsets:false];
     
-    //Setup The Web View
-    [self setupTheWebView];
+    
     
 
     //configure the buttons at the bottem
@@ -65,6 +68,14 @@
     
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    
+
+    //Setup The Web View
+    [self setupTheWebView];
+    
+}
+
 - (void)viewDidDisappear:(BOOL)animated {
     [[NSNotificationCenter defaultCenter] removeObserver:self name:@"bannerLoaded" object:nil];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:@"bannerError" object:nil];
@@ -77,6 +88,8 @@
     
     //caused an issue with iPhone composing email's
     //self.webView = nil;
+    
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = false;
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
@@ -281,6 +294,8 @@
     [self.loadingAnimation startAnimating];
     //[self.refreshButton setHidden:TRUE];
     //[self.backButton setHidden:true];
+    
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = true;
 }
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
@@ -296,30 +311,36 @@
         [self.backButton setHidden:TRUE];
     }
     
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = FALSE;
+    
     
 }
 
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
     
+    
+    
     //check the internet connection
-    if (![Reachability checkForInternetWithString:nil]) {
-        //no internet
+    if (([[Reachability reachabilityForInternetConnection] currentReachabilityStatus] == NotReachable) || ([[Reachability reachabilityWithHostName:@"www.eastlongmeadowsports.com"] currentReachabilityStatus] == NotReachable)) {
+        //if can't reach the website trying to get to
         [[Reachability showAlertNoInternet] show];
-        [self.loadingAnimation setHidden:true];
-        [self.topNavBar setTitle:@"Offline"];
+        
     } else {
         
         NSLog(@"\nWebView Error Code #: %li", (long)error.code);
         
         if (error.code == NSURLErrorCancelled) {
             //this is the error when the user tries to load another page before the other is done, just ignore this
-            return;
+            return;             //other error
+            
         } else {
-            //other error
             UIAlertView *errorAlert = [[UIAlertView alloc] initWithTitle:@"An Error Occured" message:[NSString stringWithFormat:@"An Error Occured. Please try again, if problem continues, please contact support. \n\n%@", error] delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles: nil];
             [errorAlert show];
         }
     }
+    
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = false;
+    [self.loadingAnimation setHidden:true];
     
     
     [self.navigationController popToRootViewControllerAnimated:TRUE];

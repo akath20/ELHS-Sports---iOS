@@ -7,7 +7,6 @@
 //
 
 #import "MainMenuViewController.h"
-#import "Reachability.h"
 #import "SharedValues.h"
 #import "AppDelegate.h"
 
@@ -20,11 +19,7 @@
 
 - (void)viewDidLoad {
     
-    //check for internet connection
-    if (![Reachability checkForInternetWithString:Nil]) {
-        //show alert from the class
-        [[Reachability showAlertNoInternet] show];
-    }
+    
     
     //The ad
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadBanner) name:@"bannerLoaded" object:nil];
@@ -41,6 +36,8 @@
 }
 
 - (void)viewDidAppear:(BOOL)animated {
+    
+    
     
     self.adBanner = SharedAdBannerView;
     
@@ -195,6 +192,7 @@
     //when the user selectes the row
     
     
+    
     //deselect the selected row
     [tableView deselectRowAtIndexPath:indexPath animated:true];
     
@@ -210,19 +208,14 @@
     }
     
     //switch the view
-    //check for internet connection
-    if (![Reachability checkForInternetWithString:Nil]) {
-        //show alert from the class
-        [[Reachability showAlertNoInternet] show];
-    } else {
-        [self performSegueWithIdentifier:@"showWebPage" sender:Nil];
-    }
+
     
-    
+    [self performSegueWithIdentifier:@"showWebPage" sender:Nil];
     
 }
 
 #pragma mark iAds
+
 - (void)loadBanner {
     
     [self.adBanner setAlpha:1];

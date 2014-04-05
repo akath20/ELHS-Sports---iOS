@@ -8,7 +8,6 @@
 
 #import "iPadTableViewController.h"
 #import "SharedValues.h"
-#import "Reachability.h"
 #import "iPadTableViewController.h"
 
 @interface iPadTableViewController ()
@@ -71,6 +70,8 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     //when the user selectes the row
     
+    
+    
     //deselect the selected row
     [tableView deselectRowAtIndexPath:indexPath animated:true];
     
@@ -85,13 +86,8 @@
     }
     
     //switch the view
-    //check for internet connection
-    if (![Reachability checkForInternetWithString:Nil]) {
-        //show alert from the class
-        [[Reachability showAlertNoInternet] show];
-    } else {
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"reloadWebPage" object:nil];
-    }
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"reloadWebPage" object:nil];
+    
     
     //make view disappear
     [[NSNotificationCenter defaultCenter] postNotificationName:@"dismissPopover" object:nil];
