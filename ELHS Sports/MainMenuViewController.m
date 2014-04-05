@@ -35,10 +35,7 @@
  
 }
 
-- (void)viewDidAppear:(BOOL)animated {
-    
-    
-    
+- (void)viewWillAppear:(BOOL)animated {
     self.adBanner = SharedAdBannerView;
     
     
@@ -50,7 +47,6 @@
     }
     
     [self.view addSubview:self.adBanner];
-    
 }
 
 - (void)viewDidLayoutSubviews {
