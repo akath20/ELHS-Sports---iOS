@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import <iAd/iAd.h>
+#import <MessageUI/MessageUI.h>
 
-@interface SettingsViewController : UIViewController
+@interface SettingsViewController : UIViewController <MFMailComposeViewControllerDelegate>
 
 @property (strong, nonatomic) IBOutlet UILabel *versionLabel;
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
@@ -17,6 +18,7 @@
 @property (strong, nonatomic) ADBannerView *adBanner;
 
 - (IBAction)launchWebsite:(id)sender;
+- (IBAction)sendDevEmail:(UIButton *)sender;
 
 
 

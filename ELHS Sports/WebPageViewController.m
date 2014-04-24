@@ -44,7 +44,9 @@
     
     self.adBanner = SharedAdBannerView;
     
-    [self setAutomaticallyAdjustsScrollViewInsets:false];
+    if ([self respondsToSelector:@selector(automaticallyAdjustsScrollViewInsets)]) {
+       [self setAutomaticallyAdjustsScrollViewInsets:false]; 
+    } 
     
     
     
