@@ -20,8 +20,6 @@
 @implementation WebPageViewController
 
 
-
-
 - (void)viewWillAppear:(BOOL)animated {
     
    
@@ -36,7 +34,8 @@
         
         //set the top bar with custom buttons
         UIBarButtonItem *shareButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(shareButtonClicked:)];
-        NSArray *myButtonArray = [[NSArray alloc] initWithObjects:self.selectSportButton, shareButton, nil];
+        UIBarButtonItem *inboxButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"inbox"] style:UIBarButtonItemStylePlain target:self action:@selector(inboxButtonClicked)];
+        NSArray *myButtonArray = [[NSArray alloc] initWithObjects:self.selectSportButton, shareButton, inboxButton, nil];
         self.topNavBar.rightBarButtonItems = myButtonArray;
     }
     
@@ -176,6 +175,13 @@
     
     UIActionSheet *selectShare = [[UIActionSheet alloc] initWithTitle:@"Share" delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Twitter", @"Facebook", @"Message", @"Email", @"Copy Link", @"Open in Safari", nil];
     [selectShare showInView:self.view];
+}
+
+- (void)inboxButtonClicked {
+    
+    //pop up the table view and show the recent push notifications
+    
+    
 }
 
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
