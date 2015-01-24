@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "SharedValues.h"
+#import <Parse/Parse.h>
 
 @implementation AppDelegate
 
@@ -27,6 +28,20 @@
     
     //create the table view content
     [[SharedValues allValues] createSharedTableContent];
+    
+    
+    [Parse enableLocalDatastore];
+    
+    // Initialize Parse.
+    [Parse setApplicationId:@"sjsofIbDrcm85z0fS9wCuWu7qlCCP2TNw4gSvX5E"
+                  clientKey:@"Ybs4JdJ9FpY2V83R8MX7icob761mOK9QmuWIgkEw"];
+    
+    // [Optional] Track statistics around application opens.
+    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+    
+    
+    
+    
     
     return YES;
 }
