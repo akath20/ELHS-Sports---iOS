@@ -45,6 +45,7 @@
     
     PFQuery *query = [PFQuery queryWithClassName:@"Messages"];
     [query orderByAscending:@"createdAt"];
+    [query setLimit:25];
     
     
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
@@ -83,6 +84,14 @@
 
     // Return the number of sections.
     
+    
+    
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+
+    // Return the number of rows in the section.
     if (messagesArray) {
         return messagesArray.count;
     }
@@ -90,29 +99,26 @@
     return 0;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-
-    // Return the number of rows in the section.
-    return 1;
-}
-
 - (IBAction)backButton:(id)sender {
     [self dismissViewControllerAnimated:true completion:nil];
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 194;
+    return 149;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
     MessagesTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"messageCell" forIndexPath:indexPath];
     
-    PFObject *messageObject =[messagesArray objectAtIndex:indexPath.row];
+    NSInteger row = [indexPath row];
+    
+    PFObject *messageObject =[messagesArray objectAtIndex:row];
     
     
     
     NSDateFormatter *df = [[NSDateFormatter alloc] init];
-    [df setDateFormat:@"EEE MMMM d, YYYY"];
+    [df setDateFormat:@"EEE MMMM d, YYYY @ hh:mm a"];
     NSString *date = [df stringFromDate:messageObject.createdAt];
     
     cell.dateLabel.text = date;
