@@ -7,6 +7,8 @@
 //
 
 #import "InboxTableViewController.h"
+#import "ELHS_Sports-Swift.h"
+
 
 @interface InboxTableViewController () {
     
@@ -27,6 +29,7 @@
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+    [self.tableView registerNib:[UINib nibWithNibName:@"MessagesTableViewCell" bundle:nil] forCellReuseIdentifier:@"messageCell"];
     
     
     
@@ -97,42 +100,42 @@
     [self dismissViewControllerAnimated:true completion:nil];
 }
 
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 194;
+}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    MessagesTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"messageCell" forIndexPath:indexPath];
     
     PFObject *messageObject =[messagesArray objectAtIndex:indexPath.row];
     
-    // Configure the cell...
-    cell.textLabel.text = [messageObject objectForKey:@"title"];
     
     
     NSDateFormatter *df = [[NSDateFormatter alloc] init];
     [df setDateFormat:@"EEE MMMM d, YYYY"];
     NSString *date = [df stringFromDate:messageObject.createdAt];
     
-    cell.detailTextLabel.text = date;
+    cell.dateLabel.text = date;
     
    
     
     
-    if ([messageObject objectForKey:@"message"]) {
-        
-         NSString *string = [messageObject objectForKey:@"message"];
-        
-        if ([string isEqualToString:@""]) {
-            cell.accessoryType = UITableViewCellAccessoryNone;
-        } else {
-            cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-        }
-        
-        
-    } else {
-        cell.accessoryType = UITableViewCellAccessoryNone;
-    }
+    NSString *title = [messageObject objectForKey:@"title"];
+    NSString *message = [messageObject objectForKey:@"message"];
+    
+    cell.titleLabel.text = title;
+    cell.messageLabel.text = message;
+    
+    
     
     
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    
+    
 }
 
 
@@ -179,5 +182,29 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @end

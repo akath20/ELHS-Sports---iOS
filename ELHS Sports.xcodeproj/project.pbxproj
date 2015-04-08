@@ -28,6 +28,7 @@
 		FA6ED9AA18B9587500CA58B5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA6ED98918B9587400CA58B5 /* UIKit.framework */; };
 		FA6ED9B218B9587500CA58B5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FA6ED9B018B9587500CA58B5 /* InfoPlist.strings */; };
 		FA6ED9B418B9587500CA58B5 /* ELHS_SportsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6ED9B318B9587500CA58B5 /* ELHS_SportsTests.m */; };
+		FA779A911AD35ED900D12BE2 /* SendMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA779A901AD35ED900D12BE2 /* SendMessageViewController.swift */; };
 		FA80B93818B96DC70029119C /* WebPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA80B93718B96DC70029119C /* WebPageViewController.m */; };
 		FA80B93C18B97D680029119C /* SharedValues.m in Sources */ = {isa = PBXBuildFile; fileRef = FA80B93B18B97D680029119C /* SharedValues.m */; };
 		FA80B93E18BAC68D0029119C /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA80B93D18BAC68D0029119C /* iAd.framework */; };
@@ -48,6 +49,8 @@
 		FA94DF661A73228F00BDE55B /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA94DF5D1A73228F00BDE55B /* Security.framework */; };
 		FA94DF671A73228F00BDE55B /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA94DF5E1A73228F00BDE55B /* StoreKit.framework */; };
 		FA94DF681A73228F00BDE55B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA94DF5F1A73228F00BDE55B /* SystemConfiguration.framework */; };
+		FAF1DB901AD4AF7D00103D98 /* MessagesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF1DB8E1AD4AF7D00103D98 /* MessagesTableViewCell.swift */; };
+		FAF1DB911AD4AF7D00103D98 /* MessagesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAF1DB8F1AD4AF7D00103D98 /* MessagesTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +94,7 @@
 		FA6ED9AF18B9587500CA58B5 /* ELHS SportsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ELHS SportsTests-Info.plist"; sourceTree = "<group>"; };
 		FA6ED9B118B9587500CA58B5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		FA6ED9B318B9587500CA58B5 /* ELHS_SportsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ELHS_SportsTests.m; sourceTree = "<group>"; };
+		FA779A901AD35ED900D12BE2 /* SendMessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendMessageViewController.swift; sourceTree = "<group>"; };
 		FA7CF7871A6BF9D4000EDE37 /* ELHS Sports-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ELHS Sports-Bridging-Header.h"; sourceTree = "<group>"; };
 		FA80B93618B96DC70029119C /* WebPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebPageViewController.h; sourceTree = "<group>"; };
 		FA80B93718B96DC70029119C /* WebPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebPageViewController.m; sourceTree = "<group>"; };
@@ -116,6 +120,8 @@
 		FA94DF5D1A73228F00BDE55B /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		FA94DF5E1A73228F00BDE55B /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		FA94DF5F1A73228F00BDE55B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		FAF1DB8E1AD4AF7D00103D98 /* MessagesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesTableViewCell.swift; sourceTree = "<group>"; };
+		FAF1DB8F1AD4AF7D00103D98 /* MessagesTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessagesTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -281,8 +287,7 @@
 		FA6ED9BF18B9589100CA58B5 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				FA94DF421A73193300BDE55B /* InboxTableViewController.h */,
-				FA94DF431A73193300BDE55B /* InboxTableViewController.m */,
+				FA779A8F1AD35E9200D12BE2 /* Messages */,
 				FA80B93618B96DC70029119C /* WebPageViewController.h */,
 				FA80B93718B96DC70029119C /* WebPageViewController.m */,
 				FA6ED64C18D2561300B03171 /* MainMenuViewController.h */,
@@ -292,6 +297,18 @@
 				FA6ED65218D299A200B03171 /* iPadTableViewController.m */,
 			);
 			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		FA779A8F1AD35E9200D12BE2 /* Messages */ = {
+			isa = PBXGroup;
+			children = (
+				FA94DF421A73193300BDE55B /* InboxTableViewController.h */,
+				FA94DF431A73193300BDE55B /* InboxTableViewController.m */,
+				FA779A901AD35ED900D12BE2 /* SendMessageViewController.swift */,
+				FAF1DB8E1AD4AF7D00103D98 /* MessagesTableViewCell.swift */,
+				FAF1DB8F1AD4AF7D00103D98 /* MessagesTableViewCell.xib */,
+			);
+			name = Messages;
 			sourceTree = "<group>";
 		};
 		FA80B93918B97D4F0029119C /* Custom Classes */ = {
@@ -400,6 +417,7 @@
 				FA6ED9A118B9587400CA58B5 /* Images.xcassets in Resources */,
 				FA6ED99918B9587400CA58B5 /* Main_iPhone.storyboard in Resources */,
 				FA6ED99018B9587400CA58B5 /* InfoPlist.strings in Resources */,
+				FAF1DB911AD4AF7D00103D98 /* MessagesTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,7 +439,9 @@
 				FA80B93C18B97D680029119C /* SharedValues.m in Sources */,
 				FA6ED65318D299A200B03171 /* iPadTableViewController.m in Sources */,
 				FA94DF441A73193300BDE55B /* InboxTableViewController.m in Sources */,
+				FAF1DB901AD4AF7D00103D98 /* MessagesTableViewCell.swift in Sources */,
 				FA80B93818B96DC70029119C /* WebPageViewController.m in Sources */,
+				FA779A911AD35ED900D12BE2 /* SendMessageViewController.swift in Sources */,
 				FA94DF491A731F4F00BDE55B /* MBProgressHUD.m in Sources */,
 				FA432C3618EF844400DC5220 /* Reachability.m in Sources */,
 				FA6ED64E18D2561300B03171 /* MainMenuViewController.m in Sources */,
@@ -568,6 +588,8 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEFINES_MODULE = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/parse-library-1",
@@ -594,6 +616,8 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEFINES_MODULE = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/parse-library-1",

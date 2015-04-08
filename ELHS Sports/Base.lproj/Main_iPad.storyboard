@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="ob4-Qi-1ge">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="ob4-Qi-1ge">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
     <scenes>
         <!--Title-->
@@ -52,9 +52,9 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Title" id="e1t-xp-acb">
-                        <barButtonItem key="leftBarButtonItem" title="About" id="SZ5-nL-mBj">
+                        <barButtonItem key="leftBarButtonItem" title="Inbox" id="SZ5-nL-mBj">
                             <connections>
-                                <segue destination="jfQ-KH-eQk" kind="popover" identifier="showSettings" popoverAnchorBarButtonItem="SZ5-nL-mBj" id="6FH-Ds-tbr">
+                                <segue destination="jfQ-KH-eQk" kind="popover" popoverAnchorBarButtonItem="SZ5-nL-mBj" id="Cc3-PE-ngg">
                                     <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                 </segue>
                             </connections>
@@ -183,7 +183,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KB1-lI-Xla" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="861" y="-991"/>
+            <point key="canvasLocation" x="854" y="-1027"/>
         </scene>
         <!--I Pad Table View Controller-->
         <scene sceneID="0BQ-kr-jpa">
@@ -223,7 +223,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VRf-Nc-g7f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1309" y="-991"/>
+            <point key="canvasLocation" x="1309" y="-1027"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="e3Q-AL-d4d">
@@ -240,12 +240,122 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="rri-0I-im1" kind="relationship" relationship="rootViewController" id="eWV-kM-Hqb"/>
+                        <segue destination="8vM-GB-C3P" kind="relationship" relationship="rootViewController" id="Xo6-Hs-wX5"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U6M-uQ-BZx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="282" y="-991"/>
+            <point key="canvasLocation" x="44" y="-1027"/>
+        </scene>
+        <!--Inbox-->
+        <scene sceneID="cuH-6A-2E4">
+            <objects>
+                <tableViewController id="8vM-GB-C3P" customClass="InboxTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="fne-rv-BgT">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="450"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" textLabel="Gwm-uq-Ebf" detailTextLabel="0zb-Pt-Dny" style="IBUITableViewCellStyleSubtitle" id="diR-6l-7Ih">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="diR-6l-7Ih" id="Puv-wh-GZ8">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Gwm-uq-Ebf">
+                                            <rect key="frame" x="15" y="0.0" width="290" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0zb-Pt-Dny">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="8vM-GB-C3P" id="iZc-rH-yzG"/>
+                            <outlet property="delegate" destination="8vM-GB-C3P" id="SBT-4K-G23"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Inbox" id="8dD-dx-6fV">
+                        <barButtonItem key="leftBarButtonItem" title="About" id="825-B8-n3U">
+                            <connections>
+                                <segue destination="rri-0I-im1" kind="push" id="jA1-1f-qz5"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Admin" id="Dy3-0G-o2c">
+                            <connections>
+                                <segue destination="Ja7-SL-9nj" kind="push" id="395-Rv-Igf"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <value key="contentSizeForViewInPopover" type="size" width="320" height="450"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="450"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TEj-7u-cHp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="450" y="-1027"/>
+        </scene>
+        <!--Admin-->
+        <scene sceneID="mzt-P1-urj">
+            <objects>
+                <viewController id="Ja7-SL-9nj" customClass="SendMessageViewController" customModule="ELHS_Sports" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="h8t-Xs-toa">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="450"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Short Message" minimumFontSize="17" id="iUD-94-pl1">
+                                <rect key="frame" x="16" y="95" width="288" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Admin Password" minimumFontSize="17" id="jwJ-We-yob">
+                                <rect key="frame" x="16" y="133" width="288" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" minimumFontSize="17" id="fYr-Lw-Iau">
+                                <rect key="frame" x="16" y="57" width="288" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Admin" id="NCk-30-FNb">
+                        <barButtonItem key="rightBarButtonItem" title="Send" id="oTM-1g-wBa">
+                            <connections>
+                                <action selector="sendMessage:" destination="Ja7-SL-9nj" id="VFq-YI-dF8"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <value key="contentSizeForViewInPopover" type="size" width="320" height="450"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="450"/>
+                    <connections>
+                        <outlet property="adminPass" destination="jwJ-We-yob" id="E3Y-3R-gow"/>
+                        <outlet property="notiMessage" destination="iUD-94-pl1" id="sAd-WL-4c5"/>
+                        <outlet property="notiTitle" destination="fYr-Lw-Iau" id="35T-Mj-5kW"/>
+                        <outlet property="view" destination="h8t-Xs-toa" id="bjc-nb-a2h"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Dh-8v-1V5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="450" y="-1532"/>
         </scene>
     </scenes>
     <resources>
