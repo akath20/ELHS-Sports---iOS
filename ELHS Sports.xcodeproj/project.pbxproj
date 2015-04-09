@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FA12F46818C029AB009EE855 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA12F46718C029AB009EE855 /* SettingsViewController.m */; };
+		FA1B09691AD4CEED001F17F8 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1B09681AD4CEED001F17F8 /* StoreKit.framework */; };
 		FA432C3618EF844400DC5220 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = FA432C3518EF844400DC5220 /* Reachability.m */; };
 		FA6ED64518D1539A00B03171 /* SettingsCustomNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6ED64418D1539A00B03171 /* SettingsCustomNavController.m */; };
 		FA6ED64E18D2561300B03171 /* MainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6ED64D18D2561300B03171 /* MainMenuViewController.m */; };
@@ -47,7 +48,6 @@
 		FA94DF641A73228F00BDE55B /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA94DF5B1A73228F00BDE55B /* MobileCoreServices.framework */; };
 		FA94DF651A73228F00BDE55B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA94DF5C1A73228F00BDE55B /* QuartzCore.framework */; };
 		FA94DF661A73228F00BDE55B /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA94DF5D1A73228F00BDE55B /* Security.framework */; };
-		FA94DF671A73228F00BDE55B /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA94DF5E1A73228F00BDE55B /* StoreKit.framework */; };
 		FA94DF681A73228F00BDE55B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA94DF5F1A73228F00BDE55B /* SystemConfiguration.framework */; };
 		FAF1DB901AD4AF7D00103D98 /* MessagesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF1DB8E1AD4AF7D00103D98 /* MessagesTableViewCell.swift */; };
 		FAF1DB911AD4AF7D00103D98 /* MessagesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAF1DB8F1AD4AF7D00103D98 /* MessagesTableViewCell.xib */; };
@@ -66,6 +66,7 @@
 /* Begin PBXFileReference section */
 		FA12F46618C029AB009EE855 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		FA12F46718C029AB009EE855 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		FA1B09681AD4CEED001F17F8 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		FA432C3418EF844400DC5220 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		FA432C3518EF844400DC5220 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		FA6ED64318D1539A00B03171 /* SettingsCustomNavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsCustomNavController.h; sourceTree = "<group>"; };
@@ -118,7 +119,6 @@
 		FA94DF5B1A73228F00BDE55B /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		FA94DF5C1A73228F00BDE55B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		FA94DF5D1A73228F00BDE55B /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		FA94DF5E1A73228F00BDE55B /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		FA94DF5F1A73228F00BDE55B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		FAF1DB8E1AD4AF7D00103D98 /* MessagesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesTableViewCell.swift; sourceTree = "<group>"; };
 		FAF1DB8F1AD4AF7D00103D98 /* MessagesTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessagesTableViewCell.xib; sourceTree = "<group>"; };
@@ -136,7 +136,6 @@
 				FA94DF641A73228F00BDE55B /* MobileCoreServices.framework in Frameworks */,
 				FA94DF651A73228F00BDE55B /* QuartzCore.framework in Frameworks */,
 				FA94DF661A73228F00BDE55B /* Security.framework in Frameworks */,
-				FA94DF671A73228F00BDE55B /* StoreKit.framework in Frameworks */,
 				FA94DF681A73228F00BDE55B /* SystemConfiguration.framework in Frameworks */,
 				FA6ED98818B9587400CA58B5 /* CoreGraphics.framework in Frameworks */,
 				FA94DF561A73223C00BDE55B /* AudioToolbox.framework in Frameworks */,
@@ -145,6 +144,7 @@
 				FA94DF521A73220A00BDE55B /* ParseCrashReporting.framework in Frameworks */,
 				FA6ED65818D4C4B700B03171 /* Social.framework in Frameworks */,
 				FA80B93E18BAC68D0029119C /* iAd.framework in Frameworks */,
+				FA1B09691AD4CEED001F17F8 /* StoreKit.framework in Frameworks */,
 				FA6ED98A18B9587400CA58B5 /* UIKit.framework in Frameworks */,
 				FA6ED98618B9587400CA58B5 /* Foundation.framework in Frameworks */,
 				FA94DF511A73220A00BDE55B /* Parse.framework in Frameworks */,
@@ -199,6 +199,7 @@
 		FA6ED98418B9587400CA58B5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FA1B09681AD4CEED001F17F8 /* StoreKit.framework */,
 				FA94DF571A73228F00BDE55B /* CFNetwork.framework */,
 				FA94DF581A73228F00BDE55B /* CoreLocation.framework */,
 				FA94DF591A73228F00BDE55B /* libsqlite3.dylib */,
@@ -206,7 +207,6 @@
 				FA94DF5B1A73228F00BDE55B /* MobileCoreServices.framework */,
 				FA94DF5C1A73228F00BDE55B /* QuartzCore.framework */,
 				FA94DF5D1A73228F00BDE55B /* Security.framework */,
-				FA94DF5E1A73228F00BDE55B /* StoreKit.framework */,
 				FA94DF5F1A73228F00BDE55B /* SystemConfiguration.framework */,
 				FA94DF551A73223C00BDE55B /* AudioToolbox.framework */,
 				FA94DF4A1A73220A00BDE55B /* parse-library-1 */,
@@ -383,6 +383,11 @@
 				TargetAttributes = {
 					FA6ED98118B9587400CA58B5 = {
 						DevelopmentTeam = AZN3C59G8S;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 1;
+							};
+						};
 					};
 					FA6ED9A518B9587400CA58B5 = {
 						TestTargetID = FA6ED98118B9587400CA58B5;

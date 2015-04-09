@@ -44,7 +44,7 @@
     
     
     PFQuery *query = [PFQuery queryWithClassName:@"Messages"];
-    [query orderByAscending:@"createdAt"];
+    [query orderByDescending:@"createdAt"];
     [query setLimit:25];
     
     

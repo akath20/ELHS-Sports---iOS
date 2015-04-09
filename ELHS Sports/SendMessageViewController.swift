@@ -42,7 +42,7 @@ class SendMessageViewController: UIViewController {
         //call the backend function and send the data
         
         let messageData:NSDictionary = NSDictionary(dictionary: ["messageTitle" : notiTitle.text, "message" : notiMessage.text, "password" : adminPass.text])
-        PFCloud.callFunctionInBackground("sendMessage", withParameters: messageData) { (result:AnyObject!, error:NSError!) -> Void in
+        PFCloud.callFunctionInBackground("sendMessage", withParameters: messageData as [NSObject : AnyObject]) { (result:AnyObject!, error:NSError!) -> Void in
             
             var message:String?
             

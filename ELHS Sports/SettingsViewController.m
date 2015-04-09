@@ -21,7 +21,7 @@
  
     
     //version number
-    self.versionLabel.text = [NSString stringWithFormat:@"Version: %@", [[NSBundle mainBundle] objectForInfoDictionaryKey: @"CFBundleShortVersionString"]];
+    self.versionLabel.text = [NSString stringWithFormat:@"Version: %@ (%@)", [[NSBundle mainBundle] objectForInfoDictionaryKey: @"CFBundleShortVersionString"], [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"]];
     
     //set the frame if i move it
     [self.contentView setFrame:CGRectMake(0, 0, 320, self.contentView.frame.size.height)];
